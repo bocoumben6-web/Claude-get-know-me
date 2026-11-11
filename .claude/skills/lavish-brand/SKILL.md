@@ -64,11 +64,13 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 - **Schriftfarbe für Untertitel und Text: Gelb** (passt zur Straßenästhetik). Wird schon seit Längerem so verwendet.
   - Farbton: **warmes Gelb mit leichtem Stich ins Orange.** Nicht zu grell
     (kein Neon-Gelb), nicht zu dunkel (kein Senf/Ocker), und nicht zu orange.
-  - Startwert: **#FFC21A** (Alternativen zum Vergleichen: #FFCC33 heller, #FFB81C wärmer).
-    [Mit Screenshot aus einem alten Video abgleichen und dann fixieren]
-- Weitere Farben: [AUSFÜLLEN]
-- Schriftart Überschriften: [AUSFÜLLEN] → Datei in `assets/fonts/`
-- Schriftart Untertitel: [AUSFÜLLEN] → Datei in `assets/fonts/`
+  - **Untertitel-Gelb: #F0CC38.** Aus den echten Owner-Videos gemessen (Werte
+    #E8C838 bis #F0D040, durch die TikTok-Kompression etwas dunkler).
+- **Überschrift (Hook-Titel am Anfang): Weiß-Beige #FCF0E4**, aus den Videos gemessen. Beibehalten!
+- Schriftart Untertitel: **Bebas Neue** (nur Großbuchstaben). Fontdatei: `assets/fonts/BebasNeue-Regular.ttf`.
+- Schriftart Hook-Überschrift: fette, breite Schrift mit leicht runden Ecken,
+  **nicht** Bebas Neue. [AUSFÜLLEN: Name der Schrift aus CapCut]
+- TikTok-Account: **@live.life.lavish**
 - Logo: `assets/logo.png`. Wann einblenden? [AUSFÜLLEN]
 
 ## Ton & Sprache
@@ -80,7 +82,9 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 ## No-Gos
 - Zu cleaner, steriler Werbe-Look, der nicht zur rohen Ästhetik passt
 - **Kein „LAVISH“ als große Überschrift oder Titel-Einblendung** in Videos, in
-  denen der Owner redet. Die Brand wirkt durch Inhalt und Pieces, nicht durch ein Logo-Banner.
+  denen der Owner redet. Die Überschrift ist das **Thema bzw. der Hook** (z. B.
+  „NEUE WEBSITE?“). Die Brand wirkt durch Inhalt und Pieces, nicht durch ein Logo-Banner.
+  (Ausnahme bisher gesehen: „LAVISH 24“ als Kollektionsname. Vom Owner klären lassen, ob das okay ist.)
 - [AUSFÜLLEN]
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)

@@ -13,15 +13,17 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 - Dateiname: [AUSFÜLLEN – z. B. `JJJJ-MM-TT_typ_thema.mp4`]
 
 ## Untertitel-Stil
-- Font: siehe `lavish-brand`
-- Größe: [AUSFÜLLEN]
-- Farbe: **Gelb** (Hex siehe `lavish-brand`). Rand/Schatten: [AUSFÜLLEN – vermutlich schwarzer Rand für Lesbarkeit]
+- Font: **Bebas Neue** (`assets/fonts/BebasNeue-Regular.ttf`)
+- Größe: klein, ca. 2,4 % der Bildhöhe (bei 1920 px Höhe ca. 46 px)
+- Farbe: **Gelb #F0CC38**, dünne dunkle Kontur (2–3 px) oder leichter Schatten
+- Hook-Überschrift: **#FCF0E4**, fette breite Schrift (NICHT Bebas Neue, Name noch offen), ca. 10 % der Bildhöhe pro Zeile, oberes Drittel, Pop-Animation, **hinter dem Owner** (Freistellung nötig)
 - Position: [AUSFÜLLEN] – auf jeden Fall in der **TikTok-Safe-Zone**: oben
   ca. 15 % frei, unten ca. 25 % frei (Caption/Buttons), rechts ca. 15 % frei
   (Like-/Kommentar-Leiste). Das passt dann auch für die Instagram Story.
-- Wörter pro Einblendung: [AUSFÜLLEN – z. B. 1–3]
+- Höhe im Owner-Content bisher: ca. 62–73 % von oben (liegt in der Safe-Zone)
+- Wörter pro Einblendung: Owner-Content **4–8 Wörter / ganze Satzteile**
 - Hervorhebung von Schlüsselwörtern: [AUSFÜLLEN – z. B. Akzentfarbe]
-- Großbuchstaben: [AUSFÜLLEN]
+- Großbuchstaben: ja, immer (Bebas Neue)
 
 ## Workflow (immer so vorgehen)
 1. **Analyse:** `ffprobe` für Länge/Auflösung/FPS. Alle ~1 Sek. einen Frame
