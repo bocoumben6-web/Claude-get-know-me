@@ -1,0 +1,9 @@
+# Große Videodateien standardmäßig nicht committen
+*.mp4
+*.mov
+*.MOV
+*.m4v
+*.avi
+*.mkv
+export/
+frames/
