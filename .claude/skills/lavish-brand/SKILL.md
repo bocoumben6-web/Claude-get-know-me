@@ -82,7 +82,14 @@ Kernsatz: **STREET CULTURE. CHARACTER. IDENTITY. ATTITUDE.** Im Zweifel Authenti
 - Schriftart Hook-Überschrift: fette, breite Schrift mit leicht runden Ecken,
   **nicht** Bebas Neue. Laut Owner heißt sie in CapCut **„Co Moderno“** (Schreibweise unbestätigt). Fontdatei fehlt noch: frei nicht auffindbar, Datei oder Screenshot vom Owner nötig.
 - TikTok-Account: **@live.life.lavish**
-- Logo: `assets/logo.png`. Wann einblenden? [AUSFÜLLEN]
+- **Logo: ein einzelnes „L“** in gebrochener, handgezeichneter Schrift (Blackletter-/Graffiti-Charakter,
+  unregelmäßige, leicht „tropfende“ Kanten). Dasselbe L ist auf den Hoodies (Brust) zu sehen.
+  - Dateien (freigestellt, transparent): `assets/logo.png` (weiß), `assets/logo-beige.png` (#FCF0E4),
+    `assets/logo-schwarz.png`; Original vom Owner: `assets/logo-original.png`
+  - Einsatz: **zurückhaltend** (Guidelines: Logos nicht aufdrängen). Passend z. B. klein als Stempel/Sticker,
+    als Schlussbild oder als Textur. Nie als Dauer-Wasserzeichen, nie groß über dem Owner.
+  - Wann genau einblenden? [AUSFÜLLEN – Owner fragen]
+  - Das Logo zeigt die Formensprache der Brand: rau, handgemacht, nicht geometrisch-clean. Grafiken daran ausrichten.
 
 ## Ton & Sprache
 - Sprache: **Deutsch.** Die Videos werden immer auf Deutsch gesprochen, Untertitel also auf Deutsch.
