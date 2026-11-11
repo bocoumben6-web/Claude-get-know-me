@@ -27,7 +27,7 @@ Der Schnitt soll spontan wirken, aber sorgfältig gebaut sein.
 - ffmpeg-Startpunkt (dezent, pro Clip prüfen): `eq=saturation=0.88:contrast=1.06,noise=alls=6:allf=t`
 
 ## Texturen (gezielt, nie das ganze Video überladen)
-35mm-Korn, VHS/MiniDV-Look, Blitzlicht-Fotos, Doku-Material, analoge Overlays, Fotokopie- und Magazin-Texturen.
+35mm-Korn, Blitzlicht-Fotos, Doku-Material, analoge Overlays, Fotokopie- und Magazin-Texturen.
 
 ## Sound
 - Echte Umgebungsgeräusche erhalten (sie sind so wichtig wie Musik)
@@ -104,7 +104,7 @@ Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe 
 - **Stempel-Wort:** riesig, abgenutzt, schief, **am Bildrand angeschnitten**, hinter dem Owner
 - **Fotokopie-Standbild:** letzte 0,5 s eines Satzes einfrieren, Schwarz-Weiß mit Korn, gelbes Stempel-Wort darüber.
   Schatten vorher aufhellen (Gamma 0,62), damit Gesichter Zeichnung behalten.
-- **Camcorder-Rückblende:** Farbversatz, Zeilen, milchige Schwarztöne, kleiner Datumsstempel
+- ~~Camcorder-/VHS-Rückblende~~ **gestrichen: Der Owner will den VHS-Look gar nicht** (auch keinen Datumsstempel). Nicht mehr verwenden.
 - **Einblenden:** „hingeklatscht“ (2 Frames leicht versetzt, dann sitzt es), kein weiches Pop; Ausblenden per hartem Schnitt
 - **Grading-Kette (ffmpeg):** `eq=saturation=0.86:contrast=1.07:brightness=-0.012,colorbalance=bs=0.035:bm=0.02:rs=-0.02`,
   dann Untertitel, zuletzt `noise=alls=9:allf=t` über alles (Korn verbindet Bild, Grafik und Text)
@@ -112,6 +112,10 @@ Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe 
 - `graphics_alt_v2_nicht_verwenden.py` ist der alte Baukasten-Look (Checkliste, Pop-Animationen) und nur als Negativbeispiel da.
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **Feedback zu Test v3 (Owner):**
+  - **VHS-/Camcorder-Effekt komplett weglassen.** Gilt für alle Videos.
+  - **Klebeband-Balken und Papierschnipsel mit der „hingeklatscht“-Bewegung: gefallen, beibehalten.**
+  - **Riesiges Stempel-Wort hinter dem Kopf (wie „FIRE“): beibehalten.**
 - Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25.
   **Laut Guidelines sparsam:** nur bei echten Kernaussagen (Richtwert 4–6 Wechsel pro 40 s, nicht bei jedem Satz).
   Test v1/v2 hatten 22 Wechsel. **Festgelegt:** ruhiger Schnitt wie in Referenz 3, Zooms nur bei Kernaussagen (ca. 4–8 pro Video); das Tempo kommt von den Einblendungen (siehe `owner-content`, „Grafik-Sprache“).

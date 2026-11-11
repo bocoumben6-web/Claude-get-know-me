@@ -128,11 +128,17 @@ Stattdessen, damit es **handgemacht** wirkt:
 | Gutschein-/Pass-Karten | **Sticker, Klebeband-Label, Preisschild** im Street-Look |
 | Handy-Mockup, Benachrichtigung | Screenshot roh und leicht gedreht, wie ein abfotografiertes Display, dezentes Korn |
 | Weiße Wort-Untertitel | bleibt Lavish: **Gelb #F0CC38, Bebas Neue**, Schlüsselwörter beige |
-| B-Roll clean | **VHS-/MiniDV- oder 35mm-Look**, Handkamera, Parkgarage, Dach, U-Bahn |
+| B-Roll clean | **35mm-Look** (kein VHS), Handkamera, Parkgarage, Dach, U-Bahn |
 - Farben: nur Gelb #F0CC38, Beige #FCF0E4, Schwarz, Papierweiß. Keine bunten App-Farben.
 - Alles darf leicht unperfekt sein (schief, Korn, Kanten), aber bewusst gesetzt.
 - Bilder und Fotos liefert der Owner; fehlen sie, mit Text-Elementen arbeiten und gezielt nachfragen.
 - Offen: Untertitel bleiben vorerst in Satzteilen. Ob Wort-für-Wort wie in der Referenz gewünscht ist: Owner fragen.
+
+## Vom Owner bestätigt (Test v3)
+- ✅ Klebeband-Balken / Papierschnipsel, die „hingeklatscht“ werden
+- ✅ Riesiges Stempel-Wort hinter dem Kopf (z. B. „FIRE“)
+- ❌ VHS-/Camcorder-Look: nie verwenden
+- Noch ohne Urteil: Fotokopie-Standbild, Grading/Korn, Anzahl der Zooms
 
 ## Visuelle Extras
 - **PNG-Cutouts** (freigestellt) neben dem Owner, wenn darüber geredet wird:

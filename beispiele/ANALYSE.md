@@ -88,4 +88,4 @@ Vom Owner als Umsetzungs-Referenz geschickt (Nov. 2026). Gilt zusammen mit `LAVI
   Fotokopie-Standbild „SWAG“, Camcorder-Rückblende mit „2024“, Papierschnipsel „SALES“, drei Schnipsel „GANZ / NACH / OBEN“
 - Lange Strecken ganz ohne Einblendung (Anfang nach dem Hook, Ende)
 - Offen: Jahreszahl „2024“ ist geschätzt (Lavish gibt es seit ca. 2 Jahren); Überschrift weiter in Ersatzschrift
-- Feedback des Owners: [AUSSTEHEND]
+- Feedback des Owners: VHS-Look ganz raus. Balken/Schnipsel mit der Bewegung sehen gut aus. Großes „FIRE“ hinter dem Kopf beibehalten. Weiteres Feedback folgt beim nächsten Mal.

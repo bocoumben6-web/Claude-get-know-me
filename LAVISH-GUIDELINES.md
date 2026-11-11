@@ -100,7 +100,7 @@ Typography should feel inspired by underground magazines, music editorials and s
 Use different visual textures where appropriate:
 
 * 35mm film grain
-* VHS and MiniDV footage
+* ~~VHS and MiniDV footage~~ (vom Owner gestrichen, Nov. 2026: kein VHS-Look)
 * Flash photography
 * Documentary footage
 * Analog overlays
