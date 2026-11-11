@@ -73,7 +73,7 @@ Drei Mittel, alle im Lavish-Look (Beige #FCF0E4, Gelb #F0CC38, keine anderen Far
    ca. 0,8–1,5 s lang, ungefähr alle 4–6 s. Standardmäßig **hinter dem Owner** (Tiefeneffekt).
    **Regel:** Wenn der Kopf mehr als 25 % des Textes verdeckt, kommt der Text **vor** den Owner.
    Text darf nie aus dem Bild ragen (max. ca. 940 px breit).
-3. **Checkliste / Aufzählung**, wenn der Owner mehrere Punkte nacheinander erzählt
+3. ~~Checkliste mit Icons~~ **nicht mehr verwenden** (wirkt nach Baukasten/KI, siehe „Grafik-Sprache“). Früher: Aufzählung, wenn der Owner mehrere Punkte nacheinander erzählt
    (z. B. ✗ KEINE AHNUNG → ✓ BESTES VERSUCHT → ✓ SALES GENERIERT → ↑ STEIGERUNG):
    gelbe Kreis-Icons, Bebas Neue in Beige, links oben, Punkte erscheinen genau, wenn sie gesagt werden.
    Liste liegt **vor** dem Owner, die Punkte sind kurz (max. 2–3 Wörter).
@@ -88,7 +88,28 @@ Skript: `tools/vorlage-owner-video/graphics.py`.
 (villainworldd, siehe `beispiele/ANALYSE.md`).** Also: so viel und so genau getimt wie die Referenz,
 aber im Aussehen 100 % Lavish.
 
-**Menge und Timing (aus der Referenz):**
+**WICHTIGSTE REGEL (Owner, Nov. 2026): Es darf NICHT nach „mit Claude/KI geschnitten“ aussehen.**
+Der Owner findet: Der Referenz 3 sieht man extrem an, dass sie mit Claude gebaut ist. Genau diesen
+Baukasten-Look will er nicht. **Der eigene Lavish-Stil muss vorne stehen.** Die Referenz gilt nur noch
+für das Prinzip (Infos zeigen statt nur sagen, Timing aufs Wort), nicht für Optik oder Machart.
+
+Woran man den KI-/Baukasten-Look erkennt, also **verboten**:
+- Glas- und App-Karten, Widgets, Benachrichtigungs-Blasen, saubere Handy-Mockups
+- Generische Icons (Häkchen im Kreis, Pfeile, Emojis) und Checklisten im App-Stil
+- Alles gleich animiert (immer derselbe Pop, dieselbe Dauer), alles perfekt mittig und gerade
+- Standard-Schriften, perfekte Kanten, saubere Schlagschatten, gleichmäßige Abstände
+- Ein Element nach dem anderen im gleichen Takt, wie am Fließband
+- Dieselbe Grafik-Art mehrmals hintereinander
+
+Stattdessen, damit es **handgemacht** wirkt:
+- **Eigenes Material zuerst:** echte Fotos, Blitzlicht-Bilder, Scans, Screenshots, Handschrift, Etiketten, Flyer des Owners
+- Elemente wie **ausgeschnitten und hingeklebt**: raue Kanten, leicht schief, Klebeband, Fotokopie-Korn
+- **Unregelmäßig:** mal groß, mal klein, mal links, mal angeschnitten; Dauer und Art wechseln
+- Auch mal **gar nichts** einblenden und die Einstellung einfach stehen lassen
+- Lieber ein starkes, eigenes Element als drei saubere aus dem Baukasten
+- Vor dem Export fragen: „Könnte das jeder mit einer Vorlage gemacht haben?“ Wenn ja, neu machen.
+
+**Menge und Timing (als Obergrenze, nicht als Pflicht):**
 - Ungefähr **alle 3–5 Sekunden ein Element**, immer exakt auf das Wort, das gerade gesagt wird
 - **Jede harte Info wird gezeigt:** Datum/Uhrzeit, Preis, Produkt, Ort, Name, Zahl, Liste
 - **Hook in 3 s:** Was? Wie viel? Wann? (Titel + 1–2 Elemente direkt hintereinander)

@@ -16,6 +16,7 @@ description: Checkliste vor dem Export, damit Lavish- und Owner-Videos performen
 - [ ] Ton: Stimme klar, Musik nicht zu laut, Lautheit normalisiert
 
 ## Lavish-Check (aus `LAVISH-GUIDELINES.md`, vor jedem Export)
+- [ ] **Sieht es NICHT nach „mit Claude/KI geschnitten“ aus?** (keine App-Karten, Standard-Icons, Fließband-Animationen; siehe `owner-content`)
 - [ ] Sieht es **nicht** aus wie ein generisches Fashion-Influencer-Reel?
 - [ ] Gehört der Edit ins Lavish-Universum (Street Culture, Character, Identity, Attitude)?
 - [ ] Zooms, Grafiken, Sounds sparsam, nichts ohne Grund?

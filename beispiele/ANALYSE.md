@@ -79,3 +79,5 @@ Vom Owner als Umsetzungs-Referenz geschickt (Nov. 2026). Gilt zusammen mit `LAVI
 **Was wir übernehmen (Prinzip):** jede wichtige Info bekommt ein Bild oder eine Karte; Datum/Preis/Produkt werden gezeigt, nicht nur gesagt; Hook erklärt das Angebot in 3 s; Erinnerung am Ende; ruhiger Schnitt + viele Einblendungen; kurzer B-Roll-Block.
 
 **Was wir NICHT übernehmen (Optik):** die cleanen Glas-/App-Karten, weiße Sans-Serif-Untertitel, die polierte Showroom-Optik. Das wäre nicht Lavish.
+
+**Urteil des Owners zu Referenz 3:** Man sieht dem Video extrem an, dass es mit Claude geschnitten ist. Das ist ausdrücklich **kein** Vorbild für die Optik. Nur das Prinzip (Infos zeigen, Timing) bleibt. Test v2 hat dieselbe Schwäche (Checkliste mit Icons, gleichförmige Pop-Animationen).
