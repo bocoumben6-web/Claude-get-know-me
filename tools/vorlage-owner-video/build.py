@@ -1,5 +1,5 @@
 import json, subprocess, re
-HL = r"{\c&HE4F0FC&\fscx135\fscy135\t(0,140,\fscx112\fscy112)}\1{\r}"  # keyword: beige #FCF0E4, pop
+HL = r"{\c&HE4F0FC&}\1{\r}"
 
 E = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/edit"
 FONTS = "/home/user/Claude-get-know-me/assets/fonts"
@@ -42,6 +42,9 @@ u = wt("und", 41.0)
 add(40.58, u - 0.05, "ICH FREU MICH", 1.12)
 add(u, 44.70, "UND *DANKE* FÜR JEDEN DER MICH BIS JETZT SUPPORTET HAT", 1.00)
 
+KEEP = {"GANZ EINFACH": 1.12, "FIRE": 1.25, "SWAG": 1.18, "STEIGERUNG": 1.15, "GANZ NACH OBEN": 1.22}
+for c in C:
+    c[3] = next((z for k, z in KEEP.items() if k in c[2].replace("*", "")), 1.00)
 # pieces: pad chunk edges, keep small gaps (<0.35 s), cut bigger pauses
 PAD_IN, PAD_OUT, GAP = 0.10, 0.14, 0.35
 pieces = []
@@ -68,7 +71,7 @@ for k, (ps, pe, z, *_ ) in enumerate(pieces):
     lines.append(f"[1:a]atrim=start={ps}:end={pe},asetpts=PTS-STARTPTS,afade=t=in:d=0.012,afade=t=out:st={max(0,d-0.018):.3f}:d=0.018[a{k}]")
     cat.append(f"[v{k}][a{k}]")
 lines.append("".join(cat) + f"concat=n={len(pieces)}:v=1:a=1[vc][ac]")
-open(E + "/graph.txt", "w").write(";\n".join(lines))
+open(E + "/graph3.txt", "w").write(";\n".join(lines))
 
 # subtitles on the new timeline
 def ts(t):
@@ -86,7 +89,7 @@ for ps, pe, z, s, e, txt in pieces:
     b = t + (pe - ps)
     ass.append(f"Dialogue: 0,{ts(max(0,a))},{ts(b)},Sub,,0,0,0,,{{\\an8\\pos(540,1186)}}" + re.sub(r"\*(.+?)\*", lambda m: HL.replace("\\1", m.group(1)), txt))
     t += pe - ps
-open(E + "/subs.ass", "w").write("\n".join(ass) + "\n")
-json.dump(pieces, open(E + "/pieces.json", "w"), ensure_ascii=False)
+open(E + "/subs3.ass", "w").write("\n".join(ass) + "\n")
+json.dump(pieces, open(E + "/pieces3.json", "w"), ensure_ascii=False)
 print(f"pieces={len(pieces)} new_duration={t:.2f}s")
 for p in pieces: print(f"{p[0]:6.2f}-{p[1]:6.2f} z={p[2]:.2f} {p[5]}")

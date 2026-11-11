@@ -81,3 +81,11 @@ Vom Owner als Umsetzungs-Referenz geschickt (Nov. 2026). Gilt zusammen mit `LAVI
 **Was wir NICHT übernehmen (Optik):** die cleanen Glas-/App-Karten, weiße Sans-Serif-Untertitel, die polierte Showroom-Optik. Das wäre nicht Lavish.
 
 **Urteil des Owners zu Referenz 3:** Man sieht dem Video extrem an, dass es mit Claude geschnitten ist. Das ist ausdrücklich **kein** Vorbild für die Optik. Nur das Prinzip (Infos zeigen, Timing) bleibt. Test v2 hat dieselbe Schwäche (Checkliste mit Icons, gleichförmige Pop-Animationen).
+
+## Test v3: „Neue Website“ im handgemachten Lavish-Look
+- Nur noch 5 Zooms (statt 22), keine Sounds, Grading + Korn
+- 6 Elemente, alle verschieden: Tape „ANDERES LEVEL“, Stempel „FIRE“ angeschnitten hinter dem Owner,
+  Fotokopie-Standbild „SWAG“, Camcorder-Rückblende mit „2024“, Papierschnipsel „SALES“, drei Schnipsel „GANZ / NACH / OBEN“
+- Lange Strecken ganz ohne Einblendung (Anfang nach dem Hook, Ende)
+- Offen: Jahreszahl „2024“ ist geschätzt (Lavish gibt es seit ca. 2 Jahren); Überschrift weiter in Ersatzschrift
+- Feedback des Owners: [AUSSTEHEND]

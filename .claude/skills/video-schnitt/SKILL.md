@@ -97,6 +97,20 @@ Die Cloud-Umgebung „Claude-get-know-me (Lavish Video)“ installiert beim Star
 Ablauf: Transkript → Text korrigieren → `build.py` → `ffmpeg -filter_complex_script graph.txt` → Untertitel einbrennen + `loudnorm` → Export.
 Zoom-Anker: vertikal so, dass das Untertitelband an derselben Stelle bleibt (`y = 0.64·H·(1−1/z)`).
 
+## Handgemachte Bausteine (Test v3, `tools/vorlage-owner-video/graphics_handmade.py`)
+Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe Art hintereinander:
+- **Klebeband-Label:** gelbes Gaffer-Tape, ausgefranste Enden, schwarze Bebas-Schrift mit Abrieb, 3–6° schief
+- **Papierschnipsel:** abgerissenes Fotokopie-Papier, Schrift mit Kopier-Abrieb, weicher Schatten
+- **Stempel-Wort:** riesig, abgenutzt, schief, **am Bildrand angeschnitten**, hinter dem Owner
+- **Fotokopie-Standbild:** letzte 0,5 s eines Satzes einfrieren, Schwarz-Weiß mit Korn, gelbes Stempel-Wort darüber.
+  Schatten vorher aufhellen (Gamma 0,62), damit Gesichter Zeichnung behalten.
+- **Camcorder-Rückblende:** Farbversatz, Zeilen, milchige Schwarztöne, kleiner Datumsstempel
+- **Einblenden:** „hingeklatscht“ (2 Frames leicht versetzt, dann sitzt es), kein weiches Pop; Ausblenden per hartem Schnitt
+- **Grading-Kette (ffmpeg):** `eq=saturation=0.86:contrast=1.07:brightness=-0.012,colorbalance=bs=0.035:bm=0.02:rs=-0.02`,
+  dann Untertitel, zuletzt `noise=alls=9:allf=t` über alles (Korn verbindet Bild, Grafik und Text)
+- **Kein** Whoosh, kein Sound-Effekt; Originalton bleibt
+- `graphics_alt_v2_nicht_verwenden.py` ist der alte Baukasten-Look (Checkliste, Pop-Animationen) und nur als Negativbeispiel da.
+
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25.
   **Laut Guidelines sparsam:** nur bei echten Kernaussagen (Richtwert 4–6 Wechsel pro 40 s, nicht bei jedem Satz).
