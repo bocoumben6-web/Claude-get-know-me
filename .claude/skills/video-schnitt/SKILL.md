@@ -14,7 +14,7 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 
 ## Untertitel-Stil
 - Font: **Bebas Neue** (`assets/fonts/BebasNeue-Regular.ttf`)
-- Größe: klein, ca. 2,4 % der Bildhöhe (bei 1920 px Höhe ca. 46 px)
+- Größe: klein, ASS-Fontsize 54 bei 1920 px Höhe (Großbuchstaben ca. 35 px hoch, wie im Original)
 - Farbe: **Gelb #F0CC38**, **keine Kontur**, sondern **dunkler Schlagschatten nach rechts unten** (wie im Original)
 - ASS-Style (PlayRes 1080x1920): `Style: Sub,Bebas Neue,54,&H0038CCF0,&H0038CCF0,&H00000000,&H59000000,0,0,0,0,100,100,0.5,0,1,0,3,8,170,170,0,1`, Position `{\an8\pos(540,1186)}`
 - Satzzeichen weglassen (das Original hat keine)
