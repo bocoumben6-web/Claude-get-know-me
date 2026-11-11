@@ -2,6 +2,15 @@
 
 > Vom Owner vorgegeben (Nov. 2026). **Oberste Regel für jedes Video.**
 > Bei Widerspruch zu einem Skill gilt dieses Dokument, außer der Owner sagt im Einzelfall etwas anderes.
+>
+> **Stand und Herkunft:** Die Liste hat der Owner zusammen mit ChatGPT aus der bisherigen Arbeit an Lavish
+> erstellt. Sie beschreibt die Brand-Identität; es kommen noch ein, zwei kleine Änderungen.
+>
+> **Wichtige Einschränkung vom Owner:** Lavish-Videos haben in der Praxis durchaus „Schnickschnack"
+> (Effekte, Grafiken, Text). Die Stellen „sparingly / avoid unnecessary motion graphics / excessive zoom"
+> sind deshalb **nicht als Verbot** zu lesen. Wie viel genau, zeigt das Referenzvideo, das der Owner
+> noch schickt: **Guidelines (Identität) + Referenzvideo (Umsetzung) zusammen ergeben den Stil.**
+> Bis dahin: Effekte sind erlaubt, solange sie nach Lavish aussehen und nicht nach generischem Influencer-Reel.
 
 ## 01. BRAND IDENTITY
 

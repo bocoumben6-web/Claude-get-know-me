@@ -64,8 +64,9 @@ Nicht erlaubt (passt nicht zu Lavish):
 ## Wörter verdeutlichen (Owner-Wunsch, inspiriert von der Referenz None of Us)
 Der Owner will, dass wichtige Wörter **zusätzlich betont** werden, mit Text-Grafiken statt Bildern.
 **Aber:** Laut `LAVISH-GUIDELINES.md` Typografie **sparsam** und editorial einsetzen (Underground-Magazin,
-Musik-Editorial, Streetwear-Kampagne), keine unnötigen Motion Graphics. Richtwert: **2–4 große Callouts
-pro Video**, nur die stärksten Wörter. Kleine Textelemente sind okay, wenn sie Kontext geben.
+Musik-Editorial, Streetwear-Kampagne), keine unnötigen Motion Graphics. Richtwert vorläufig: **2–4 große Callouts
+pro Video** – **noch offen**: Der Owner sagt, Lavish hat eigentlich mehr „Schnickschnack“. Die genaue Menge
+wird am Referenzvideo festgelegt, das der Owner noch schickt. Kleine Textelemente sind okay, wenn sie Kontext geben.
 Drei Mittel, alle im Lavish-Look (Beige #FCF0E4, Gelb #F0CC38, keine anderen Farben):
 1. **Keyword im Untertitel:** Das Schlüsselwort ist **beige statt gelb** und poppt kurz auf
    (135 % → 112 %). Etwa 1 Keyword pro Satz, nur bei echten Kernwörtern
