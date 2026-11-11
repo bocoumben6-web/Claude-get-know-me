@@ -30,7 +30,14 @@ Vorher immer auch `lavish-brand` und `video-schnitt` beachten.
 - Zooms/Punch-Ins bei wichtigen Aussagen: [AUSFÜLLEN]
 - B-Roll (Pieces, Lifestyle) zwischenschneiden: [AUSFÜLLEN]
 - Musik im Hintergrund: [AUSFÜLLEN – ja/nein, Lautstärke]
-- Untertitel: siehe `video-schnitt` (oder hier abweichend: [AUSFÜLLEN])
+- Untertitel: **gelb**, Straßenästhetik (Details siehe `video-schnitt`)
+- Look: roh, gern in der Parkgarage oder auf der Straße gedreht, kein Studio-Look
+
+## Starke Themen (aus der Brand-Geschichte)
+- Der Weg von Lavish (seit ca. 2 Jahren): Aufbau, Learnings, Rückschläge
+- Pop-ups: Vorbereitung, Behind the Scenes, der Tag selbst mit der Community
+- Bekannte Personen, die Lavish getragen haben (siehe `lavish-brand`)
+- Nähe zur Community: Kunden, Fans, Fragen beantworten
 
 ## Ende / Call-to-Action
 - [AUSFÜLLEN – z. B. „Folg für mehr“, Link in Bio, kein CTA]

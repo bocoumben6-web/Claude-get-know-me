@@ -11,9 +11,12 @@ Vorher immer auch `lavish-brand` und `video-schnitt` beachten.
 - [AUSFÜLLEN – z. B. Begehren wecken, Drop ankündigen, Verkauf]
 
 ## Look & Gefühl
-- Stimmung: [AUSFÜLLEN – z. B. edel, ruhig, dunkel, cinematic / oder energiegeladen]
-- Welche Einstellungen? [AUSFÜLLEN – z. B. Makro-Close-ups, Getragen am Körper, Flatlay, Verpackung/Unboxing]
-- Licht/Farbe: [AUSFÜLLEN]
+- Stimmung: **raw, Straße**. Typische Location ist die Parkgarage (Beton, Neonlicht, Schatten).
+- Produkte: **Standout-Pieces** groß und auffällig in Szene setzen. **Tracksuits**
+  eher als Alltags-, Fit- und Kombi-Content (verschiedene Farben, getragen im Alltag).
+- Welche Einstellungen? [AUSFÜLLEN – z. B. Close-ups von Details/Stoff, Fit am Körper, Walk-ins in der Garage]
+- Licht/Farbe: rau und kontrastreich, nicht überpoliert [Vom Owner bestätigen lassen]
+- Content-Ideen: bekannte Personen in Lavish (siehe `lavish-brand`), Pop-up-Recaps, Fans in ihren Pieces
 
 ## Schnitt
 - Schnitt auf den Beat: [AUSFÜLLEN – ja/nein]

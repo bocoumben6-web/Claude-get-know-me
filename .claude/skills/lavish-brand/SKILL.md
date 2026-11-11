@@ -1,6 +1,6 @@
 ---
 name: lavish-brand
-description: Markenidentität von Lavish (Schreibweise, Farben, Fonts, Logo, Ton, Zielgruppe, No-Gos). Immer laden, bevor ein Video, eine Caption oder ein Text für Lavish oder den Owner erstellt wird.
+description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look) – Schreibweise, Produkte, Farben, Fonts, Logo, Ton, Zielgruppe, Community, Social Proof, No-Gos. Immer laden, bevor ein Video, eine Caption oder ein Text für Lavish oder den Owner erstellt wird.
 ---
 
 # Lavish – Brand-Grundlagen
@@ -11,36 +11,63 @@ description: Markenidentität von Lavish (Schreibweise, Farben, Fonts, Logo, Ton
 ## Name & Schreibweise
 - Markenname: **Lavish**
 - Schreibweise im Video/Text: [AUSFÜLLEN – z. B. „LAVISH“ in Großbuchstaben oder „Lavish“]
-- Was ist Lavish? (Produkte / „Pieces“): [AUSFÜLLEN – z. B. Schmuck, Kleidung, Taschen …]
-- Preisniveau / Positionierung: [AUSFÜLLEN – z. B. Luxus, Premium, Streetwear …]
+
+## Was ist Lavish?
+- **Streetwear-Brand**, seit ca. 2 Jahren am Markt (Stand: Nov. 2026).
+- Sortiment:
+  - **Standout-Pieces**: auffällige Teile, die herausstechen, im Content die Stars
+  - **Tracksuits**: ganz normale Basics für den Alltag, die sich verlässlich verkaufen
+- Preisniveau / Positionierung: [AUSFÜLLEN]
+
+## Ästhetik: raw, Straße
+- Der Look ist **roh und ungefiltert**, nicht poliert, nicht „Studio“.
+- Typische Location: **Parkgarage** (Beton, Neonlicht, Schatten, Hall).
+- Weitere Locations: [AUSFÜLLEN – z. B. Straße nachts, Treppenhaus, Pop-up-Store]
+- Grading: eher kontrastreich und rau, ein bisschen Körnung ist okay. Nicht
+  überglättet, keine Hochglanz-Werbeoptik. [Vom Owner bestätigen lassen]
+- Handkamera, echte Momente und echter Umgebungston passen zur Brand.
 
 ## Zwei Content-Arten (nie vermischen!)
-1. **Owner-Content** → Personal Branding des Owners. Siehe Skill `owner-content`.
-2. **Lavish-Content** → Die Pieces stehen im Fokus, wenig/kein Reden. Siehe Skill `lavish-product-content`.
+1. **Owner-Content**: Personal Branding des Owners. Siehe Skill `owner-content`.
+2. **Lavish-Content**: Die Pieces stehen im Fokus, wenig oder kein Reden. Siehe Skill `lavish-product-content`.
+
+## Community
+- Community ist dem Owner **sehr wichtig**: Nähe zu den Leuten, kein „abgehobenes“ Brand-Gehabe.
+- Lavish hat schon **mehrere Pop-ups** gemacht. Pop-up-Content (Schlangen,
+  Leute, Atmosphäre, Owner mit Kunden) ist starkes Material.
+- Ideen für Content: Kunden und Fans zeigen, Fan-Fotos reposten, Recaps von Pop-ups, Q&A mit der Community.
+
+## Social Proof: Bekannte Personen, die Lavish getragen haben
+- **Pagel**, Rapper (DE) [Schreibweise vom Owner bestätigen lassen]
+- **Tom Bischof**, Fußballspieler beim FC Bayern [Schreibweise vom Owner bestätigen lassen]
+- **Benno**, Rapper [Schreibweise vom Owner bestätigen lassen]
+- Weitere: [AUSFÜLLEN]
+- Einsatz: Solche Clips oder Fotos sind sehr starke Hooks („Das trägt …“). Nur
+  Material verwenden, das der Owner freigegeben hat bzw. verwenden darf.
 
 ## Zielgruppe
 - Alter: [AUSFÜLLEN]
 - Geschlecht: [AUSFÜLLEN]
-- Land/Sprache: [AUSFÜLLEN – z. B. Deutschland, Deutsch]
-- Was will die Zielgruppe fühlen? [AUSFÜLLEN – z. B. exklusiv, erfolgreich, selbstbewusst]
+- Land/Sprache: [AUSFÜLLEN – vermutlich Deutschland, Deutsch]
+- Interessen: Streetwear, Deutschrap, Fußball [Vom Owner bestätigen lassen]
 
 ## Visuelle Identität
-- Hauptfarben (Hex): [AUSFÜLLEN]
-- Akzentfarbe: [AUSFÜLLEN]
+- **Schriftfarbe für Untertitel und Text: Gelb** (passt zur Straßenästhetik). Wird schon seit Längerem so verwendet.
+  - Genauer Farbton (Hex): [AUSFÜLLEN – z. B. #FFE600]
+- Weitere Farben: [AUSFÜLLEN]
 - Schriftart Überschriften: [AUSFÜLLEN] → Datei in `assets/fonts/`
 - Schriftart Untertitel: [AUSFÜLLEN] → Datei in `assets/fonts/`
-- Logo: `assets/logo.png` – wann einblenden? [AUSFÜLLEN – z. B. nur am Ende, nie, als kleines Wasserzeichen]
-- Farb-Look / Grading: [AUSFÜLLEN – z. B. warm, kühl, kontrastreich, gedeckt]
+- Logo: `assets/logo.png`. Wann einblenden? [AUSFÜLLEN]
 
 ## Ton & Sprache
 - Sprache: [AUSFÜLLEN – Deutsch / Englisch / Mix]
-- Du oder Ihr? [AUSFÜLLEN]
-- Stil: [AUSFÜLLEN – z. B. selbstbewusst, kurz, edel, locker]
+- Stil: direkt, Straße, echt, nah an der Community
 - Typische Wörter/Phrasen: [AUSFÜLLEN]
-- Emojis in Captions: [AUSFÜLLEN – ja/nein/welche]
+- Emojis in Captions: [AUSFÜLLEN]
 
 ## No-Gos
-- [AUSFÜLLEN – z. B. keine billig wirkenden Effekte, keine Comic-Fonts, keine lauten Sounds …]
+- Zu cleaner, steriler Werbe-Look, der nicht zur rohen Ästhetik passt
+- [AUSFÜLLEN]
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
-- (noch leer)
+- Untertitel und Text im Owner-Content sind gelb.

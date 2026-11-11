@@ -15,7 +15,7 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 ## Untertitel-Stil
 - Font: siehe `lavish-brand`
 - Größe: [AUSFÜLLEN]
-- Farbe / Rand / Schatten: [AUSFÜLLEN]
+- Farbe: **Gelb** (Hex siehe `lavish-brand`). Rand/Schatten: [AUSFÜLLEN – vermutlich schwarzer Rand für Lesbarkeit]
 - Position: [AUSFÜLLEN – z. B. mittleres Drittel, nicht ganz unten wegen App-UI]
 - Wörter pro Einblendung: [AUSFÜLLEN – z. B. 1–3]
 - Hervorhebung von Schlüsselwörtern: [AUSFÜLLEN – z. B. Akzentfarbe]
