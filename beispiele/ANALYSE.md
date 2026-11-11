@@ -47,3 +47,10 @@ Die Videos selbst liegen nicht im Repo (zu groß).
 - Wie haben die beiden eigenen Videos performt (Views, Ø Wiedergabedauer)?
 - Ist „LAVISH 24“ als Kollektionsname in der Überschrift okay?
 - Welche Elemente der Referenz will der Owner konkret übernehmen?
+
+## Test v1: „Neue Website“ neu geschnitten (Nov. 2026)
+- 46 s → 41,8 s (Pausen raus), 22 Einstellungen mit Zoom-Wechseln (1.0 / 1.12 / 1.18 / 1.22 / 1.25)
+- Neue Hook-Überschrift „NEUE WEBSITE?“ hinter dem Owner, Buchstaben-Pop
+- Alte eingebrannte Texte per Inpainting entfernt; bei starken Zooms bleiben leichte Reste (nur bei bereits bearbeitetem Material)
+- Untertitel neu: Gelb, Bebas Neue, Schatten, korrigierte Hörfehler („mit Laval“ → „mittlerweile“, „wake up“ → „Swag haben“)
+- Feedback des Owners: [AUSSTEHEND]

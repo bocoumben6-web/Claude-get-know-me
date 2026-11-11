@@ -15,7 +15,9 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 ## Untertitel-Stil
 - Font: **Bebas Neue** (`assets/fonts/BebasNeue-Regular.ttf`)
 - Größe: klein, ca. 2,4 % der Bildhöhe (bei 1920 px Höhe ca. 46 px)
-- Farbe: **Gelb #F0CC38**, dünne dunkle Kontur (2–3 px) oder leichter Schatten
+- Farbe: **Gelb #F0CC38**, **keine Kontur**, sondern **dunkler Schlagschatten nach rechts unten** (wie im Original)
+- ASS-Style (PlayRes 1080x1920): `Style: Sub,Bebas Neue,54,&H0038CCF0,&H0038CCF0,&H00000000,&H59000000,0,0,0,0,100,100,0.5,0,1,0,3,8,170,170,0,1`, Position `{\an8\pos(540,1186)}`
+- Satzzeichen weglassen (das Original hat keine)
 - Hook-Überschrift: **#FCF0E4**, fette breite Schrift (NICHT Bebas Neue, Name noch offen), ca. 10 % der Bildhöhe pro Zeile, oberes Drittel, Pop-Animation, **hinter dem Owner** (Freistellung nötig)
 - Position: [AUSFÜLLEN] – auf jeden Fall in der **TikTok-Safe-Zone**: oben
   ca. 15 % frei, unten ca. 25 % frei (Caption/Buttons), rechts ca. 15 % frei
@@ -64,5 +66,16 @@ Die Cloud-Umgebung „Claude-get-know-me (Lavish Video)“ installiert beim Star
 - Referenzen: `beispiele/`
 - Fertige Videos nicht ins Git committen (zu groß) – nur auf Wunsch.
 
+## Vorlage-Skripte (aus Test v1 „Neue Website“)
+`tools/vorlage-owner-video/` enthält die getesteten Skripte (Pfade darin anpassen):
+- `clean.py`: entfernt eingebrannte alte Untertitel/Überschrift per Inpainting (nur nötig, wenn das Material schon Text hat)
+- `hook.py`: Hook-Überschrift mit Buchstaben-Pop **hinter dem Owner** (MediaPipe-Maske)
+- `build.py`: Untertitel-Chunks (korrigierter Text), Jump Cuts (Pausen > 0,35 s raus), Zoom pro Chunk, ASS-Datei
+
+Ablauf: Transkript → Text korrigieren → `build.py` → `ffmpeg -filter_complex_script graph.txt` → Untertitel einbrennen + `loudnorm` → Export.
+Zoom-Anker: vertikal so, dass das Untertitelband an derselben Stelle bleibt (`y = 0.64·H·(1−1/z)`).
+
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
-- (noch leer)
+- Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25. Etwa alle 1–2 Sätze wechseln.
+- Hook-Überschrift: bis der echte Font bekannt ist, Platzhalter **Rubik Black, horizontal auf 80 % gestaucht**.
+- Videos immer prüfen: Schnittstellen anhören (keine abgeschnittenen Wörter), Frames bei jedem Zoom ansehen.

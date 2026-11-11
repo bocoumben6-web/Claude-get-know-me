@@ -1,0 +1,34 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Bebas Neue,54,&H0038CCF0,&H0038CCF0,&H00000000,&H59000000,0,0,0,0,100,100,0.5,0,1,0,3,8,170,170,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.26,Sub,,0,0,0,,{\an8\pos(540,1186)}WARUM WIRD DIE WEBSITE ÜBERHAUPT NEU GEMACHT
+Dialogue: 0,0:00:02.23,0:00:03.24,Sub,,0,0,0,,{\an8\pos(540,1186)}GANZ EINFACH
+Dialogue: 0,0:00:03.31,0:00:04.68,Sub,,0,0,0,,{\an8\pos(540,1186)}LAVISH IST GRÖSSER GEWORDEN
+Dialogue: 0,0:00:04.65,0:00:06.68,Sub,,0,0,0,,{\an8\pos(540,1186)}LAVISH HAT 1 ANDERES LEVEL MITTLERWEILE
+Dialogue: 0,0:00:06.75,0:00:09.36,Sub,,0,0,0,,{\an8\pos(540,1186)}DEMENTSPRECHEND MUSS DIE WEBSITE NATÜRLICH AUCH SO AUSSEHEN
+Dialogue: 0,0:00:09.33,0:00:10.66,Sub,,0,0,0,,{\an8\pos(540,1186)}SIE MUSS FIRE SEIN
+Dialogue: 0,0:00:10.63,0:00:13.08,Sub,,0,0,0,,{\an8\pos(540,1186)}GENAUSO WIE MEINE PIECES GENAUSO WIE ICH ES BIN
+Dialogue: 0,0:00:13.05,0:00:14.94,Sub,,0,0,0,,{\an8\pos(540,1186)}GENAUSO WIE DIE LEUTE DIE LAVISH ROCKEN
+Dialogue: 0,0:00:14.91,0:00:16.52,Sub,,0,0,0,,{\an8\pos(540,1186)}VERSTEHST DU SIE MUSS SWAG HABEN
+Dialogue: 0,0:00:16.59,0:00:18.58,Sub,,0,0,0,,{\an8\pos(540,1186)}ICH WEISS NOCH BACK IN THE DAYS
+Dialogue: 0,0:00:18.55,0:00:20.46,Sub,,0,0,0,,{\an8\pos(540,1186)}ALS ICH DIE WEBSITE GANZ ALLEINE GEMACHT HAB
+Dialogue: 0,0:00:20.43,0:00:22.18,Sub,,0,0,0,,{\an8\pos(540,1186)}UND ICH HAB ÜBERHAUPT GAR KEINE AHNUNG
+Dialogue: 0,0:00:22.15,0:00:23.52,Sub,,0,0,0,,{\an8\pos(540,1186)}VON DIESEM E-COMMERCE GEHABT
+Dialogue: 0,0:00:23.59,0:00:25.28,Sub,,0,0,0,,{\an8\pos(540,1186)}UND ICH HAB MEIN BESTES VERSUCHT
+Dialogue: 0,0:00:25.35,0:00:26.86,Sub,,0,0,0,,{\an8\pos(540,1186)}UND ICH HAB AUCH SALES DADURCH GENERIERT
+Dialogue: 0,0:00:26.83,0:00:30.14,Sub,,0,0,0,,{\an8\pos(540,1186)}ABER WIR WOLLEN NE STÄNDIGE STEIGERUNG WISST IHR
+Dialogue: 0,0:00:30.21,0:00:31.34,Sub,,0,0,0,,{\an8\pos(540,1186)}WEIL AM ENDE DES TAGES
+Dialogue: 0,0:00:31.31,0:00:32.64,Sub,,0,0,0,,{\an8\pos(540,1186)}WENN WIR LAVISH ERLEBEN WOLLEN
+Dialogue: 0,0:00:32.71,0:00:34.78,Sub,,0,0,0,,{\an8\pos(540,1186)}MÜSSEN WIR BIS NACH GANZ NACH OBEN
+Dialogue: 0,0:00:34.85,0:00:37.32,Sub,,0,0,0,,{\an8\pos(540,1186)}JA MANN DESWEGEN SEID GESPANNT
+Dialogue: 0,0:00:37.39,0:00:38.12,Sub,,0,0,0,,{\an8\pos(540,1186)}ICH FREU MICH
+Dialogue: 0,0:00:38.09,0:00:41.68,Sub,,0,0,0,,{\an8\pos(540,1186)}UND DANKE FÜR JEDEN DER MICH BIS JETZT SUPPORTET HAT
