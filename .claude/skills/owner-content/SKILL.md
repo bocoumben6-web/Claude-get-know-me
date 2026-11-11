@@ -22,7 +22,7 @@ Analysierte Referenzen: `beispiele/ANALYSE.md`.
 1. Start **nah an der Kamera / angeschnitten**, dann geht der Owner zurück in die Totale.
 2. **Überschrift** poppt Buchstabe für Buchstabe auf (Typewriter- bzw. Pop-Animation):
    - **Weiß-Beige #FCF0E4**, sehr fett, breit, leicht abgerundete Buchstaben.
-     **Nicht Bebas Neue!** Genaue Schriftart beim Owner erfragen [AUSFÜLLEN].
+     **Nicht Bebas Neue!** Laut Owner heißt sie in CapCut **„Co Moderno“** (Schreibweise unbestätigt, Fontdatei fehlt noch).
      Groß, 1–2 Zeilen, zentriert im oberen Drittel (ca. 15–30 % von oben)
    - **Text steht HINTER dem Owner** (Tiefeneffekt: Kopf bzw. Kapuze verdeckt
      die Buchstaben). Dafür den Owner freistellen (Segmentierung) und über den Text legen.

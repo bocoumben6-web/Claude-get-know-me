@@ -18,7 +18,7 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 - Farbe: **Gelb #F0CC38**, **keine Kontur**, sondern **dunkler Schlagschatten nach rechts unten** (wie im Original)
 - ASS-Style (PlayRes 1080x1920): `Style: Sub,Bebas Neue,54,&H0038CCF0,&H0038CCF0,&H00000000,&H59000000,0,0,0,0,100,100,0.5,0,1,0,3,8,170,170,0,1`, Position `{\an8\pos(540,1186)}`
 - Satzzeichen weglassen (das Original hat keine)
-- Hook-Überschrift: **#FCF0E4**, fette breite Schrift (NICHT Bebas Neue, Name noch offen), ca. 10 % der Bildhöhe pro Zeile, oberes Drittel, Pop-Animation, **hinter dem Owner** (Freistellung nötig)
+- Hook-Überschrift: **#FCF0E4**, fette breite Schrift (NICHT Bebas Neue; laut Owner „Co Moderno“ aus CapCut, Datei fehlt noch), ca. 10 % der Bildhöhe pro Zeile, oberes Drittel, Pop-Animation, **hinter dem Owner** (Freistellung nötig)
 - Position: [AUSFÜLLEN] – auf jeden Fall in der **TikTok-Safe-Zone**: oben
   ca. 15 % frei, unten ca. 25 % frei (Caption/Buttons), rechts ca. 15 % frei
   (Like-/Kommentar-Leiste). Das passt dann auch für die Instagram Story.
@@ -77,5 +77,5 @@ Zoom-Anker: vertikal so, dass das Untertitelband an derselben Stelle bleibt (`y 
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25. Etwa alle 1–2 Sätze wechseln.
-- Hook-Überschrift: bis der echte Font bekannt ist, Platzhalter **Rubik Black, horizontal auf 80 % gestaucht**.
+- Hook-Überschrift: bis die Fontdatei von „Co Moderno“ vorliegt, Platzhalter **Rubik Black, horizontal auf 80 % gestaucht**.
 - Videos immer prüfen: Schnittstellen anhören (keine abgeschnittenen Wörter), Frames bei jedem Zoom ansehen.

@@ -69,7 +69,7 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 - **Überschrift (Hook-Titel am Anfang): Weiß-Beige #FCF0E4**, aus den Videos gemessen. Beibehalten!
 - Schriftart Untertitel: **Bebas Neue** (nur Großbuchstaben). Fontdatei: `assets/fonts/BebasNeue-Regular.ttf`.
 - Schriftart Hook-Überschrift: fette, breite Schrift mit leicht runden Ecken,
-  **nicht** Bebas Neue. [AUSFÜLLEN: Name der Schrift aus CapCut]
+  **nicht** Bebas Neue. Laut Owner heißt sie in CapCut **„Co Moderno“** (Schreibweise unbestätigt). Fontdatei fehlt noch: frei nicht auffindbar, Datei oder Screenshot vom Owner nötig.
 - TikTok-Account: **@live.life.lavish**
 - Logo: `assets/logo.png`. Wann einblenden? [AUSFÜLLEN]
 
