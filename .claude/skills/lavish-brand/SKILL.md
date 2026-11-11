@@ -88,7 +88,10 @@ Kernsatz: **STREET CULTURE. CHARACTER. IDENTITY. ATTITUDE.** Im Zweifel Authenti
     `assets/logo-schwarz.png`; Original vom Owner: `assets/logo-original.png`
   - Einsatz: **zurückhaltend** (Guidelines: Logos nicht aufdrängen). Passend z. B. klein als Stempel/Sticker,
     als Schlussbild oder als Textur. Nie als Dauer-Wasserzeichen, nie groß über dem Owner.
-  - Wann genau einblenden? [AUSFÜLLEN – Owner fragen]
+  - **FESTE REGEL (Owner): Am Ende JEDES Videos kommt das Lavish-Logo (das L). Immer.**
+    Gilt für Owner-Content und Lavish-Content. Als Schlussbild nach dem letzten Satz (ca. 1–1,5 s),
+    im Lavish-Look (hart geschnitten, Korn, keine weiche Blende, kein Glanz-Effekt).
+    Genaue Gestaltung (Hintergrund schwarz oder über dem letzten Bild, Größe, Dauer): [mit dem Owner am ersten Video abstimmen]
   - Das Logo zeigt die Formensprache der Brand: rau, handgemacht, nicht geometrisch-clean. Grafiken daran ausrichten.
 
 ## Ton & Sprache
@@ -112,4 +115,5 @@ Kernsatz: **STREET CULTURE. CHARACTER. IDENTITY. ATTITUDE.** Im Zweifel Authenti
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Untertitel und Text im Owner-Content sind gelb (warm, leicht orange, siehe oben).
 - Kein großer „LAVISH“-Schriftzug in Owner-Videos.
+- **Jedes Video endet mit dem Lavish-Logo (L).** Ohne Ausnahme.
 - „Pajel“ immer mit j schreiben.

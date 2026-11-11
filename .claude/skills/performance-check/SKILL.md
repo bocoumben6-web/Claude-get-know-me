@@ -11,6 +11,7 @@ description: Checkliste vor dem Export, damit Lavish- und Owner-Videos performen
 - [ ] Untertitel lesbar und nicht von App-UI verdeckt (oben ~15 %, unten ~20 % freihalten)
 - [ ] Länge passt zum Format (Owner: [AUSFÜLLEN] Sek., Lavish: [AUSFÜLLEN] Sek.)
 - [ ] Ende: Loop oder klarer CTA (je nach Skill)
+- [ ] **Lavish-Logo (L) am Ende vorhanden** (Pflicht bei jedem Video)
 - [ ] Stil-Regeln aus `lavish-brand` eingehalten (keine No-Gos)
 - [ ] Caption + Hashtags vorgeschlagen
 - [ ] Ton: Stimme klar, Musik nicht zu laut, Lautheit normalisiert

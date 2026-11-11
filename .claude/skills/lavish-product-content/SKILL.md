@@ -33,6 +33,9 @@ Texturen gezielt: 35mm-Korn, Blitzlicht-Fotos (kein VHS), Fotokopie-/Magazin-Loo
 - Gesamtlänge: [AUSFÜLLEN – z. B. 7–15 Sek. für Loop]
 - Loop (Ende geht nahtlos in Anfang über): [AUSFÜLLEN]
 
+## Ende
+- **Immer das Lavish-Logo (L) als Schlussbild** (`assets/logo.png`, Regel siehe `lavish-brand`).
+
 ## Text im Video
 - Text-Overlays: [AUSFÜLLEN – z. B. nur Produktname + Preis, nur „Drop am …“, gar kein Text]
 - Font/Position: siehe `lavish-brand`

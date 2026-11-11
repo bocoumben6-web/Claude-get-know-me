@@ -161,6 +161,7 @@ Stattdessen, damit es **handgemacht** wirkt:
 ## Ende / Call-to-Action
 - Locker und persönlich: Dank an die Community, „wir sehen uns beim nächsten …“
 - Kein harter Verkaufs-CTA.
+- **Ganz am Schluss immer das Lavish-Logo (L)** als Schlussbild (`assets/logo.png`, Regel siehe `lavish-brand`).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Überschrift am Anfang in Weiß-Beige (fette, breite Schrift, hinter dem Owner), Untertitel in Gelb (Bebas Neue).
