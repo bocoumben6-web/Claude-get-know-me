@@ -40,6 +40,25 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 8. **Export** + kurze Vorschau-Frames dem Owner zeigen.
 9. Feedback des Owners als Regel in den passenden Skill schreiben.
 
+## Werkzeuge (getestet, Nov. 2026)
+Die Cloud-Umgebung „Claude-get-know-me (Lavish Video)“ installiert beim Start
+`faster-whisper`, `mediapipe` sowie `libegl1`/`libgles2`. Fehlt etwas, die Befehle von Hand ausführen.
+
+**Transkript (Whisper):**
+- Modell `small`, `device="cpu"`, `compute_type="int8"`, `language="de"`, `word_timestamps=True`
+- `initial_prompt="Lavish, Pajel, Tom Bischof, Benno"`, damit Namen richtig geschrieben werden
+- Bekannter Fehler: `av.open() ... metadata_errors`. Lösung: Audio vorher mit
+  ffmpeg in Raw umwandeln (`-f f32le -ac 1 -ar 16000`) und als numpy-Array übergeben.
+- Transkript danach **immer manuell prüfen** (z. B. „feier“ statt „fire“) und Namen korrigieren.
+
+**Freistellung (Text hinter dem Owner):**
+- MediaPipe `ImageSegmenter` mit Modell `selfie_multiclass_256x256.tflite`
+  (storage.googleapis.com/mediapipe-models/image_segmenter/selfie_multiclass_256x256/float32/latest/)
+- Maske = 1 − Hintergrund-Konfidenz, leicht weichzeichnen (Blur ca. 1,5 px)
+- Reihenfolge: Bild → Titeltext → Owner (Maske) darüber → Untertitel ganz oben
+- Fürs Video pro Frame segmentieren (nur für die ca. 2,5 Sek. des Hook-Titels nötig)
+- Eine `TypeError` beim Beenden von MediaPipe ist harmlos; die Ausgabe wird trotzdem gespeichert.
+
 ## Ordner
 - Logo/Fonts: `assets/`
 - Referenzen: `beispiele/`
