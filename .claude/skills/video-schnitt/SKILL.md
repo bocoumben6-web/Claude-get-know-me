@@ -100,6 +100,6 @@ Zoom-Anker: vertikal so, dass das Untertitelband an derselben Stelle bleibt (`y 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25.
   **Laut Guidelines sparsam:** nur bei echten Kernaussagen (Richtwert 4–6 Wechsel pro 40 s, nicht bei jedem Satz).
-  Test v1/v2 hatten 22 Wechsel. **Menge noch offen**, wird am Referenzvideo des Owners festgelegt (siehe Hinweis in `LAVISH-GUIDELINES.md`).
+  Test v1/v2 hatten 22 Wechsel. **Festgelegt:** ruhiger Schnitt wie in Referenz 3, Zooms nur bei Kernaussagen (ca. 4–8 pro Video); das Tempo kommt von den Einblendungen (siehe `owner-content`, „Grafik-Sprache“).
 - Hook-Überschrift: bis die Fontdatei von „Co Moderno“ vorliegt, Platzhalter **Rubik Black, horizontal auf 80 % gestaucht**.
 - Videos immer prüfen: Schnittstellen anhören (keine abgeschnittenen Wörter), Frames bei jedem Zoom ansehen.

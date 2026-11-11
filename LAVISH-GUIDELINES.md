@@ -10,7 +10,8 @@
 > (Effekte, Grafiken, Text). Die Stellen „sparingly / avoid unnecessary motion graphics / excessive zoom"
 > sind deshalb **nicht als Verbot** zu lesen. Wie viel genau, zeigt das Referenzvideo, das der Owner
 > noch schickt: **Guidelines (Identität) + Referenzvideo (Umsetzung) zusammen ergeben den Stil.**
-> Bis dahin: Effekte sind erlaubt, solange sie nach Lavish aussehen und nicht nach generischem Influencer-Reel.
+> **Referenzvideo ist da (villainworldd, Nov. 2026):** Menge und Timing der Einblendungen wie dort, Aussehen nach
+> diesen Guidelines. Die Übersetzung steht im Skill `owner-content`, Abschnitt „Grafik-Sprache“.
 
 ## 01. BRAND IDENTITY
 

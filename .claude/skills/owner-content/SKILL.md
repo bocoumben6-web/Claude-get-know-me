@@ -64,9 +64,7 @@ Nicht erlaubt (passt nicht zu Lavish):
 ## Wörter verdeutlichen (Owner-Wunsch, inspiriert von der Referenz None of Us)
 Der Owner will, dass wichtige Wörter **zusätzlich betont** werden, mit Text-Grafiken statt Bildern.
 **Aber:** Laut `LAVISH-GUIDELINES.md` Typografie **sparsam** und editorial einsetzen (Underground-Magazin,
-Musik-Editorial, Streetwear-Kampagne), keine unnötigen Motion Graphics. Richtwert vorläufig: **2–4 große Callouts
-pro Video** – **noch offen**: Der Owner sagt, Lavish hat eigentlich mehr „Schnickschnack“. Die genaue Menge
-wird am Referenzvideo festgelegt, das der Owner noch schickt. Kleine Textelemente sind okay, wenn sie Kontext geben.
+Musik-Editorial, Streetwear-Kampagne), keine unnötigen Motion Graphics. Menge: siehe Abschnitt „Grafik-Sprache“ (alle 3–5 s ein Element, große Wort-Callouts sind eine von mehreren Arten). Kleine Textelemente sind okay, wenn sie Kontext geben.
 Drei Mittel, alle im Lavish-Look (Beige #FCF0E4, Gelb #F0CC38, keine anderen Farben):
 1. **Keyword im Untertitel:** Das Schlüsselwort ist **beige statt gelb** und poppt kurz auf
    (135 % → 112 %). Etwa 1 Keyword pro Satz, nur bei echten Kernwörtern
@@ -84,6 +82,36 @@ Zusätzlich:
 - Sounds: **nicht** bei jedem Callout. Guidelines: keine gehäuften Whooshes. Höchstens 2–3 pro Video oder ganz weglassen;
   lieber den echten Umgebungston stehen lassen.
 Skript: `tools/vorlage-owner-video/graphics.py`.
+
+## Grafik-Sprache: Referenz-Menge + Lavish-Look (verbindlich, Nov. 2026)
+**Formel des Owners: Brand-Identität (`LAVISH-GUIDELINES.md`) + Umsetzung wie in Referenz 3
+(villainworldd, siehe `beispiele/ANALYSE.md`).** Also: so viel und so genau getimt wie die Referenz,
+aber im Aussehen 100 % Lavish.
+
+**Menge und Timing (aus der Referenz):**
+- Ungefähr **alle 3–5 Sekunden ein Element**, immer exakt auf das Wort, das gerade gesagt wird
+- **Jede harte Info wird gezeigt:** Datum/Uhrzeit, Preis, Produkt, Ort, Name, Zahl, Liste
+- **Hook in 3 s:** Was? Wie viel? Wann? (Titel + 1–2 Elemente direkt hintereinander)
+- **Ruhiger Schnitt**, die Einblendungen machen das Tempo. Zooms nur bei Kernaussagen.
+- **Ein kurzer schneller Block** (3–5 s) mit B-Roll oder Fotos, wenn Pieces/Outfits erwähnt werden
+- **Erinnerung am Ende:** die wichtigste Info (Datum, Drop, Ort) kommt noch einmal
+- Einzelne Wörter dürfen kurz **riesig** werden (1 Wort, unter 1 s)
+- Elemente stehen 1,5–4 s, oben oder seitlich, **Gesicht bleibt frei**
+
+**Aussehen (aus den Guidelines, statt der cleanen App-Karten der Referenz):**
+| Referenz zeigt | Lavish-Version |
+|---|---|
+| Glas-Karte mit Datum | Datum wie ein **Flyer-/Ticket-Abriss oder Stempel**: Bebas Neue, Beige/Gelb auf dunkel, leicht schief, Papier- oder Fotokopie-Textur |
+| Poster-Liste | **Fotokopierter Aushang / Magazinseite**, Schwarz-Weiß mit Gelb als Akzent, sichtbares Korn |
+| Freigestellte Produktfotos | Pieces als **Blitzlicht-Foto** (harter Schatten, dunkler Hintergrund) oder freigestellt mit rauem Rand, kein sauberes Shop-Bild |
+| Gutschein-/Pass-Karten | **Sticker, Klebeband-Label, Preisschild** im Street-Look |
+| Handy-Mockup, Benachrichtigung | Screenshot roh und leicht gedreht, wie ein abfotografiertes Display, dezentes Korn |
+| Weiße Wort-Untertitel | bleibt Lavish: **Gelb #F0CC38, Bebas Neue**, Schlüsselwörter beige |
+| B-Roll clean | **VHS-/MiniDV- oder 35mm-Look**, Handkamera, Parkgarage, Dach, U-Bahn |
+- Farben: nur Gelb #F0CC38, Beige #FCF0E4, Schwarz, Papierweiß. Keine bunten App-Farben.
+- Alles darf leicht unperfekt sein (schief, Korn, Kanten), aber bewusst gesetzt.
+- Bilder und Fotos liefert der Owner; fehlen sie, mit Text-Elementen arbeiten und gezielt nachfragen.
+- Offen: Untertitel bleiben vorerst in Satzteilen. Ob Wort-für-Wort wie in der Referenz gewünscht ist: Owner fragen.
 
 ## Visuelle Extras
 - **PNG-Cutouts** (freigestellt) neben dem Owner, wenn darüber geredet wird:

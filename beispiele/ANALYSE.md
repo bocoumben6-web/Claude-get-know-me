@@ -59,3 +59,23 @@ Die Videos selbst liegen nicht im Repo (zu groß).
 - 7 große Callouts (GRÖSSER, ANDERES LEVEL, FIRE, SWAG, BACK IN THE DAYS, GANZ NACH OBEN, SEID GESPANNT)
 - Checkliste mit 4 Punkten, Rückblende-Look, Keywords im Untertitel beige, 12 dezente Whooshes
 - Feedback des Owners: [AUSSTEHEND]
+
+## Referenz 3: villainworldd („1 € Vault Drop“-Ankündigung) – Maßstab für die Menge an „Schnickschnack“
+Vom Owner als Umsetzungs-Referenz geschickt (Nov. 2026). Gilt zusammen mit `LAVISH-GUIDELINES.md`.
+
+| Merkmal | Beobachtung |
+|---|---|
+| Länge | 65 s, zwei Personen reden abwechselnd, ein Raum (Garage mit Auto) |
+| Schnitte | nur ca. 17 in 65 s. Lange, ruhige Einstellungen; **die Grafiken machen das Tempo, nicht der Schnitt** |
+| Tempo-Wechsel | am Ende (ca. 54–58 s) kurzer schneller Block mit B-Roll (Outfits draußen, Jacke), dann zurück zur Totale |
+| Untertitel | weiß, Sans-Serif, **ein Wort pro Einblendung**, mittig; einzelne Wörter kurz **riesig** (z. B. „Zeit“) |
+| Hook (0–3 s) | Logo oben → animierte Münze dreht sich rein → „1 €“ groß → Datums-Karte. In 3 s ist klar: was, wie viel, wann |
+| Grafik-Dichte | ungefähr **alle 3–5 s ein neues Element**, immer genau zu dem Wort, das gerade fällt |
+| Grafik-Arten | Datum/Uhrzeit-Karte, Preis groß, Liste aller Gewinne als Poster, freigestellte Produktfotos, Gutschein-Karten (100 €, 50 €), „Ticket“-Karte (DU → Marke), Pass-Karte, Benachrichtigung, Handy-Mockup der Website, Passwort-Feld |
+| Platzierung | Grafiken oben oder seitlich neben den Personen, Gesichter bleiben frei; Elemente poppen rein und verschwinden nach 1,5–4 s |
+| Ende | Datums-Karte kommt noch einmal (Erinnerung), dann TikTok-Endscreen |
+| Ton | -22 LUFS, Stimme im Vordergrund |
+
+**Was wir übernehmen (Prinzip):** jede wichtige Info bekommt ein Bild oder eine Karte; Datum/Preis/Produkt werden gezeigt, nicht nur gesagt; Hook erklärt das Angebot in 3 s; Erinnerung am Ende; ruhiger Schnitt + viele Einblendungen; kurzer B-Roll-Block.
+
+**Was wir NICHT übernehmen (Optik):** die cleanen Glas-/App-Karten, weiße Sans-Serif-Untertitel, die polierte Showroom-Optik. Das wäre nicht Lavish.
