@@ -38,36 +38,52 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 - Ideen für Content: Kunden und Fans zeigen, Fan-Fotos reposten, Recaps von Pop-ups, Q&A mit der Community.
 
 ## Social Proof: Bekannte Personen, die Lavish getragen haben
-- **Pagel**, Rapper (DE) [Schreibweise vom Owner bestätigen lassen]
-- **Tom Bischof**, Fußballspieler beim FC Bayern [Schreibweise vom Owner bestätigen lassen]
+- **Pajel**, Rapper (DE). Schreibweise mit „j“, nicht „Pagel“!
+- **Tom Bischof**, Fußballspieler beim FC Bayern (Schreibweise bestätigt)
 - **Benno**, Rapper [Schreibweise vom Owner bestätigen lassen]
 - Weitere: [AUSFÜLLEN]
 - Einsatz: Solche Clips oder Fotos sind sehr starke Hooks („Das trägt …“). Nur
   Material verwenden, das der Owner freigegeben hat bzw. verwenden darf.
 
 ## Zielgruppe
-- Alter: [AUSFÜLLEN]
-- Geschlecht: [AUSFÜLLEN]
-- Land/Sprache: [AUSFÜLLEN – vermutlich Deutschland, Deutsch]
-- Interessen: Streetwear, Deutschrap, Fußball [Vom Owner bestätigen lassen]
+- Alter: **18–30**
+- Geschlecht: **gemischt, Männer und Frauen**. Die Pieces sind **Unisex**, also
+  im Content beide Geschlechter zeigen und neutral ansprechen.
+- Typ: **modeinteressierte** Leute, die auf Streetwear und Styling achten
+- Land/Sprache: Deutschland, Deutsch
+- Interessen: Streetwear, Mode, Deutschrap, Fußball [Rap/Fußball vom Owner bestätigen lassen]
+
+## Plattformen
+- **TikTok = Hauptplattform.** Alle Videos werden zuerst für TikTok gebaut (9:16, TikTok-Safe-Zones).
+- **Instagram Story:** Die TikTok-Videos werden zusätzlich in die Story gepostet.
+  Darauf achten, dass Text nicht von der Story-UI verdeckt wird (oben und unten Platz lassen).
+- **Instagram Post / Feed:** nur für **größere Kampagnen und Fotoshoots**,
+  also hochwertiger und kuratierter als der TikTok-Alltag, aber trotzdem im rohen Look.
 
 ## Visuelle Identität
 - **Schriftfarbe für Untertitel und Text: Gelb** (passt zur Straßenästhetik). Wird schon seit Längerem so verwendet.
-  - Genauer Farbton (Hex): [AUSFÜLLEN – z. B. #FFE600]
+  - Farbton: **warmes Gelb mit leichtem Stich ins Orange.** Nicht zu grell
+    (kein Neon-Gelb), nicht zu dunkel (kein Senf/Ocker), und nicht zu orange.
+  - Startwert: **#FFC21A** (Alternativen zum Vergleichen: #FFCC33 heller, #FFB81C wärmer).
+    [Mit Screenshot aus einem alten Video abgleichen und dann fixieren]
 - Weitere Farben: [AUSFÜLLEN]
 - Schriftart Überschriften: [AUSFÜLLEN] → Datei in `assets/fonts/`
 - Schriftart Untertitel: [AUSFÜLLEN] → Datei in `assets/fonts/`
 - Logo: `assets/logo.png`. Wann einblenden? [AUSFÜLLEN]
 
 ## Ton & Sprache
-- Sprache: [AUSFÜLLEN – Deutsch / Englisch / Mix]
+- Sprache: **Deutsch.** Die Videos werden immer auf Deutsch gesprochen, Untertitel also auf Deutsch.
 - Stil: direkt, Straße, echt, nah an der Community
 - Typische Wörter/Phrasen: [AUSFÜLLEN]
 - Emojis in Captions: [AUSFÜLLEN]
 
 ## No-Gos
 - Zu cleaner, steriler Werbe-Look, der nicht zur rohen Ästhetik passt
+- **Kein „LAVISH“ als große Überschrift oder Titel-Einblendung** in Videos, in
+  denen der Owner redet. Die Brand wirkt durch Inhalt und Pieces, nicht durch ein Logo-Banner.
 - [AUSFÜLLEN]
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
-- Untertitel und Text im Owner-Content sind gelb.
+- Untertitel und Text im Owner-Content sind gelb (warm, leicht orange, siehe oben).
+- Kein großer „LAVISH“-Schriftzug in Owner-Videos.
+- „Pajel“ immer mit j schreiben.

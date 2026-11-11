@@ -16,7 +16,9 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 - Font: siehe `lavish-brand`
 - Größe: [AUSFÜLLEN]
 - Farbe: **Gelb** (Hex siehe `lavish-brand`). Rand/Schatten: [AUSFÜLLEN – vermutlich schwarzer Rand für Lesbarkeit]
-- Position: [AUSFÜLLEN – z. B. mittleres Drittel, nicht ganz unten wegen App-UI]
+- Position: [AUSFÜLLEN] – auf jeden Fall in der **TikTok-Safe-Zone**: oben
+  ca. 15 % frei, unten ca. 25 % frei (Caption/Buttons), rechts ca. 15 % frei
+  (Like-/Kommentar-Leiste). Das passt dann auch für die Instagram Story.
 - Wörter pro Einblendung: [AUSFÜLLEN – z. B. 1–3]
 - Hervorhebung von Schlüsselwörtern: [AUSFÜLLEN – z. B. Akzentfarbe]
 - Großbuchstaben: [AUSFÜLLEN]
