@@ -53,4 +53,9 @@ Die Videos selbst liegen nicht im Repo (zu groß).
 - Neue Hook-Überschrift „NEUE WEBSITE?“ hinter dem Owner, Buchstaben-Pop
 - Alte eingebrannte Texte per Inpainting entfernt; bei starken Zooms bleiben leichte Reste (nur bei bereits bearbeitetem Material)
 - Untertitel neu: Gelb, Bebas Neue, Schatten, korrigierte Hörfehler („mit Laval“ → „mittlerweile“, „wake up“ → „Swag haben“)
+- Feedback des Owners: Editing gefällt; mehr Wörter verdeutlichen mit Text-Grafiken wie bei None of Us.
+
+## Test v2: „Neue Website“ mit Text-Grafiken
+- 7 große Callouts (GRÖSSER, ANDERES LEVEL, FIRE, SWAG, BACK IN THE DAYS, GANZ NACH OBEN, SEID GESPANNT)
+- Checkliste mit 4 Punkten, Rückblende-Look, Keywords im Untertitel beige, 12 dezente Whooshes
 - Feedback des Owners: [AUSSTEHEND]

@@ -61,6 +61,25 @@ Nicht erlaubt (passt nicht zu Lavish):
 - Zu viele Effekte auf einmal, und Effekte ohne Grund
 - Andere Schriften oder Farben als im Brand-Skill festgelegt
 
+## Wörter verdeutlichen (Owner-Wunsch, inspiriert von der Referenz None of Us)
+Der Owner will, dass wichtige Wörter **zusätzlich betont** werden, mit Text-Grafiken statt Bildern.
+Drei Mittel, alle im Lavish-Look (Beige #FCF0E4, Gelb #F0CC38, keine anderen Farben):
+1. **Keyword im Untertitel:** Das Schlüsselwort ist **beige statt gelb** und poppt kurz auf
+   (135 % → 112 %). Etwa 1 Keyword pro Satz, nur bei echten Kernwörtern
+   (z. B. GRÖSSER, FIRE, SWAG, SALES, GANZ NACH OBEN).
+2. **Große Text-Callouts:** 1–2 Wörter groß in Beige im oberen Drittel, Pop-in und kurzes Ausblenden,
+   ca. 0,8–1,5 s lang, ungefähr alle 4–6 s. Standardmäßig **hinter dem Owner** (Tiefeneffekt).
+   **Regel:** Wenn der Kopf mehr als 25 % des Textes verdeckt, kommt der Text **vor** den Owner.
+   Text darf nie aus dem Bild ragen (max. ca. 940 px breit).
+3. **Checkliste / Aufzählung**, wenn der Owner mehrere Punkte nacheinander erzählt
+   (z. B. ✗ KEINE AHNUNG → ✓ BESTES VERSUCHT → ✓ SALES GENERIERT → ↑ STEIGERUNG):
+   gelbe Kreis-Icons, Bebas Neue in Beige, links oben, Punkte erscheinen genau, wenn sie gesagt werden.
+   Liste liegt **vor** dem Owner, die Punkte sind kurz (max. 2–3 Wörter).
+Zusätzlich:
+- **Rückblende-Look** bei „back in the days“ / Vergangenheit: kurz Schwarz-Weiß, mehr Kontrast, Korn, Vignette.
+- **Dezenter Whoosh** (leises Rauschen) bei jedem Callout bzw. Listenpunkt, deutlich leiser als die Stimme.
+Skript: `tools/vorlage-owner-video/graphics.py`.
+
 ## Visuelle Extras
 - **PNG-Cutouts** (freigestellt) neben dem Owner, wenn darüber geredet wird:
   - Pieces/Shirts, die erwähnt werden (z. B. zwei Shirts links und rechts)
@@ -85,5 +104,6 @@ Nicht erlaubt (passt nicht zu Lavish):
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Überschrift am Anfang in Weiß-Beige (fette, breite Schrift, hinter dem Owner), Untertitel in Gelb (Bebas Neue).
+- Test v1 (nur Schnitt + Zooms) gefiel dem Owner. Gewünscht: mehr Betonung von Wörtern mit Text-Grafiken wie bei None of Us (umgesetzt in v2).
 - Auto-Untertitel (CapCut/Whisper) schreiben „Lavish“ oft falsch, z. B. als „Lewis“.
   **Immer zu „Lavish“ korrigieren.** Namen wie Pajel, Tom Bischof, Benno ebenfalls prüfen.
