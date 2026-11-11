@@ -12,6 +12,28 @@ description: Technischer Schnitt-Workflow mit ffmpeg für Lavish- und Owner-Vide
 - Lautheit: ca. -14 LUFS (`loudnorm=I=-14:TP=-1.5:LRA=11`)
 - Dateiname: [AUSFÜLLEN – z. B. `JJJJ-MM-TT_typ_thema.mp4`]
 
+## Schnittsprache (aus `LAVISH-GUIDELINES.md`)
+**Bevorzugt:** harte Schnitte, bewusste Jump Cuts, rhythmische Schnitte, gelegentliche Freeze Frames,
+unerwartete Bildausschnitte, Doku-Sequenzen, wechselndes Tempo (kurze schnelle Passagen, dann längere Einstellungen).
+**Vermeiden:** generische CapCut-Übergänge, übermäßige Zooms, unnötige Motion Graphics, Glitch-Effekte,
+Schnitt auf jeden einzelnen Beat, sich wiederholende Übergänge.
+Der Schnitt soll spontan wirken, aber sorgfältig gebaut sein.
+
+## Color Grading
+- Leicht entsättigt, tiefe Schwarztöne mit erhaltener Zeichnung, natürliche Hauttöne
+- Dezent kühle Untertöne, wo es passt; natürliches Licht und Umgebungsfarben erhalten
+- Dezentes Filmkorn, wo es passt
+- Pro Szene anpassen, nie ein Einheits-Filter über alles
+- ffmpeg-Startpunkt (dezent, pro Clip prüfen): `eq=saturation=0.88:contrast=1.06,noise=alls=6:allf=t`
+
+## Texturen (gezielt, nie das ganze Video überladen)
+35mm-Korn, VHS/MiniDV-Look, Blitzlicht-Fotos, Doku-Material, analoge Overlays, Fotokopie- und Magazin-Texturen.
+
+## Sound
+- Echte Umgebungsgeräusche erhalten (sie sind so wichtig wie Musik)
+- Sound-Design nur dezent, für Atmosphäre
+- **Keine** gehäuften Whooshes, künstlichen Impacts, generischen Werbe-Sounds (max. 2–3 pro Video, eher keine)
+
 ## Untertitel-Stil
 - Font: **Bebas Neue** (`assets/fonts/BebasNeue-Regular.ttf`)
 - Größe: klein, ASS-Fontsize 54 bei 1920 px Höhe (Großbuchstaben ca. 35 px hoch, wie im Original)
@@ -76,6 +98,8 @@ Ablauf: Transkript → Text korrigieren → `build.py` → `ffmpeg -filter_compl
 Zoom-Anker: vertikal so, dass das Untertitelband an derselben Stelle bleibt (`y = 0.64·H·(1−1/z)`).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
-- Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25. Etwa alle 1–2 Sätze wechseln.
+- Zoom-Stufen: normal 1.0, Punch-in 1.12–1.18, starke Aussage 1.22–1.25.
+  **Laut Guidelines sparsam:** nur bei echten Kernaussagen (Richtwert 4–6 Wechsel pro 40 s, nicht bei jedem Satz).
+  Test v1/v2 hatten 22 Wechsel: zu viel.
 - Hook-Überschrift: bis die Fontdatei von „Co Moderno“ vorliegt, Platzhalter **Rubik Black, horizontal auf 80 % gestaucht**.
 - Videos immer prüfen: Schnittstellen anhören (keine abgeschnittenen Wörter), Frames bei jedem Zoom ansehen.

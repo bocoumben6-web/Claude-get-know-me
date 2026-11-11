@@ -12,7 +12,15 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 - Markenname: **Lavish**
 - Schreibweise im Video/Text: [AUSFÜLLEN – z. B. „LAVISH“ in Großbuchstaben oder „Lavish“]
 
+## Master-Guidelines
+Die verbindlichen Vorgaben des Owners stehen in `LAVISH-GUIDELINES.md` (Repo-Wurzel). **Immer zuerst lesen.**
+Kernsatz: **STREET CULTURE. CHARACTER. IDENTITY. ATTITUDE.** Im Zweifel Authentizität vor Perfektion, Atmosphäre vor Effekten.
+
 ## Was ist Lavish?
+- Verwurzelt in **Hip-Hop-Kultur, Underground-Communities und zeitgenössischer High Fashion**:
+  rohe Straßenkultur trifft Premium-Mode.
+- Inspiration: Hip-Hop und Musik, Basketball und Fußball, Underground-Mode, Graffiti und Street Art,
+  Dächer, Parkgaragen, U-Bahn-Stationen, Straßen, Alltagsorte, Tänzer, Musiker, echte Persönlichkeiten.
 - **Streetwear-Brand**, seit ca. 2 Jahren am Markt (Stand: Nov. 2026).
 - Sortiment:
   - **Standout-Pieces**: auffällige Teile, die herausstechen, im Content die Stars
@@ -21,10 +29,13 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 
 ## Ästhetik: raw, Straße
 - Der Look ist **roh und ungefiltert**, nicht poliert, nicht „Studio“.
+- Stichworte: raw, dark, underground, cinematic, authentic, editorial, „imperfect but intentional“,
+  premium ohne kommerziell zu wirken. Gefühl: Underground-Hip-Hop-Doku trifft High-Fashion-Editorial.
 - Typische Location: **Parkgarage** (Beton, Neonlicht, Schatten, Hall).
 - Weitere Locations: [AUSFÜLLEN – z. B. Straße nachts, Treppenhaus, Pop-up-Store]
-- Grading: eher kontrastreich und rau, ein bisschen Körnung ist okay. Nicht
-  überglättet, keine Hochglanz-Werbeoptik. [Vom Owner bestätigen lassen]
+- Grading (bestätigt durch Guidelines): leicht entsättigt, tiefe Schwarztöne mit Zeichnung, natürliche
+  Hauttöne, dezent kühle Untertöne, natürliches Licht erhalten, dezentes Filmkorn. Gelb ist der Akzent.
+  Nie starke Filter, nie dasselbe Grading stur auf jede Szene.
 - Handkamera, echte Momente und echter Umgebungston passen zur Brand.
 
 ## Zwei Content-Arten (nie vermischen!)
@@ -81,6 +92,10 @@ description: Markenidentität von Lavish (Streetwear-Brand mit rohem Street-Look
 
 ## No-Gos
 - Zu cleaner, steriler Werbe-Look, der nicht zur rohen Ästhetik passt
+- Alles, was wie ein generisches Fashion-Influencer-Reel aussieht
+- Die Brand-Identität für einen Social-Media-Trend opfern
+- Generische Influencer-Captions, Emoji-Grafiken
+- Logos ständig in den Vordergrund drängen
 - **Kein „LAVISH“ als große Überschrift oder Titel-Einblendung** in Videos, in
   denen der Owner redet. Die Überschrift ist das **Thema bzw. der Hook** (z. B.
   „NEUE WEBSITE?“). Die Brand wirkt durch Inhalt und Pieces, nicht durch ein Logo-Banner.

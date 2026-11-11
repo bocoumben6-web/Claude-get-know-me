@@ -18,6 +18,13 @@ Vorher immer auch `lavish-brand` und `video-schnitt` beachten.
 - Licht/Farbe: rau und kontrastreich, nicht überpoliert [Vom Owner bestätigen lassen]
 - Content-Ideen: bekannte Personen in Lavish (siehe `lavish-brand`), Pop-up-Recaps, Fans in ihren Pieces
 
+## Produktdarstellung (aus `LAVISH-GUIDELINES.md`)
+Die Kleidung soll **Teil der Umgebung** sein, keine klassische Produktwerbung.
+Zeigen: Stoffstruktur, Silhouette, Fit, Bewegung, Distressing- und Verarbeitungsdetails, individuelles Styling.
+Logos nicht ständig in den Fokus zwingen.
+Bildsprache: Doku-Momente, Tänzer, Musiker, echte Persönlichkeiten, Orte wie Dach, Parkgarage, U-Bahn, Straße.
+Texturen gezielt: 35mm-Korn, VHS/MiniDV, Blitzlicht-Fotos, Fotokopie-/Magazin-Look.
+
 ## Schnitt
 - Schnitt auf den Beat: [AUSFÜLLEN – ja/nein]
 - Durchschnittliche Länge pro Shot: [AUSFÜLLEN – z. B. 0,5–1,5 Sek.]

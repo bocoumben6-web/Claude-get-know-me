@@ -15,6 +15,15 @@ description: Checkliste vor dem Export, damit Lavish- und Owner-Videos performen
 - [ ] Caption + Hashtags vorgeschlagen
 - [ ] Ton: Stimme klar, Musik nicht zu laut, Lautheit normalisiert
 
+## Lavish-Check (aus `LAVISH-GUIDELINES.md`, vor jedem Export)
+- [ ] Sieht es **nicht** aus wie ein generisches Fashion-Influencer-Reel?
+- [ ] Gehört der Edit ins Lavish-Universum (Street Culture, Character, Identity, Attitude)?
+- [ ] Zooms, Grafiken, Sounds sparsam, nichts ohne Grund?
+- [ ] Keine CapCut-Übergänge, keine Glitches, keine Emojis?
+- [ ] Grading dezent: leicht entsättigt, tiefe Schwarztöne, natürliche Haut?
+- [ ] Umgebungston erhalten?
+- [ ] Im Zweifel: Authentizität vor Perfektion, Atmosphäre vor Effekt
+
 ## Was bei unseren Videos funktioniert (aus echten Zahlen abgeleitet)
 - (wird aus dem Log unten ergänzt)
 

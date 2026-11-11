@@ -63,6 +63,9 @@ Nicht erlaubt (passt nicht zu Lavish):
 
 ## Wörter verdeutlichen (Owner-Wunsch, inspiriert von der Referenz None of Us)
 Der Owner will, dass wichtige Wörter **zusätzlich betont** werden, mit Text-Grafiken statt Bildern.
+**Aber:** Laut `LAVISH-GUIDELINES.md` Typografie **sparsam** und editorial einsetzen (Underground-Magazin,
+Musik-Editorial, Streetwear-Kampagne), keine unnötigen Motion Graphics. Richtwert: **2–4 große Callouts
+pro Video**, nur die stärksten Wörter. Kleine Textelemente sind okay, wenn sie Kontext geben.
 Drei Mittel, alle im Lavish-Look (Beige #FCF0E4, Gelb #F0CC38, keine anderen Farben):
 1. **Keyword im Untertitel:** Das Schlüsselwort ist **beige statt gelb** und poppt kurz auf
    (135 % → 112 %). Etwa 1 Keyword pro Satz, nur bei echten Kernwörtern
@@ -77,7 +80,8 @@ Drei Mittel, alle im Lavish-Look (Beige #FCF0E4, Gelb #F0CC38, keine anderen Far
    Liste liegt **vor** dem Owner, die Punkte sind kurz (max. 2–3 Wörter).
 Zusätzlich:
 - **Rückblende-Look** bei „back in the days“ / Vergangenheit: kurz Schwarz-Weiß, mehr Kontrast, Korn, Vignette.
-- **Dezenter Whoosh** (leises Rauschen) bei jedem Callout bzw. Listenpunkt, deutlich leiser als die Stimme.
+- Sounds: **nicht** bei jedem Callout. Guidelines: keine gehäuften Whooshes. Höchstens 2–3 pro Video oder ganz weglassen;
+  lieber den echten Umgebungston stehen lassen.
 Skript: `tools/vorlage-owner-video/graphics.py`.
 
 ## Visuelle Extras
