@@ -134,8 +134,43 @@ Stattdessen, damit es **handgemacht** wirkt:
 - Bilder und Fotos liefert der Owner; fehlen sie, mit Text-Elementen arbeiten und gezielt nachfragen.
 - Offen: Untertitel bleiben vorerst in Satzteilen. Ob Wort-für-Wort wie in der Referenz gewünscht ist: Owner fragen.
 
+## Update 12.11.2026: erwachsener + mehr Motion (hat Vorrang vor älteren Stellen in diesem Skill)
+**Feedback des Owners zu Test v3:** Die Balken sind gut, aber das Ganze wirkt noch **zu kindlich**.
+Kunden sind auch um die 30. Ziel: **erwachsen, hochwertig, Street-Editorial** statt Bastel-Look.
+
+**Aussehen (reifer):**
+- Akzentfarben: **Gelb #F0CC38, Weiß/Beige #FCF0E4, Schwarz.** Nichts anderes.
+- Balken bleiben, aber **sauber**: gerade Kanten, volle Flächen (schwarzer Balken mit weißer/gelber Schrift,
+  gelber Balken mit schwarzer Schrift), höchstens 0–2° Neigung, keine ausgefransten Enden, kein „Abrieb“.
+- **Kein Bastel-Look mehr:** keine abgerissenen Papierschnipsel, keine stark schiefen Sticker, kein „hingeklebt“.
+- Typografie wie Magazin/Kampagne: klare Hierarchie (ein großes Wort + kleine Zusatzzeile), bündig an einem
+  Raster ausgerichtet, viel Luft, kleine Label in Versalien, dünne Linien als Trenner.
+- Weniger ist mehr: lieber ein präzises Element als drei verspielte. Kein Comic, keine Emojis, keine Icons.
+- Korn und Grading bleiben dezent; das Bild darf roh sein, die Grafik ist präzise.
+
+**Motion (aus den Referenzen None of Us und Villain übernehmen, damit Leute länger dranbleiben):**
+Der Owner will ausdrücklich die **Bewegungs-Animationen** dieser Videos, im Lavish-Look.
+- **Einflug mit Bewegungsunschärfe:** Element kommt von unten/seitlich rein (ca. 6–8 Frames), mit Motion Blur
+- **Überschwingen und Setzen:** leicht über das Ziel hinaus, dann sitzt es (kein lineares Reinfahren)
+- **Lebendiges Halten:** solange ein Element steht, driftet oder skaliert es minimal (nie komplett starr)
+- **Zahlen zählen hoch** (z. B. 0 → 100), statt einfach dazustehen
+- **Licht-Sweep:** ein heller Streifen läuft einmal über Balken/Karte
+- **Morph am selben Platz:** ein Element wird zum nächsten (z. B. Preis → Datum), statt weg und neu
+- **Durchwechseln:** mehrere Varianten/Farben eines Produkts blenden nacheinander an derselben Stelle durch
+- **Rausgehen** genauso aktiv (zurückfahren mit Blur) oder per hartem Schnitt, nicht ausfaden lassen
+- **Wort für Wort** bei Schlüsselstellen; einzelne Wörter dürfen kurz groß werden
+- Dichte: ca. alle 3–5 s etwas Neues, exakt aufs gesprochene Wort
+- Zooms/Kamera-Push auf Gesichter bei Pointen (None of Us), sonst ruhiger Schnitt
+
+**Abgrenzung (bleibt gültig):** Die Motion übernehmen wir, **nicht** die Optik der Referenzen (Glas-/App-Karten,
+weiße Standard-Untertitel, bunte Farben). Es darf weiterhin nicht nach Baukasten/KI aussehen:
+Lavish-Schrift, Lavish-Farben, eigenes Material.
+
+**Versionen:** Ein 9:16-Video für TikTok, das auch in die Instagram-Story geht (Safe-Zones für beide beachten).
+Eine eigene Instagram-Fassung nur, wenn der Owner sie ausdrücklich verlangt.
+
 ## Vom Owner bestätigt (Test v3)
-- ✅ Klebeband-Balken / Papierschnipsel, die „hingeklatscht“ werden
+- ✅ Balken (seit 12.11. in der sauberen, erwachsenen Form; Papierschnipsel und Fransen-Tape entfallen)
 - ✅ Riesiges Stempel-Wort hinter dem Kopf (z. B. „FIRE“)
 - ❌ VHS-/Camcorder-Look: nie verwenden
 - Noch ohne Urteil: Fotokopie-Standbild, Grading/Korn, Anzahl der Zooms

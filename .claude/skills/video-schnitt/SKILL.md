@@ -112,6 +112,10 @@ Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe 
 - `graphics_alt_v2_nicht_verwenden.py` ist der alte Baukasten-Look (Checkliste, Pop-Animationen) und nur als Negativbeispiel da.
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **12.11.2026:** v3-Bausteine wirken zu kindlich. Papierschnipsel, Fransen-Tape und starke Schräglagen nicht mehr verwenden.
+  Balken sauber und gerade, Akzente nur Gelb/Weiß/Schwarz. Motion nach `owner-content` („Update 12.11.“):
+  Einflug mit Motion Blur, Überschwingen, Drift beim Halten, Hochzählen, Licht-Sweep, Morph.
+- **12.11.2026:** Vor jedem Senden die Pflicht-Selbstkontrolle aus `performance-check` vollständig durchgehen.
 - **Feedback zu Test v3 (Owner):**
   - **VHS-/Camcorder-Effekt komplett weglassen.** Gilt für alle Videos.
   - **Klebeband-Balken und Papierschnipsel mit der „hingeklatscht“-Bewegung: gefallen, beibehalten.**

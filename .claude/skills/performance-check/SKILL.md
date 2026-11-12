@@ -5,6 +5,22 @@ description: Checkliste vor dem Export, damit Lavish- und Owner-Videos performen
 
 # Performance-Check
 
+## PFLICHT: Selbstkontrolle, bevor der Owner irgendetwas bekommt
+**Regel des Owners (12.11.2026): Kein Ergebnis schicken, bevor ich selbst ausschließen kann, dass etwas falsch ist.**
+Erst wenn alle Punkte geprüft und bestanden sind, wird gesendet. Fehler vorher beheben, nicht mitliefern.
+1. **Ganzes Video ansehen:** Kontaktbogen über die volle Länge (mind. 2 Bilder pro Sekunde) + jedes Bild direkt vor/nach jedem Schnitt
+2. **Jede Einblendung einzeln:** Anfang, Mitte, Ende als Vollbild ansehen (lesbar? im Bild? nichts verdeckt Gesicht? richtige Farbe/Schrift?)
+3. **Untertitel Wort für Wort** gegen den Ton prüfen (zweites Transkript des fertigen Videos); „Lavish“ und Namen richtig
+4. **Timing:** jede Grafik erscheint auf das gesprochene Wort (± 0,15 s)
+5. **Ton:** keine abgeschnittenen Wörter an Schnitten, kein Knacken, Lautheit ca. -14 LUFS, kein Clipping
+6. **Technik:** 1080x1920, 30 fps, H.264 + AAC, Dauer stimmt, Datei spielt ab
+7. **Safe-Zones** TikTok und Instagram-Story frei (oben 15 %, unten 25 %, rechts 15 %)
+8. **Lavish-Logo am Ende** vorhanden
+9. **Keine Reste:** alte Texte, Artefakte, Platzhalter, falsche Jahreszahlen, geschätzte Fakten
+10. **Stil:** erwachsen, Lavish, nicht kindlich, nicht Baukasten/KI; verbotene Dinge (VHS, Whooshes, Icons) nicht drin
+11. Alle Regeln aus „Gelernte Regeln“ der Skills noch einmal gegenlesen
+Was sich nicht ausschließen lässt (z. B. fehlende Schrift, fehlende Fakten), wird **vor** dem Senden offen benannt oder nachgefragt.
+
 ## Checkliste vor jedem Export
 - [ ] Die ersten **1–2 Sekunden** stoppen den Scroll (Bewegung, Aussage oder starkes Bild – kein Logo-Intro, kein „Hey Leute“)
 - [ ] Kein toter Moment > [AUSFÜLLEN, Standard 1,5] Sek.

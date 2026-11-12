@@ -89,3 +89,13 @@ Vom Owner als Umsetzungs-Referenz geschickt (Nov. 2026). Gilt zusammen mit `LAVI
 - Lange Strecken ganz ohne Einblendung (Anfang nach dem Hook, Ende)
 - Offen: Jahreszahl „2024“ ist geschätzt (Lavish gibt es seit ca. 2 Jahren); Überschrift weiter in Ersatzschrift
 - Feedback des Owners: VHS-Look ganz raus. Balken/Schnipsel mit der Bewegung sehen gut aus. Großes „FIRE“ hinter dem Kopf beibehalten. Weiteres Feedback folgt beim nächsten Mal.
+
+## Motion-Analyse der Referenzen (12.11.2026, Bild für Bild)
+Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als Referenz für **Bewegung** geschickt.
+- **Villain, Hook:** Münze dreht sich als 3D-Objekt von unten ins Bild (Motion Blur), schwingt aus; „1 €“ setzt sich darauf;
+  an derselben Stelle wird daraus die Datums-Karte (Morph statt Wechsel). Alles in ca. 2,4 s.
+- **Villain, Poster:** fährt mit Unschärfe von unten hoch, wird dabei größer, sitzt nach ca. 0,3 s und **driftet dann langsam weiter nach oben**.
+- **Villain, Gutschein:** Karte schiebt sich hoch, Betrag **zählt 0 → 100**, ein Lichtstreifen läuft drüber; Tracksuit-Bild **wechselt die Farben durch**.
+- **Villain, Untertitel:** ein Wort pro Einblendung, einzelne Wörter kurz riesig.
+- **None of Us:** fette Titel springen rein, Kamera-Push auf Gesichter bei Pointen, Ergebnis-Banner („WINNER“), Timer im Bild.
+- Gemeinsam: nichts steht starr; jedes Element hat Eingang, Leben und Ausgang.
