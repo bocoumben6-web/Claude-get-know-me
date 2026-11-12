@@ -99,3 +99,13 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - **Villain, Untertitel:** ein Wort pro Einblendung, einzelne Wörter kurz riesig.
 - **None of Us:** fette Titel springen rein, Kamera-Push auf Gesichter bei Pointen, Ergebnis-Banner („WINNER“), Timer im Bild.
 - Gemeinsam: nichts steht starr; jedes Element hat Eingang, Leben und Ausgang.
+
+## Video „WhatsApp-Gruppe / 15 % Discount“ (12.11.2026) – erstes echtes Owner-Video
+- 5 Rohclips (37 s) → 28,1 s inkl. Schlussbild. 13 Abschnitte, Pausen raus, letzter Satz ungeschnitten.
+- Hook: „15%“ zählt hoch + „DISCOUNT?“ hinter dem Owner (Titel aus dem ersten Satz abgeleitet, **nicht vom Owner vorgegeben**).
+- Balken: NEUE WEBSITE · DIREKT OBEN → WHATSAPP-LINK → WHATSAPP-GRUPPE (Roll) · 15% DISCOUNT (zählt) · EARLY ACCESS · SAMPLE REVIEW ·
+  POP-UP NACH 10 SEKUNDEN (Zähler) · BEI JEDEM DROP · VERLOSUNGEN · DISCOUNTS · + ALLES ANDERE · QR-Code + HOUSE OF LAVISH
+- Schlussbild: Logo + HOUSE OF LAVISH + QR-Code (führt auf den WhatsApp-Kanal HOUSEOFLAVISH).
+- Selbstkontrolle fand und behob: abgeschnittenes „Gruppe“, Balken 0,4 s zu früh, Datei 307 MB, QR im Schlussbild zu klein, Untertitel-Größe.
+- Ohne Website-Screenshots gebaut (nur Text-Balken). Überschrift-Schrift weiter Ersatz.
+- Feedback des Owners: [AUSSTEHEND]

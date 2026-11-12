@@ -1,0 +1,28 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Bebas Neue,54,&H0038CCF0,&H0038CCF0,&H00000000,&H50000000,0,0,0,0,100,100,0.5,0,1,0,3,8,150,150,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.10,0:00:02.13,Sub,,0,0,0,,{\an8\pos(540,1186)}WIE HABT IHR DIE MÖGLICHKEIT {\c&HE4F0FC&}15 PROZENT{\r}
+Dialogue: 0,0:00:02.20,0:00:03.29,Sub,,0,0,0,,{\an8\pos(540,1186)}{\c&HE4F0FC&}DISCOUNT{\r} ZU BEKOMMEN
+Dialogue: 0,0:00:03.38,0:00:04.29,Sub,,0,0,0,,{\an8\pos(540,1186)}DAS ERKLÄRE ICH EUCH JETZT
+Dialogue: 0,0:00:04.37,0:00:06.36,Sub,,0,0,0,,{\an8\pos(540,1186)}WIR HABEN JETZT NATÜRLICH EINE {\c&HE4F0FC&}NEUE WEBSITE{\r}
+Dialogue: 0,0:00:06.40,0:00:09.34,Sub,,0,0,0,,{\an8\pos(540,1186)}UND OBEN STEHT DIREKT DER {\c&HE4F0FC&}WHATSAPP-LINK{\r}
+Dialogue: 0,0:00:09.42,0:00:10.65,Sub,,0,0,0,,{\an8\pos(540,1186)}KOMMT IN DIE {\c&HE4F0FC&}WHATSAPP-GRUPPE{\r} REIN
+Dialogue: 0,0:00:10.74,0:00:12.13,Sub,,0,0,0,,{\an8\pos(540,1186)}{\c&HE4F0FC&}15 PROZENT{\r} EARLY ACCESS
+Dialogue: 0,0:00:12.18,0:00:13.69,Sub,,0,0,0,,{\an8\pos(540,1186)}UND NATÜRLICH AUCH {\c&HE4F0FC&}SAMPLE REVIEW{\r}
+Dialogue: 0,0:00:13.79,0:00:16.08,Sub,,0,0,0,,{\an8\pos(540,1186)}NATÜRLICH KRIEGT IHR AUCH EIN {\c&HE4F0FC&}POP-UP{\r} NACH 10 SEKUNDEN
+Dialogue: 0,0:00:16.15,0:00:16.81,Sub,,0,0,0,,{\an8\pos(540,1186)}GENAU DIESELBE GESCHICHTE
+Dialogue: 0,0:00:16.87,0:00:18.46,Sub,,0,0,0,,{\an8\pos(540,1186)}UND JEDES MAL WENN ICH EINEN {\c&HE4F0FC&}NEUEN DROP{\r} HABE
+Dialogue: 0,0:00:18.47,0:00:20.48,Sub,,0,0,0,,{\an8\pos(540,1186)}WERDE ICH DA {\c&HE4F0FC&}VERLOSUNGEN{\r}
+Dialogue: 0,0:00:20.59,0:00:21.29,Sub,,0,0,0,,{\an8\pos(540,1186)}{\c&HE4F0FC&}DISCOUNTS{\r}
+Dialogue: 0,0:00:21.39,0:00:22.57,Sub,,0,0,0,,{\an8\pos(540,1186)}UND ALLES ANDERE MÖGLICHE REINSCHICKEN
+Dialogue: 0,0:00:22.65,0:00:23.88,Sub,,0,0,0,,{\an8\pos(540,1186)}ALSO JOINT DER {\c&HE4F0FC&}WHATSAPP-GRUPPE{\r}
+Dialogue: 0,0:00:24.45,0:00:25.88,Sub,,0,0,0,,{\an8\pos(540,1186)}{\c&HE4F0FC&}HOUSE OF LAVISH{\r}

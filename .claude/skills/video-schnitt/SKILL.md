@@ -111,7 +111,41 @@ Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe 
 - **Kein** Whoosh, kein Sound-Effekt; Originalton bleibt
 - `graphics_alt_v2_nicht_verwenden.py` ist der alte Baukasten-Look (Checkliste, Pop-Animationen) und nur als Negativbeispiel da.
 
+## Aktuelle Pipeline (ab 12.11.2026): `tools/owner-video-v2/`
+Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsApp-Gruppe“ gebaut und komplett geprüft.
+- `plan.py`: Schnittplan (Quellzeiten der Abschnitte), Untertitel-Texte, Zeit-Umrechnung. **Hier beginnt jedes neue Video.**
+- `comp.py`: liest das Material **nach Frame-Nummern** (Bild und Ton bleiben exakt gleich lang), macht Kamera-Zoom
+  (am Kopf verankert), Grading (nur aufs Material), Hook-Titel hinter dem Owner, alle Balken und Bewegungen, Schlussbild.
+- `qa.py`: die Pflicht-Selbstkontrolle als Skript. **Muss „ALLES BESTANDEN“ melden, bevor der Owner etwas bekommt.**
+
+**Ablauf:**
+1. Mehrere Clips zuerst zu einem Master zusammenfügen (30 fps). Sätze laufen oft über Clip-Grenzen.
+2. Sprach-Abschnitte per Lautstärke messen (Bandpass 250–3200 Hz, 10-ms-Hüllkurve). **Whisper-Zeitmarken sind bei Pausen
+   bis zu 0,4 s daneben**; Schnitt- und Grafikzeiten deshalb an den gemessenen Abschnitten ausrichten.
+3. Text mit `large-v3` und **ganzen Sätzen als Kontext** transkribieren. Kurze Schnipsel und Vorgabe-Wörter (initial_prompt)
+   führen zu falschen Wörtern. Unklare Wörter mit mehreren Modellen gegenprüfen, sonst den Owner fragen.
+4. Kopfposition pro Abschnitt messen (MediaPipe), danach Zoom/Bildausschnitt und Platz für Grafiken festlegen.
+5. Ton: `highpass=75, afftdn=nr=9`, dann feste Verstärkung auf -14 LUFS + Limiter (kein dynamisches loudnorm).
+6. Export: `-crf 19 -maxrate 12M -bufsize 24M`. **Ohne Obergrenze bläht das Korn die Datei auf über 300 MB auf.**
+
+**Gestaltung (erwachsener Look):**
+- Balken: Bebas Neue, gerade Kanten, weicher Schatten. Stile: Gelb/Schwarz, Schwarz/Beige, Beige/Schwarz.
+  Hierarchie: **ein großer Balken (Größe 96) + kleinere Zeilen (Größe 70)**, linksbündig an x=64, ab y=300.
+- Owner per Zoom 1,18 nach rechts rücken (Kopf bei x≈650), dann ist links Platz. Zeilen neben dem Kopf max. ca. 480 px breit.
+- Bewegung: Einflug 0,28 s mit Überschwingen + Bewegungsunschärfe, langsame Drift beim Halten, Rausfahren 0,17 s,
+  Text-Roll im selben Balken (Morph), Hochzählen, einmaliger Licht-Sweep, Kamera-Push bei Pointen.
+- Balken dürfen über Jump Cuts hinweg stehen bleiben (verbindet die Schnitte).
+- Hook-Titel beige hinter dem Owner, bei heller Wand mit weichem dunklem Schatten; Material oben leicht abdunkeln.
+- QR-Code: mind. 4 s sichtbar, mind. 360 px, Lesbarkeit aus dem fertigen Video prüfen (auch verkleinert).
+- Schlussbild: schwarzer Grund, Logo groß, darunter optional Balken + QR. 2,2 s.
+
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **12.11.2026, aus der Selbstkontrolle gelernt:**
+  - Nie in einer Sprechpause **innerhalb eines Wortes** schneiden („Grup-pe“ wurde abgeschnitten). Vor dem Schnitt prüfen,
+    ob in den nächsten 0,5 s noch ein kurzer Laut folgt. Im Zweifel den Satz ungeschnitten lassen.
+  - Jeden weggeschnittenen Sprach-Abschnitt begründen (qa.py Punkt 3).
+  - Beim Prüfen Stereo nie einfach zu Mono zusammenlegen (täuscht Clipping vor).
+  - Untertitel-Größe bleibt 54 (nicht eigenmächtig ändern).
 - **12.11.2026:** v3-Bausteine wirken zu kindlich. Papierschnipsel, Fransen-Tape und starke Schräglagen nicht mehr verwenden.
   Balken sauber und gerade, Akzente nur Gelb/Weiß/Schwarz. Motion nach `owner-content` („Update 12.11.“):
   Einflug mit Motion Blur, Überschwingen, Drift beim Halten, Hochzählen, Licht-Sweep, Morph.
