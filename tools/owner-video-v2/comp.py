@@ -85,7 +85,7 @@ def sweep(im, p):
 class El:
     """content(t_local) -> RGBA tile; handles enter / living hold / exit"""
     def __init__(self, t_in, t_out, x, y, content, enter=(-1, 0), exit=(-1, 0), dist=300, din=0.28, dout=0.17,
-                 drift=(7, 0), do_sweep=False, cut_out=False):
+                 drift=(7, 0), do_sweep=False, cut_out=False, move=None, shadow=True):
         self.__dict__.update(locals())
     def draw(self, layer, t):
         if not (self.t_in <= t < self.t_out): return
@@ -93,7 +93,7 @@ class El:
         im = self.content(tl)
         if self.do_sweep and 0.34 <= tl < 0.34 + 0.5:
             im = sweep(im, (tl - 0.34) / 0.5)
-        im, pad = shadowed(im)
+        im, pad = shadowed(im) if self.shadow else (im.copy(), 0)   # copy: never alter a cached image
         p = tl / self.din
         ox = oy = 0.0; vx = vy = 0.0; alpha = 1.0
         if p < 1:
@@ -109,6 +109,8 @@ class El:
             alpha = min(alpha, 1 - max(0, (q - 0.55) / 0.45))
         dr = min(1.0, tl / max(life, 0.01))
         ox += self.drift[0] * dr; oy += self.drift[1] * dr
+        if self.move:
+            mx, my = self.move(tl); ox += mx; oy += my
         im = mblur(im, vx, vy)
         if alpha < 1: im.putalpha(im.getchannel("A").point(lambda v: int(v * alpha)))
         layer.alpha_composite(im, (int(round(self.x + ox)) - pad, int(round(self.y + oy)) - pad)) if \
@@ -149,6 +151,14 @@ def count_bar(prefix_fn, final_n, suffix, style, size=74, dur=0.55):
         return im
     return content
 
+def framed(path, w, b=8):
+    im = Image.open(path).convert("RGB"); im = im.resize((w, int(round(w * im.height / im.width))), Image.LANCZOS)
+    out = Image.new("RGBA", (im.width + 2 * b, im.height + 2 * b), INK + (255,)); out.paste(im, (b, b)); return out
+
+def outline(w, h, t=6):
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, w - 1, h - 1), outline=YEL + (255,), width=t); return im
+
 def timer_block(t_count, dur=0.9):
     """black block: small label + big yellow seconds counter"""
     lab = text_img("POP-UP NACH", 50, BEI, track=3)
@@ -179,40 +189,59 @@ o = out_time
 E = []                                  # front elements
 BIG, MID = 96, 70                       # hierarchy: one big statement bar, smaller rows under it
 hb = bar_metrics(BIG)[0]; hm = bar_metrics(MID)[0]; GAP = 12
-Y1 = 300
+Y1 = 300; RW = Y1 + hb + GAP
 
-# website: one big bar
-s, e = piece_out("website")
-E.append(El(o(8.60), e, X0, Y1, static(make_bar("NEUE WEBSITE", "K", BIG)), enter=(-1, 0), do_sweep=True))
+# ---- website: big bar + the real homepage screenshot ----
+t_site, t_bar, t_link, t_grp = o(8.60), o(10.86), o(12.95), o(13.74)
+E.append(El(t_site, t_bar - 0.02, X0, Y1, static(make_bar("NEUE WEBSITE", "K", BIG)), enter=(-1, 0), do_sweep=True))
+cw = framed(J + "/card_web.png", 300); sw = framed(J + "/strip_web.png", 700, b=6)
+t_card = o(8.74); SHIFT = sw.height + GAP
+E.append(El(t_card, t_grp + 0.22, X0, RW, static(cw), enter=(-1, 0), dist=440, din=0.32, drift=(0, 0),
+            move=lambda tl: (0, SHIFT * ease_out((tl - (t_link - t_card)) / 0.28))))
+# "oben steht direkt ...": yellow frame marks the banner at the top of the page
+E.append(El(t_bar + 0.14, t_link + 0.04, X0 - 5, RW - 5, static(outline(cw.width + 10, 8 + int(111 * 300 / 1206) + 12)), enter=(0, 0), dist=0,
+            din=0.12, dout=0.06, drift=(0, 0), shadow=False))
+# "... der WhatsApp-Link": the banner jumps out of the page, big and readable; the page slides down under it
+def strip_pop(tl):
+    k = 300 / 700 + (1 - 300 / 700) * ease_back(tl / 0.30, 1.6)
+    return sw.resize((max(2, int(sw.width * k)), max(2, int(sw.height * k))), Image.LANCZOS)
+E.append(El(t_link, t_grp + 0.14, X0, RW, strip_pop, enter=(0, 0), dist=0, din=0.10, drift=(0, 0)))
+# one yellow bar that drops from the top and rolls through three states; benefits stack under it
+STACK_END = o(18.90)
+E.append(El(t_bar, STACK_END, X0, Y1, rolling_bar([(0, "DIREKT OBEN"), (t_link - t_bar, "WHATSAPP-LINK"),
+            (t_grp - t_bar, "WHATSAPP-GRUPPE")], "Y", BIG), enter=(0, -1), dist=320, do_sweep=True))
+R1 = RW; R2 = R1 + hm + GAP; R3 = R2 + hm + GAP
+E.append(El(o(15.42), STACK_END - 0.03, X0, R1, count_bar(None, 15, "% DISCOUNT", "K", MID), enter=(-1, 0)))
+E.append(El(o(16.18), STACK_END - 0.06, X0, R2, static(make_bar("EARLY ACCESS", "W", MID)), enter=(-1, 0)))
+E.append(El(o(17.82), STACK_END - 0.09, X0, R3, static(make_bar("SAMPLE REVIEW", "K", MID)), enter=(-1, 0), do_sweep=True))
 
-# whatsapp: one bar that drops from the top and rolls through three states, benefits stack under it
-_, e_s = piece_out("sample")
-t_bar = o(10.86)
-E.append(El(t_bar, e_s, X0, Y1, rolling_bar([(0, "DIREKT OBEN"), (o(12.95) - t_bar, "WHATSAPP-LINK"),
-            (o(13.74) - t_bar, "WHATSAPP-GRUPPE")], "Y", BIG), enter=(0, -1), dist=320, do_sweep=True))
-R1 = Y1 + hb + GAP; R2 = R1 + hm + GAP; R3 = R2 + hm + GAP
-E.append(El(o(15.42), e_s - 0.03, X0, R1, count_bar(None, 15, "% DISCOUNT", "K", MID), enter=(-1, 0)))
-E.append(El(o(16.18), e_s - 0.06, X0, R2, static(make_bar("EARLY ACCESS", "W", MID)), enter=(-1, 0)))
-E.append(El(o(17.82), e_s - 0.09, X0, R3, static(make_bar("SAMPLE REVIEW", "K", MID)), enter=(-1, 0), do_sweep=True))
-
-# pop-up timer, then "same story": the two benefits come back under it
+# ---- pop-up: counter runs to 10, then the real pop-up jumps in ----
 _, e_same = piece_out("same")
-t_tm = o(20.16)
-tb = timer_block(o(20.56) - t_tm)
-TBH = tb(0).height
-E.append(El(t_tm, e_same, X0, Y1, tb, enter=(-1, 0)))
-E.append(El(o(22.47), e_same - 0.03, X0, Y1 + TBH + GAP, static(make_bar("15% DISCOUNT", "Y", MID)), enter=(-1, 0), din=0.22))
-E.append(El(o(22.47) + 0.09, e_same - 0.06, X0, Y1 + TBH + GAP + hm + GAP, static(make_bar("EARLY ACCESS", "W", MID)), enter=(-1, 0), din=0.22))
+t_tm = o(20.16); t10 = o(20.56) + 0.62
+E.append(El(t_tm, t10 + 0.17, X0, Y1, timer_block(o(20.56) - t_tm, dur=0.60), enter=(-1, 0)))
+cp = framed(J + "/card_popup.png", 300); YC = Y1 + hm + GAP
+def popup_pop(tl):
+    k = 0.80 + 0.20 * ease_back(tl / 0.28, 2.2)
+    im = cp.resize((int(cp.width * k), int(cp.height * k)), Image.LANCZOS)
+    cv = Image.new("RGBA", cp.size, (0, 0, 0, 0)); cv.alpha_composite(im, ((cp.width - im.width) // 2, (cp.height - im.height) // 2)) if k <= 1 else cv.paste(im.crop(((im.width - cp.width) // 2, (im.height - cp.height) // 2, (im.width - cp.width) // 2 + cp.width, (im.height - cp.height) // 2 + cp.height)))
+    return cv
+E.append(El(t10 + 0.04, e_same - 0.03, X0, YC, popup_pop, enter=(0, 0), dist=0, din=0.10, drift=(0, 4)))
+E.append(El(t10, e_same, X0, Y1, rolling_bar([(0, "NACH 10 SEKUNDEN"), (o(22.47) - t10, "15% + EARLY ACCESS")], "Y", MID),
+            enter=(0, -1), dist=260, do_sweep=True))
+# "genau dieselbe Geschichte": yellow frame on the WhatsApp button of the pop-up
+bx0, by0, bx1, by1 = [int(round(v * 300 / 1110)) for v in (105, 1661, 1004, 1792)]
+E.append(El(o(22.47) + 0.12, e_same - 0.03, X0 + 8 + bx0 - 6, YC + 8 + by0 - 6, static(outline(bx1 - bx0 + 12, by1 - by0 + 12)), enter=(0, 0), dist=0,
+            din=0.12, drift=(0, 4), shadow=False))
 
-# every new drop: giveaways, discounts, everything else
+# ---- every new drop: giveaways, discounts, everything else ----
 _, e_all = piece_out("alles")
 D1 = Y1 + hm + GAP; D2 = D1 + hb + GAP; D3 = D2 + hb + GAP
 E.append(El(o(24.66), e_all, X0, Y1, static(make_bar("BEI JEDEM DROP", "W", MID)), enter=(0, -1), dist=260))
-E.append(El(o(26.40), e_all - 0.03, X0, D1, static(make_bar("VERLOSUNGEN", "Y", BIG)), enter=(-1, 0), do_sweep=True))
+E.append(El(o(26.60), e_all - 0.03, X0, D1, static(make_bar("VERLOSUNGEN", "Y", BIG)), enter=(-1, 0), do_sweep=True))
 E.append(El(o(29.07), e_all - 0.06, X0, D2, static(make_bar("DISCOUNTS", "K", BIG)), enter=(-1, 0)))
 E.append(El(o(30.37), e_all - 0.09, X0, D3, static(make_bar("+ ALLES ANDERE", "W", MID)), enter=(-1, 0)))
 
-# join: one rolling bar above the QR tile; both stay until the logo card (hard cut)
+# ---- join: one rolling bar above the QR tile; both stay until the logo card (hard cut) ----
 END = TOTAL
 qt = qr_tile(360)
 t_j = o(31.88)
@@ -273,10 +302,11 @@ CAM = {
  "hook1": (1.00, 1.00, (500, 750), (500, 750)), "hook2": (1.00, 1.00, (462, 680), (462, 680)),
  "erklaer": (1.16, 1.34, (540, 735), (540, 720)),
  "website": (1.18, 1.18, (510, 725), (650, 725)), "walink": (1.18, 1.18, (524, 728), (650, 725)),
- "early": (1.18, 1.18, (570, 718), (660, 725)), "sample": (1.18, 1.18, (598, 716), (670, 725)),
- "popup": (1.18, 1.23, (490, 716), (650, 725)), "same": (1.36, 1.36, (496, 723), (640, 740)),
- "drop": (1.18, 1.24, (523, 720), (650, 725)), "disc": (1.30, 1.30, (533, 711), (660, 730)),
- "alles": (1.18, 1.18, (513, 718), (650, 725)), "join": (1.18, 1.21, (515, 714), (655, 725)),
+ "early": (1.18, 1.18, (570, 718), (660, 725)),
+ "sample": (1.18, 1.23, (545, 716), (655, 725)), "same": (1.23, 1.26, (496, 723), (650, 725)),
+ "drop": (1.18, 1.20, (523, 720), (650, 725)), "drop2": (1.30, 1.30, (523, 716), (660, 730)),
+ "disc": (1.18, 1.18, (533, 711), (650, 725)), "alles": (1.26, 1.26, (513, 718), (655, 728)),
+ "join": (1.18, 1.21, (515, 714), (655, 725)),
 }
 def cam_matrix(name, p):
     z0, z1, (hx, hy), (tx_, ty_) = CAM[name]

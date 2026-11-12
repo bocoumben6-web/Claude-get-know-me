@@ -140,6 +140,16 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - Schlussbild: schwarzer Grund, Logo groß, darunter optional Balken + QR. 2,2 s.
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **Feedback zum Video „WhatsApp-Gruppe“ v1 (Owner: „fast perfekt“), umgesetzt in v2:**
+  - **Screenshots des Owners per Motion einbauen**, als gerahmte Karte ohne Handy-Rahmen (8 px schwarzer Rand, weicher Schatten),
+    ca. 300 px breit links neben dem Owner. Wichtige Stelle mit **gelbem Rahmen markieren**; kleiner Text (z. B. ein Banner)
+    **springt groß aus der Karte heraus** (hier 700 px breit). Pop-up „poppt“ mit Überschwingen ins Bild.
+    Zuschnitte liegen in `assets/website/` (Startseite, Pop-up, Banner von lavishclo.com).
+  - **Pausen mit neuem Ansatz mitten im Satz herausschneiden** („…Drop habe | werde ich da Verlosungen“). Der Owner hört
+    solche Stolperer sofort. Jede Pause über ca. 0,5 s im Satz prüfen und im Zweifel schließen.
+  - **Nach einer Aussage nicht zu schnell in die nächste Szene schneiden**: mind. 0,4 s Luft nach dem letzten Wort,
+    wenn danach Thema oder Bildausschnitt wechselt. Kein harter Punch-in direkt danach.
+  - Technik: Ein gespeichertes Grafik-Bild nie direkt verändern (immer `.copy()`), sonst wird es beim Einblenden dauerhaft blass.
 - **12.11.2026, aus der Selbstkontrolle gelernt:**
   - Nie in einer Sprechpause **innerhalb eines Wortes** schneiden („Grup-pe“ wurde abgeschnitten). Vor dem Schnitt prüfen,
     ob in den nächsten 0,5 s noch ein kurzer Laut folgt. Im Zweifel den Satz ungeschnitten lassen.

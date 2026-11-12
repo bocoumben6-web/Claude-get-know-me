@@ -82,6 +82,9 @@ Kernsatz: **STREET CULTURE. CHARACTER. IDENTITY. ATTITUDE.** Im Zweifel Authenti
 - Schriftart Hook-Überschrift: fette, breite Schrift mit leicht runden Ecken,
   **nicht** Bebas Neue. Laut Owner heißt sie in CapCut **„Co Moderno“** (Schreibweise unbestätigt). Fontdatei fehlt noch: frei nicht auffindbar, Datei oder Screenshot vom Owner nötig.
 - TikTok-Account: **@live.life.lavish**
+- Website: **lavishclo.com** (Banner oben: „Tritt unserem WhatsApp Kanal bei!“; Pop-up nach 10 s: „Drops sind schnell weg“)
+- Instagram laut Website: **@lllavishclo**
+- WhatsApp-Kanal: **HOUSEOFLAVISH** (im Video „House of Lavish“ / „WhatsApp-Gruppe“ genannt). QR-Code: `tools/owner-video-v2` nutzt den vom Owner geschickten Code.
 - **Logo: ein einzelnes „L“** in gebrochener, handgezeichneter Schrift (Blackletter-/Graffiti-Charakter,
   unregelmäßige, leicht „tropfende“ Kanten). Dasselbe L ist auf den Hoodies (Brust) zu sehen.
   - Dateien (freigestellt, transparent): `assets/logo.png` (weiß), `assets/logo-beige.png` (#FCF0E4),

@@ -108,4 +108,9 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Schlussbild: Logo + HOUSE OF LAVISH + QR-Code (führt auf den WhatsApp-Kanal HOUSEOFLAVISH).
 - Selbstkontrolle fand und behob: abgeschnittenes „Gruppe“, Balken 0,4 s zu früh, Datei 307 MB, QR im Schlussbild zu klein, Untertitel-Größe.
 - Ohne Website-Screenshots gebaut (nur Text-Balken). Überschrift-Schrift weiter Ersatz.
-- Feedback des Owners: [AUSSTEHEND]
+- Feedback des Owners zu v1: „fast perfekt“. Gewünscht: Website- und Pop-up-Screenshot per Motion einbauen, den Stolperer bei
+  „…Drop habe“ bereinigen, an der Pop-up-Stelle nicht so schnell in die nächste Szene wechseln.
+- **v2:** Startseite als Karte bei „neue Website“, gelber Rahmen ums Banner bei „direkt oben“, Banner springt groß heraus bei
+  „WhatsApp-Link“; Zähler bis 10, dann echtes Pop-up, gelber Rahmen um den WhatsApp-Button bei „dieselbe Geschichte“.
+  Pause nach „Drop habe“ entfernt, mehr Luft nach „10 Sekunden“, kein Punch-in danach. 28,4 s. Selbstkontrolle bestanden.
+- Feedback des Owners zu v2: [AUSSTEHEND]
