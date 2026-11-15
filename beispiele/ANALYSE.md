@@ -113,4 +113,10 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - **v2:** Startseite als Karte bei „neue Website“, gelber Rahmen ums Banner bei „direkt oben“, Banner springt groß heraus bei
   „WhatsApp-Link“; Zähler bis 10, dann echtes Pop-up, gelber Rahmen um den WhatsApp-Button bei „dieselbe Geschichte“.
   Pause nach „Drop habe“ entfernt, mehr Luft nach „10 Sekunden“, kein Punch-in danach. 28,4 s. Selbstkontrolle bestanden.
-- Feedback des Owners zu v2: [AUSSTEHEND]
+- Feedback des Owners zu v2: „super so". Gewünscht: typische Sounds, Rauschen entfernen, Stimme besser hörbar.
+- **v3 (15.11.2026):** 23 Sound-Stellen (Whoosh, Pop, Ticken, Klingel, Chime, Schlag), alle mind. 9 dB unter der Stimme.
+  Stimme: Abstand zum Rauschen 13,0 → 19,8 dB. Bild unverändert. Selbstkontrolle bestanden (roh 220, fertig 215 von 249 Punkten).
+- Schon in der Aufnahme undeutlich gesprochen (kein Erkenner-Mehrheit im Rohton): 15 (das zweite), Early Access, ein, dieselbe,
+  Geschichte, in, reinschicken, House of Lavish. Für künftige Drehs: diese Wörter deutlicher sprechen oder näher ans Mikro.
+- Der Owner hat dieses Video als **„unser Lavish Setup"** für alle künftigen Videos festgelegt.
+- Feedback des Owners zu v3: [AUSSTEHEND]

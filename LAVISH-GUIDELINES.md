@@ -116,6 +116,9 @@ Preserve authentic ambient sounds and use subtle sound design to enhance the atm
 
 Avoid excessive whooshes, artificial impacts and generic commercial sound effects.
 
+> **Ergänzung des Owners (12.11.2026):** Die typischen Sounds (Whoosh, Pop, Ticken, Klingel, Schlag) sind erwünscht.
+> „Excessive" bleibt die Grenze: Die Stimme hat immer Vorrang. Regeln im Skill `lavish-setup`.
+
 ## 08. PRODUCT PRESENTATION
 
 Lavish clothing should feel like part of the environment, not like a traditional product advertisement.

@@ -32,7 +32,8 @@ Der Schnitt soll spontan wirken, aber sorgfältig gebaut sein.
 ## Sound
 - Echte Umgebungsgeräusche erhalten (sie sind so wichtig wie Musik)
 - Sound-Design nur dezent, für Atmosphäre
-- **Keine** gehäuften Whooshes, künstlichen Impacts, generischen Werbe-Sounds (max. 2–3 pro Video, eher keine)
+- **Geändert am 12.11.2026:** Der Owner will die typischen Sounds (Whoosh, Pop, Ticken, Klingel, Schlag). Regeln dafür stehen im Skill `lavish-setup`.
+  Weiterhin gilt: Stimme hat Vorrang, nichts Überladenes.
 
 ## Untertitel-Stil
 - Font: **Bebas Neue** (`assets/fonts/BebasNeue-Regular.ttf`)
@@ -108,7 +109,7 @@ Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe 
 - **Einblenden:** „hingeklatscht“ (2 Frames leicht versetzt, dann sitzt es), kein weiches Pop; Ausblenden per hartem Schnitt
 - **Grading-Kette (ffmpeg):** `eq=saturation=0.86:contrast=1.07:brightness=-0.012,colorbalance=bs=0.035:bm=0.02:rs=-0.02`,
   dann Untertitel, zuletzt `noise=alls=9:allf=t` über alles (Korn verbindet Bild, Grafik und Text)
-- **Kein** Whoosh, kein Sound-Effekt; Originalton bleibt
+- (Stand Test v3, überholt: Sounds sind seit 12.11.2026 erwünscht, siehe `lavish-setup`)
 - `graphics_alt_v2_nicht_verwenden.py` ist der alte Baukasten-Look (Checkliste, Pop-Animationen) und nur als Negativbeispiel da.
 
 ## Aktuelle Pipeline (ab 12.11.2026): `tools/owner-video-v2/`
@@ -125,7 +126,9 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 3. Text mit `large-v3` und **ganzen Sätzen als Kontext** transkribieren. Kurze Schnipsel und Vorgabe-Wörter (initial_prompt)
    führen zu falschen Wörtern. Unklare Wörter mit mehreren Modellen gegenprüfen, sonst den Owner fragen.
 4. Kopfposition pro Abschnitt messen (MediaPipe), danach Zoom/Bildausschnitt und Platz für Grafiken festlegen.
-5. Ton: `highpass=75, afftdn=nr=9`, dann feste Verstärkung auf -14 LUFS + Limiter (kein dynamisches loudnorm).
+5. Ton: **`voice.py`** (Hochpass 75 Hz, Rauschprofil-Entrauschen 70 %, schonende Pausen-Absenkung 6 dB), dann **`mix.py`**
+   (Sätze angleichen, feste Verstärkung auf -14 LUFS, eigener Begrenzer, Sounds dazu). Kein dynamisches loudnorm.
+   **`afftdn` nicht mehr verwenden**: Es hat kaum Rauschen entfernt (13,0 → 13,4 dB) und die Verständlichkeit gesenkt (220 → 204 von 249).
 6. Export: `-crf 19 -maxrate 12M -bufsize 24M`. **Ohne Obergrenze bläht das Korn die Datei auf über 300 MB auf.**
 
 **Gestaltung (erwachsener Look):**
@@ -139,7 +142,20 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - QR-Code: mind. 4 s sichtbar, mind. 360 px, Lesbarkeit aus dem fertigen Video prüfen (auch verkleinert).
 - Schlussbild: schwarzer Grund, Logo groß, darunter optional Balken + QR. 2,2 s.
 
+## Ton-Werkzeuge (ab 15.11.2026, alle in `tools/owner-video-v2/`)
+- `voice.py`: Stimme säubern. `mix.py`: Stimme + Sounds, Begrenzer greift nur an echten Spitzen (drückt die Stimme nicht mit herunter).
+- `sfx.py`: alle Sounds werden erzeugt (Whoosh, Pop, Tick, Klick, Glocke, Chime, Schlag, Riser), Zeiten wie die Grafiken.
+- `sfx_check.py`: jeder Sound mind. 9 dB unter der Stimme. `sound_words.py`: kein Wort wird von einem Sound verdeckt.
+- `hear3.py`: drei Spracherkenner (large-v3, medium, small) zählen verstandene Untertitel-Wörter. **Ein Erkenner allein kippt
+  bei Grenzwörtern**; drei zusammen schwanken noch um ca. ±4 von 249 Punkten bei unhörbaren Unterschieden.
+- Maßstab ist immer die **Rohaufnahme**: Was dort klar verständlich ist (2 von 3), muss es im fertigen Video bleiben.
+  Wörter, die schon roh undeutlich sind, kann keine Bearbeitung retten; dem Owner nennen statt daran herumzuschrauben.
+- Zusätzliche Pakete: `noisereduce`, `scipy`, `opencv-python-headless` (im Setup-Skript der Umgebung).
+
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **15.11.2026:** Das Video „WhatsApp-Gruppe" ist der Standard („Lavish Setup", Skill `lavish-setup`). Neue Videos bauen darauf auf.
+- **15.11.2026, aus der Ton-Arbeit gelernt:** Erst messen, dann einstellen. Stärkeres Entrauschen klingt in Zahlen besser (Abstand),
+  macht die Stimme aber schlechter (Wörter gehen verloren). Bei drei Sounds dicht an einem undeutlichen Wort einen streichen.
 - **Feedback zum Video „WhatsApp-Gruppe“ v1 (Owner: „fast perfekt“), umgesetzt in v2:**
   - **Screenshots des Owners per Motion einbauen**, als gerahmte Karte ohne Handy-Rahmen (8 px schwarzer Rand, weicher Schatten),
     ca. 300 px breit links neben dem Owner. Wichtige Stelle mit **gelbem Rahmen markieren**; kleiner Text (z. B. ein Banner)

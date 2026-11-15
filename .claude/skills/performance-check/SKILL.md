@@ -21,7 +21,8 @@ Erst wenn alle Punkte geprüft und bestanden sind, wird gesendet. Fehler vorher 
 11. Alle Regeln aus „Gelernte Regeln“ der Skills noch einmal gegenlesen
 Was sich nicht ausschließen lässt (z. B. fehlende Schrift, fehlende Fakten), wird **vor** dem Senden offen benannt oder nachgefragt.
 
-**Als Skript:** `tools/owner-video-v2/qa.py` prüft Technik, Ton, Schnitte, Untertitel gegen den Ton, QR-Code, Safe-Zones,
+**Reihenfolge der Skripte:** `sfx_check.py` → `sound_words.py` → `qa.py` (liest deren Ergebnis mit). Alles muss bestanden sein.
+**Als Skript:** `tools/owner-video-v2/qa.py` prüft Technik, Ton, Schnitte, Sprache gegen die Rohaufnahme, Sounds, QR-Code, Safe-Zones,
 Schlussbild und ob eine Grafik das Gesicht verdeckt. Zusätzlich immer selbst ansehen: Kontaktbogen (2 Bilder/s),
 Bilder vor/nach jedem Schnitt, jede Einblendung in voller Größe.
 **Grenze:** Claude kann das Video nicht anhören. Klang, Betonung und Gefühl prüft der Owner.

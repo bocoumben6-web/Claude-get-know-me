@@ -8,6 +8,7 @@ Dieses Repository ist Claudes Gedächtnis für den Videostil von **Lavish**.
   2. **Lavish-Content** (Pieces im Fokus, wenig Reden) → Skill `lavish-product-content`
 - **Oberste Regel: `LAVISH-GUIDELINES.md`** (Master-Guidelines des Owners). Vor jedem Video lesen.
   Bei Widerspruch zu einem Skill gelten die Guidelines.
+- **Standard für jedes neue Video: Skill `lavish-setup`** (das vom Owner festgelegte Lavish-Videokonzept). Zuerst laden.
 - Immer gelten: `lavish-brand`, `video-schnitt`, `performance-check`.
 - Wenn der Owner Feedback gibt, das für zukünftige Videos gilt: als Regel im
   Abschnitt „Gelernte Regeln“ des passenden Skills eintragen.

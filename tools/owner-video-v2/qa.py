@@ -47,19 +47,19 @@ for b0, b1 in bursts:
     if not inside: chk(f"Sprach-Abschnitt {b0:.2f}-{b1:.2f} bewusst entfernt", why is not None, f"({why})" if why else "NICHT BEGRÜNDET")
 chk("alle übrigen Sprach-Abschnitte vollständig enthalten", all(any(s - 0.02 <= b0 and b1 <= e_ + 0.02 for s, e_ in kept) or any(abs(a0 - b0) < 0.05 for a0, _, w in ALLOWED if w) for b0, b1 in bursts))
 
-print("4 UNTERTITEL gegen Ton des fertigen Videos")
-from faster_whisper import WhisperModel
-m = WhisperModel("large-v3", device="cpu", compute_type="int8")
-subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", F, "-f", "f32le", "-ac", "1", "-ar", "16000", J + "/final.raw"])
-r, _ = m.transcribe(np.fromfile(J + "/final.raw", dtype=np.float32), language="de", beam_size=5, condition_on_previous_text=False)
-heard = " ".join(s.text.strip() for s in r); print("   gehört:", heard)
-norm = lambda s: re.sub(r"[^a-zäöüß0-9 ]", "", s.lower().replace("-", " ").replace("%", " prozent")).split()
-H = norm(heard); U = norm(" ".join(t.replace("*", "") for _, _, t in SUBS)); sm = difflib.SequenceMatcher(None, H, U)
-OKAY = {("early", "access"): "englisches Wort, wird ohne Kontext nicht erkannt; mit Kontext und vom Owner bestätigt", ("ein", "pop", "up"): "nur Schreibweise/Grammatik", ("dieselbe",): "nur Schreibweise"}
-diffs = [(tuple(H[i1:i2]), tuple(U[j1:j2])) for tag, i1, i2, j1, j2 in sm.get_opcodes() if tag != "equal"]
-for h, u in diffs: print(f"   Abweichung: gehört {h} / Untertitel {u}  -> {OKAY.get(u, 'UNGEKLÄRT')}")
-chk("jede Abweichung ist geklärt", all(u in OKAY for h, u in diffs), f"{len(diffs)} Stellen")
-chk("'WhatsApp-Gruppe' am Ende vollständig hörbar", "whatsapp gruppe house of lavish" in " ".join(H))
+print("4 SPRACHE: fertiges Video gegen die Rohaufnahme (drei Erkenner)")
+# Maßstab ist die Rohaufnahme: Was dort klar verständlich ist (mind. 2 von 3 Erkennern), muss es im fertigen Video auch sein.
+# Wörter, die schon roh undeutlich sind, kann keine Bearbeitung retten; sie werden nur aufgelistet (die Untertitel tragen sie).
+from hear3 import hear, U as UW
+votes, texts = hear(F, through_aac=False)
+rawv = np.array(json.load(open(J + "/raw_votes.json")))
+assert len(rawv) == len(UW), "raw_votes.json passt nicht zum Schnitt: voice-Test neu laufen lassen"
+print("   gehört (bestes Modell):", texts[0])
+lost = [UW[i] for i in range(len(UW)) if rawv[i] >= 2 and votes[i] < 2]
+unclear = sorted({UW[i] for i in range(len(UW)) if rawv[i] < 2})
+print("   schon in der Rohaufnahme undeutlich (liegt an der Aussprache, nicht am Schnitt):", unclear)
+chk("jedes roh klar verständliche Wort bleibt verständlich", not lost, "verloren: " + str(lost) if lost else "")
+chk("Gesamtverständlichkeit höchstens 5 % unter der Rohaufnahme", votes.sum() >= rawv.sum() - 12, f"roh {int(rawv.sum())}, fertig {int(votes.sum())} von {3 * len(UW)}")
 chk("'Lavish' richtig geschrieben", "LAVISH" in " ".join(t for _, _, t in SUBS) and "LEWIS" not in " ".join(t for _, _, t in SUBS))
 chk("keine Satzzeichen in Untertiteln", not re.search(r"[.,!?]", " ".join(t for _, _, t in SUBS)))
 
@@ -95,4 +95,10 @@ while True:
                 if not (x1 < box[0] or x0 > box[2] or y1 < box[1] or y0 > box[3]): bad.append(round(t, 2))
     n += 1
 chk("keine Grafik über dem Gesicht (alle 1/3 s geprüft)", not bad, str(bad[:8]))
+print("6 SOUNDS")
+import os
+for f_, label in (("sfx_check.json", "jeder Sound mind. 9 dB unter der Stimme"), ("sound_words.json", "Sounds verdecken kein Wort")):
+    if os.path.exists(J + "/" + f_) and os.path.getmtime(J + "/" + f_) >= os.path.getmtime(J + "/a_mix.wav") - 1:
+        r_ = json.load(open(J + "/" + f_)); chk(label, r_["ok"], str({k: v for k, v in r_.items() if k != "ok"}))
+    else: chk(label + " (Prüfung für diese Mischung gelaufen)", False, "sfx_check.py / sound_words.py nach mix.py ausführen")
 print("\nERGEBNIS:", "ALLES BESTANDEN" if ok else "NICHT BESTANDEN")
