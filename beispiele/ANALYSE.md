@@ -130,4 +130,10 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
   und an der Seite unten links. Ich meine, das Flanell erklärt sich von selber. Fünf verschiedene Flanellmuster. Wow, this is fashion,
   this is art at this point. Und vom Fit wollen wir gar nicht sprechen. Also wenn das nicht rockt, hat keine Ahnung, Mann."
 - Der Owner trägt das Flanell im Video NICHT → Produktbilder nötig (angefragt). Arbeitsordner: scratchpad/job3.
-- Stand: wartet auf Bilder, Überschrift und Bestätigung des Wortlauts.
+- Owner schickte 9 Fotos, Überschrift „SNR FLANELL" bestätigt, am Ende nur das Logo. Wortlaut NICHT ausdrücklich bestätigt.
+- **v1 (16.11.2026):** 30,5 s. Hook-Titel hinter dem Owner; Karten: Brust-Print (Still Not Reachable), Saum mit gelbem Rahmen (Distressing),
+  3 Patches (Nacken / Rücken / Seite, Fotos wechseln), Flanell ganz + 5 Muster-Kacheln, „This is Fashion / Art" (Frauenfoto), Fit (Duo-Foto).
+  16 Sound-Stellen, Stimme 15,3 → 22,5 dB Abstand zum Rauschen. Selbstkontrolle bestanden.
+- Entfernt: Dublette `_12`, ein einzelnes „und" vor langer Pause, Halbsatz nach dem Take. „Patchworks" blieb drin.
+- Undeutlich schon in der Aufnahme: Saum, Distressing, unten, erklärt, fünf, this is, Mann. Bekannte Ausnahme: Endung von „Besonderheiten".
+- Feedback des Owners: [AUSSTEHEND]

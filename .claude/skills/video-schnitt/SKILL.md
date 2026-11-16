@@ -153,6 +153,18 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - Zusätzliche Pakete: `noisereduce`, `scipy`, `opencv-python-headless` (im Setup-Skript der Umgebung).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **16.11.2026, Video „SNR Flanell" (zweites im Lavish Setup), Skripte in `tools/owner-video-v2/beispiel-snr-flanell/`:**
+  - **Produktfotos als Karten 430 px breit** (statt 300): Zoom 1,25 mit festem linken Bildrand, dann sitzt der Kopf bei 1,25 × Kopf-x
+    und links ist Platz bis x≈510. Fotos wechseln per Pop am selben Platz; ein Balken zählt („3 PATCHES", „5 MUSTER") oder rollt weiter.
+  - **Whooshes müssen in den Schnitt passen:** Zwischen zwei Abschnitten sind nur ca. 0,24 s Pause. Whoosh max. 0,20 s lang,
+    Start 0,11 s vor dem Abschnitt. Länger oder früher verdeckt das Wortende davor (gemessen bei „Besonderheiten", „unten links").
+  - **Nach dem letzten Wort 0,15–0,2 s Luft** vor dem Logo; der Logo-Schlag liegt erst nach dem Schnitt.
+  - **Satz-Angleichung max. ±2 dB** (vorher +3,5/−3): stärkere Sprünge kosteten ein Wort.
+  - **Prüf-Maßstab robuster:** `rawvotes.py` hört die Rohaufnahme dreimal leicht verschieden und speichert pro Wort den niedrigsten Wert.
+    `sound_words.py` macht bei jedem Verdacht eine Gegenprobe (Sounds dort stumm). Schreibvarianten der Erkenner („Flanel") werden angeglichen.
+    Die Gesichts-Prüfung ignoriert Gesichter innerhalb von Fotokarten.
+  - Einzelne Erkenner-Ergebnisse schwanken um mehrere Punkte ohne hörbare Ursache. Nicht jedem Punkt hinterherjagen; dem Owner die
+    Grenzfälle nennen und ihn anhören lassen.
 - **15.11.2026:** Das Video „WhatsApp-Gruppe" ist der Standard („Lavish Setup", Skill `lavish-setup`). Neue Videos bauen darauf auf.
 - **15.11.2026, aus der Ton-Arbeit gelernt:** Erst messen, dann einstellen. Stärkeres Entrauschen klingt in Zahlen besser (Abstand),
   macht die Stimme aber schlechter (Wörter gehen verloren). Bei drei Sounds dicht an einem undeutlichen Wort einen streichen.

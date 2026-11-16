@@ -1,7 +1,7 @@
 """Final audio: speech (cleaned) -> phrase level rides -> gain to target -> + sounds -> transparent peak limiter.
 The limiter only touches real peaks, so sounds never push the voice down."""
 import sys, json, wave, subprocess, numpy as np
-J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job2"
+J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job3"
 SR = 48000; CEIL = 0.84
 def rd(p):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", J + "/" + p, "-f", "f32le", "-ac", "2", "-ar", str(SR), J + "/t/r.raw"])
@@ -34,7 +34,7 @@ for s_, e_, _t in SUBS:
 med = float(np.median([l for _, _, l in lv])); rides = []
 g = np.ones(n)
 for a, b, l in lv:
-    d = float(np.clip(med - l, -3.0, 3.5)) if abs(med - l) > 1.2 else 0.0; rides.append([round(a, 2), round(b, 2), round(d, 2)])
+    d = float(np.clip(med - l, -2.0, 2.0)) if abs(med - l) > 1.2 else 0.0; rides.append([round(a, 2), round(b, 2), round(d, 2)])
     if d: g[int(max(0, a - 0.06) * SR):int((b + 0.06) * SR)] = 10 ** (d / 20)
 json.dump(rides, open(J + "/rides.json", "w"))
 k = np.hanning(int(0.08 * SR)); k /= k.sum(); g = np.convolve(g, k, mode="same")

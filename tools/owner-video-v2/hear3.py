@@ -2,7 +2,7 @@
 One recogniser alone flips on borderline words; three together are stable enough to judge a mix."""
 import sys, subprocess, re, difflib, numpy as np
 from faster_whisper import WhisperModel
-J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job2"
+J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job3"
 sys.path.insert(0, J)
 from plan import SUBS
 _models = None
@@ -13,6 +13,7 @@ def models():
 def norm(t):
     t = re.sub(r"[^a-zäöüß0-9 ]", "", t.lower().replace("-", " ").replace("%", " prozent"))
     for a, b in (("pop up", "popup"), ("die selbe", "dieselbe")): t = t.replace(a, b)
+    t = re.sub(r"\bflanel(?=\b|muster)", "flanell", t).replace("flanell muster", "flanellmuster").replace("fashion", "fashion")   # spelling variants of the recognisers
     return t.split()
 U = norm(" ".join(t.replace("*", "") for _, _, t in SUBS))
 def hear(path, through_aac=True):
