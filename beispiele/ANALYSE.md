@@ -120,3 +120,14 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
   Geschichte, in, reinschicken, House of Lavish. Für künftige Drehs: diese Wörter deutlicher sprechen oder näher ans Mikro.
 - Der Owner hat dieses Video als **„unser Lavish Setup"** für alle künftigen Videos festgelegt.
 - Feedback des Owners zu v3: [AUSSTEHEND]
+
+## Video „SNR Flanell" (begonnen 16.11.2026) – zweites Video im Lavish Setup
+- 15 Rohclips à ca. 3 s (Betonwand, gleiche Machart). **Clip `_11` und `_12` sind identisches Material** (Ton-Korrelation 1,00), `_12` entfällt.
+  Owner-Vorgabe: Material darf nicht doppelt vorkommen → bei jedem Job Clips per Ton-Korrelation auf Dubletten prüfen.
+- Reihenfolge nach Exportzeit: Basis, _2 … _11, _13, _15, zuletzt die `.mov` (Outro, Owner geht aus dem Bild). Master 42,8 s.
+- Wortlaut (Entwurf, vom Owner zu bestätigen): „Heute reden wir über das SNR Flanell. Still Not Reachable Flanell. Ich erzähle euch die
+  Besonderheiten. Wir haben unten am Saum mit Distressing gearbeitet. Wir haben drei wunderschöne Patches: am Nacken, auf dem Rücken
+  und an der Seite unten links. Ich meine, das Flanell erklärt sich von selber. Fünf verschiedene Flanellmuster. Wow, this is fashion,
+  this is art at this point. Und vom Fit wollen wir gar nicht sprechen. Also wenn das nicht rockt, hat keine Ahnung, Mann."
+- Der Owner trägt das Flanell im Video NICHT → Produktbilder nötig (angefragt). Arbeitsordner: scratchpad/job3.
+- Stand: wartet auf Bilder, Überschrift und Bestätigung des Wortlauts.

@@ -43,6 +43,7 @@ Gemessen mit drei Spracherkennern, Skript `voice.py`:
 - Ganz verschwindet Außenrauschen nicht. Das dem Owner so sagen.
 
 ## Ablauf für ein neues Video
+0. **Dubletten prüfen:** Clips per Ton-Korrelation vergleichen; identisches oder überlappendes Material nur einmal verwenden (Owner-Vorgabe 16.11.2026)
 1. Clips zu einem Master zusammenfügen, Sprach-Abschnitte messen, mit ganzen Sätzen transkribieren
 2. Dem Owner den Wortlaut zeigen und sagen, welche Screenshots/Fotos/Fakten fehlen. Nichts schätzen.
 3. `plan.py`: Schnittplan + Untertitel. Pausen mit neuem Ansatz mitten im Satz herausnehmen, nach Aussagen 0,4 s Luft lassen, nie in einem Wort schneiden.
