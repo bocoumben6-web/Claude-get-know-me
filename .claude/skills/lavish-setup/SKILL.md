@@ -20,7 +20,8 @@ Details stehen in `lavish-brand`, `owner-content`, `video-schnitt`, `performance
 | **Motion** | Einflug mit Bewegungsunschärfe und Überschwingen, leichte Drift beim Halten, Text rollt im selben Balken weiter, Zahlen zählen hoch, ein Lichtstreifen, Kamerafahrt auf den Owner bei Pointen |
 | **Screenshots des Owners** | Als gerahmte Karte ohne Handy-Rahmen. Wichtige Stelle mit gelbem Rahmen markieren; kleiner Text springt groß heraus; Pop-ups „poppen" ins Bild |
 | **Bildausschnitt** | Owner per Zoom 1,18 nach rechts (Kopf bei x≈650), links ist Platz für Grafik. Nie eine Grafik über dem Gesicht. |
-| **Farbe** | Leicht entsättigt, Lichter gedämpft, oben etwas abgedunkelt, dezentes Korn über allem |
+| **Farbe** | Leicht entsättigt, Lichter gedämpft, oben etwas abgedunkelt. **Kein Korn** (TikTok macht daraus Matsch, gemessen 17.11.2026) |
+| **Export** | Hohe Qualität ohne Korn, ca. 18 Mbit/s, bt709-Farbangaben (Details in `video-schnitt`). Owner an „Hochladen in hoher Qualität" in TikTok erinnern. |
 | **Sounds** | Whoosh, Pop, Ticken, Klingel/Chime, tiefer Schlag bei Hook und Logo. Alle selbst erzeugt. Regeln siehe unten. |
 | **Stimme** | Entrauscht und im Pegel ausgeglichen. Regeln siehe unten. |
 | **QR-Code / Link** | Wenn der Owner einen schickt: mind. 4 s sichtbar, auch im Schlussbild |

@@ -108,7 +108,7 @@ Alle prozedural erzeugt, jedes Mal leicht anders (Zufall), nie zweimal dieselbe 
 - ~~Camcorder-/VHS-Rückblende~~ **gestrichen: Der Owner will den VHS-Look gar nicht** (auch keinen Datumsstempel). Nicht mehr verwenden.
 - **Einblenden:** „hingeklatscht“ (2 Frames leicht versetzt, dann sitzt es), kein weiches Pop; Ausblenden per hartem Schnitt
 - **Grading-Kette (ffmpeg):** `eq=saturation=0.86:contrast=1.07:brightness=-0.012,colorbalance=bs=0.035:bm=0.02:rs=-0.02`,
-  dann Untertitel, zuletzt `noise=alls=9:allf=t` über alles (Korn verbindet Bild, Grafik und Text)
+  dann Untertitel. **Kein Korn mehr im Export** (seit 17.11.2026, TikTok-Komprimierung)
 - (Stand Test v3, überholt: Sounds sind seit 12.11.2026 erwünscht, siehe `lavish-setup`)
 - `graphics_alt_v2_nicht_verwenden.py` ist der alte Baukasten-Look (Checkliste, Pop-Animationen) und nur als Negativbeispiel da.
 
@@ -153,6 +153,15 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - Zusätzliche Pakete: `noisereduce`, `scipy`, `opencv-python-headless` (im Setup-Skript der Umgebung).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **17.11.2026, Owner: „TikTok komprimiert das Video, sieht nach schlechter Qualität aus."** Gemessen mit nachgestellter
+  TikTok-Komprimierung (H.264, ca. 2 Mbit/s): **Zeitliches Filmkorn ist der Hauptgrund** (Ähnlichkeit zum Original 0,937 mit Korn,
+  0,966 ohne). Zusätzliches Entrauschen/Schärfen brachte nichts. Deshalb gilt für den **Export zum Hochladen**:
+  - **Kein Korn** (`noise=...allf=t` weglassen). Der rohe Look kommt aus Grading und Material, nicht aus Korn.
+  - `-crf 14 -maxrate 25M -bufsize 50M -preset slow -profile:v high -level 4.2 -r 30 -g 60`, Farbangaben
+    `-colorspace bt709 -color_primaries bt709 -color_trc bt709 -color_range tv`, Audio AAC 256k. Ca. 18 Mbit/s, 70 MB für 30 s.
+  - Dem Owner bei jedem Video sagen: In TikTok **„Hochladen in hoher Qualität"** einschalten (beim Posten unter „Weitere
+    Optionen" bzw. in den Einstellungen), Datensparmodus aus, und die Datei **nicht über WhatsApp/Telegram** aufs Handy schicken
+    (die komprimieren vorher schon), sondern direkt herunterladen, AirDrop oder Kabel.
 - **16.11.2026, Video „SNR Flanell" (zweites im Lavish Setup), Skripte in `tools/owner-video-v2/beispiel-snr-flanell/`:**
   - **Produktfotos als Karten 430 px breit** (statt 300): Zoom 1,25 mit festem linken Bildrand, dann sitzt der Kopf bei 1,25 × Kopf-x
     und links ist Platz bis x≈510. Fotos wechseln per Pop am selben Platz; ein Balken zählt („3 PATCHES", „5 MUSTER") oder rollt weiter.
