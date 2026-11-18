@@ -38,15 +38,24 @@ Analysiert aus dem TikTok-Download (1024×576, 16:9 quer, 30 fps).
 - Musik läuft unter dem ganzen Video, Stimme darüber. In B-Roll-Strecken nur Musik.
 - Für unseren Export: Musik-Stellen **stumm** lassen (Owner legt Musik in der App drauf) + Zeitliste mitschicken.
 
-## GTA-Switch
-- Bei **jedem Ortswechsel** (Owner-Vorgabe). In Referenz 1 nicht zu sehen (dort nur harte Schnitte).
-- Genaues Aussehen: [AUSFÜLLEN] – Owner fragen bzw. Beispiel zeigen lassen. Vermutung (nicht bestätigt):
-  Kamera zoomt aus dem Bild raus in eine Draufsicht/Karte, Farb-Entsättigung + Whoosh, dann wieder rein am neuen Ort.
+## GTA-Switch (Owner, 18.11.2026: „wie beim Charakterwechsel in GTA 5“)
+- Bei **jedem Ortswechsel**. In Referenz 1 nicht zu sehen (dort nur harte Schnitte).
+- Umsetzung (`tools/owner-vlog/build.py`, `switch_frames`), 1,0 s bei 30 fps:
+  1. **3 Sprünge nach oben** (je 4 Frames, schnell anfahren, weich abbremsen): Kamera fährt aus dem letzten Bild
+     hoch in einen Himmel, vertikale Bewegungsunschärfe, bei jedem Sprung ein kurzer heller Ruck
+  2. Mit jedem Sprung **entsättigter, kühler, flacher** (GTA-Look), oben fast grau
+  3. **Schwenk** über den Himmel (6 Frames, horizontale Unschärfe)
+  4. **3 Sprünge runter** ins erste Bild des neuen Orts, Farbe kommt zurück
+  5. Ton: pro Sprung ein dumpfer Schlag, Luftzug beim Schwenk (selbst erzeugt, keine Spiel-Sounds)
+- **Nicht** mit gespiegelter/verkleinerter Umgebung arbeiten: sieht aus wie ein Kaleidoskop (getestet, verworfen).
+- Himmel wird selbst erzeugt (blass, Wolken). Keine Grafiken, Sounds oder Karten aus dem Spiel verwenden.
 
-## Offene Fragen an den Owner
-- Format: quer 16:9 wie im Download oder 9:16? [AUSFÜLLEN]
-- Account-Name: [AUSFÜLLEN]
-- Schlussbild/Logo: [AUSFÜLLEN] (Referenz hat keins)
+## Festgelegt (Owner, 18.11.2026)
+- **Format quer 16:9** (1920×1080), wie der alte Vlog. Hochkant-Clips mittig auf unscharfem Hintergrund;
+  Clips mit falscher Drehung (Metadaten) im Bild prüfen und richtig drehen.
+- **Kein Logo am Ende**, harter Schluss wie im alten Vlog.
+- Stumme Stellen (B-Roll ohne Reden) bekommen Musik vom Owner; Zeitliste mitschicken.
+- Untertitel nur, wo die Spracherkennung sicher ist (mit zweitem Durchlauf prüfen); unsichere Stellen dem Owner nennen.
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - (noch keine)
