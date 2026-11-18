@@ -25,12 +25,21 @@ SEGMENTS = [
     ("4662", 0.00, 1.93, "music"),
     ("4665", 0.00, 2.46, "voice"),     # Warte, warte, warte
     ("4668", 0.00, 2.50, "voice"),     # Ich verstehe diese Menschen nicht
-    ("4705", 0.00, 2.79, "music"),     # Rückfahrt, Outro
+    ("4704", 0.00, 5.55, "voice"),     # "Ich bin jetzt fertig mit dem Video, danke ..." (Ende: Kamera kippt -> weg)
+    ("4705", 0.00, 2.79, "music"),     # Rückfahrt
+    "SWITCH",
+    ("4706", 0.00, 3.60, "music"),     # Essen, Kumpel mit Flasche
+    ("4708", 2.20, 4.20, "music"),     # am Tisch
+    ("4708", 5.60, 7.60, "music"),     # Pommes füttern
+    ("4710", 0.00, 3.00, "music"),     # Nachtfahrt
+    "SWITCH",
+    ("4712", 0.00, 2.10, "voice"),     # Autohalle: "Gucken wir mal kurz, ein Schnäppchen"
+    ("4712", 2.80, 9.25, "voice"),     # "entweder wird es der oder der ... ich weiß es doch nicht, Bro"
 ]
 SWITCH_LEN = 0.4          # Whip-Pan, Sekunden (12 Frames)
 ROTATE = {"4662": "transpose=2"}     # Metadaten falsch: Inhalt liegt quer
 PORTRAIT = set()                     # Owner 19.11.: Hochkant-Clips raus
-NOISE = {"4653": (4.6, 6.4), "4659": (6.1, 7.2), "4660": (2.4, 3.2), "4665": (0.0, 0.3), "4668": (0.0, 1.1)}
+NOISE = {"4704": (5.6, 6.5), "4712": (11.2, 13.6), "4653": (4.6, 6.4), "4659": (6.1, 7.2), "4660": (2.4, 3.2), "4665": (0.0, 0.3), "4668": (0.0, 1.1)}
 
 # (clip, [(wort, start_im_clip), ...], ende_im_clip)
 SUBS = [
@@ -58,4 +67,21 @@ SUBS = [
     ("4660", [("DER", 0.88), ("ROSA", 1.30), ("TUNNEL", 1.64)], 2.6),
     ("4665", [("WARTE", 0.32), ("WARTE", 0.96), ("WARTE", 1.34)], 2.2),
     ("4668", [("ICH", 1.20), ("VERSTEHE", 1.54), ("DIESE", 1.84), ("MENSCHEN", 1.92), ("NICHT", 2.06)], 2.5),
+    ("4704", [("ICH", 0.0), ("BIN", 0.02), ("JETZT", 0.08), ("FERTIG", 0.20)], 0.24),
+    ("4704", [("MIT", 0.24), ("DEM", 0.36), ("VIDEO", 0.48)], 0.72),
+    ("4704", [("DANKE", 0.72)], 1.30),                       # Name danach unsicher -> Owner fragen
+    ("4704", [("DANKE", 1.30), ("ANDI", 1.46)], 1.74),
+    ("4704", [("DANKE", 1.74), ("LUIS", 1.82)], 2.24),
+    ("4704", [("DANKE", 2.24), ("MUSTAFA", 2.48)], 2.86),
+    ("4704", [("HINTER", 2.86), ("DER", 3.18), ("KAMERA", 3.30)], 3.64),
+    ("4704", [("WIR", 3.64), ("GEHEN", 3.70), ("JETZT", 3.94), ("NATÜRLICH", 4.18)], 4.9),
+    ("4712", [("GUCKEN", 0.0), ("WIR", 0.08), ("MAL", 0.20), ("BRUDER", 0.30)], 0.58),
+    ("4712", [("SCHNÄPPCHEN", 0.58), ("WEISST", 1.14), ("DU", 1.38)], 2.06),
+    ("4712", [("ENTWEDER", 2.82), ("WIRD", 3.14), ("ES", 3.30), ("DER", 3.44), ("BRUDER", 3.54)], 3.88),
+    ("4712", [("ODER", 3.88), ("DER", 3.96), ("BRUDER", 4.12)], 4.54),
+    ("4712", [("ABER", 4.54), ("ES", 4.62), ("KANN", 4.74), ("AUCH", 4.82), ("SEIN", 4.90)], 5.02),
+    ("4712", [("ES", 5.02), ("WIRD", 5.12), ("DER", 5.16), ("DA", 5.34), ("HINTEN", 5.44), ("BRUDER", 5.72)], 5.92),
+    ("4712", [("ABER", 5.92), ("ES", 6.02), ("KANN", 6.16), ("AUCH", 6.36), ("SEIN", 6.54), ("BRUDER", 6.80)], 6.96),
+    ("4712", [("ES", 6.96), ("WIRD", 7.08), ("DER", 7.20)], 7.58),
+    ("4712", [("OH", 7.58), ("ICH", 7.88), ("WEISS", 8.02), ("ES", 8.30), ("DOCH", 8.48), ("NICHT", 8.64), ("BRO", 8.96)], 9.25),
 ]

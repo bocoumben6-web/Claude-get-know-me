@@ -65,4 +65,7 @@ Ob der GTA-Switch später zurückkommt: offen. Der Owner wollte einen echten GTA
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Hochkant-Clips nicht verwenden (19.11.2026).
+- **Untertitel unten und kleiner** (Owner, 19.11.2026): Bebas Neue Gelb, Größe 62 bei 1080p, Mitte bei 86 % der Bildhöhe
+  (statt groß in der Bildmitte wie in Referenz 1).
+- Doppelt hochgeladene Dateien („IMG_xxxx (1).MOV“) prüfen: unterscheiden sich oft nur im Datei-Kopf -> nur einmal verwenden.
 - Kein GTA-Switch, solange der Owner ihn nicht wieder freigibt; Whip-Pan als Übergang (19.11.2026).

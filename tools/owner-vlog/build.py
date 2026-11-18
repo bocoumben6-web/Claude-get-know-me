@@ -176,13 +176,13 @@ WrapStyle: 2
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,Bebas Neue,84,&H0038CCF0,&H0038CCF0,&H80000000,&H64000000,0,0,0,0,100,100,1,0,1,1.2,2.5,5,80,80,0,1
+Style: Sub,Bebas Neue,62,&H0038CCF0,&H0038CCF0,&H80000000,&H64000000,0,0,0,0,100,100,1,0,1,1.2,2.5,5,80,80,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
 for a, b, txt in ev:
-    ass += f"Dialogue: 0,{ts(a)},{ts(b)},Sub,,0,0,0,,{{\\pos({W // 2},{int(H * 0.52)})}}{txt}\n"
+    ass += f"Dialogue: 0,{ts(a)},{ts(b)},Sub,,0,0,0,,{{\\pos({W // 2},{int(H * 0.86)})}}{txt}\n"
 open(f"{T}/subs.ass", "w").write(ass)
 
 # ---------- 5. Export ----------
