@@ -3,9 +3,10 @@
 Dieses Repository ist Claudes Gedächtnis für den Videostil von **Lavish**.
 
 - Sprache mit dem Owner: **Deutsch**.
-- Es gibt zwei Content-Arten, die nie vermischt werden:
+- Es gibt drei Content-Arten, die nie vermischt werden:
   1. **Owner-Content** (Personal Branding) → Skill `owner-content`
   2. **Lavish-Content** (Pieces im Fokus, wenig Reden) → Skill `lavish-product-content`
+  3. **Owner-Vlog** (zweiter Account, Tagesvlogs) → Skill `owner-vlog`. Lavish Setup gilt dort nicht automatisch.
 - **Oberste Regel: `LAVISH-GUIDELINES.md`** (Master-Guidelines des Owners). Vor jedem Video lesen.
   Bei Widerspruch zu einem Skill gelten die Guidelines.
 - **Standard für jedes neue Video: Skill `lavish-setup`** (das vom Owner festgelegte Lavish-Videokonzept). Zuerst laden.
