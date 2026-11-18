@@ -7,10 +7,14 @@ Reads cut_a.wav, writes a_voice.wav (48 kHz, dual mono)."""
 import sys, subprocess, wave, numpy as np
 import noisereduce as nr
 from scipy.signal import butter, sosfiltfilt
-J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job2"
+J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job4"
 sys.path.insert(0, J)
 from plan import TOTAL
-SR = 48000; STRENGTH = 0.70; PAUSE_DB = 6.0
+try:
+    from plan import NOISE
+except ImportError:
+    NOISE = None
+SR = 48000; STRENGTH = 0.80 if NOISE else 0.70; PAUSE_DB = 6.0   # 0.80 measured on the Black-Friday video with a clean profile (no word lost)
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", J + "/cut_a.wav", "-f", "f32le", "-ac", "1", "-ar", str(SR), J + "/t/c.raw"])
 raw = np.fromfile(J + "/t/c.raw", dtype=np.float32).astype(np.float64)
 hp = lambda x, f: sosfiltfilt(butter(2, f, "hp", fs=SR, output="sos"), x)
@@ -27,7 +31,11 @@ def expander(x, depth_db, hold=0.12):
     g = 10 ** (-(1 - k) * depth_db / 20); w = int(0.04 * SR)
     return x * np.convolve(g, np.hanning(w) / np.hanning(w).sum(), mode="same")
 x0 = hp(raw, 75)
-noise = x0[int((TOTAL + 0.15) * SR):int((TOTAL + 1.2) * SR)]          # room tone that sits under the end card
+if NOISE:   # clean pause taken straight from the master (best profile; the end-card tone may contain breath)
+    _m = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", str(NOISE[0]), "-t", str(NOISE[1]), "-i", J + "/master.mkv", "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True).stdout
+    noise = hp(np.frombuffer(_m, dtype=np.float32).astype(np.float64), 75)
+else:
+    noise = x0[int((TOTAL + 0.15) * SR):int((TOTAL + 1.2) * SR)]          # room tone that sits under the end card
 x = nr.reduce_noise(y=x0, sr=SR, y_noise=noise, stationary=True, prop_decrease=STRENGTH, n_fft=2048)[:len(raw)]
 x = expander(x, PAUSE_DB)
 with wave.open(J + "/a_voice.wav", "wb") as w:

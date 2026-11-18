@@ -137,3 +137,13 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Entfernt: Dublette `_12`, ein einzelnes „und" vor langer Pause, Halbsatz nach dem Take. „Patchworks" blieb drin.
 - Undeutlich schon in der Aufnahme: Saum, Distressing, unten, erklärt, fünf, this is, Mann. Bekannte Ausnahme: Endung von „Besonderheiten".
 - Feedback des Owners: [AUSSTEHEND]
+
+## Video „Black Friday / Beanie-Deal" (18.11.2026) – drittes Video im Lavish Setup
+- 9 Clips in 4K (keine Dubletten), Master 21 s → 12,5 s + Logo. Owner-Wunsch: mehr Hypermotion; „kein Black Friday, sondern ein
+  Beanie-Deal zu Black Friday"; 3 neue Colorways bleiben geheim; Aktion wird später genauer gesagt.
+- Ablauf: Hook „BLACK FRIDAY?" hinter dem Owner → „BLACK FRIDAY" knallt rein und wird durchgestrichen (Kamera-Schlag) → „AKTION?" rollt zu
+  „WER WEISS" → „BEANIES" + „SCHON GEDROPPT" + Karussell der 4 Owner-Fotos (bereits erschienene Beanies) → „BEANIE-DEAL" +
+  „3 NEUE COLORWAYS" (zählt) + drei „?"-Karten → „AKTION: BALD MEHR INFOS" → Logo.
+- Entfernt: unklarer Halbsatz nach dem letzten Satz (beim Losgehen). Überschrift „BLACK FRIDAY?" von Claude gewählt (aus dem ersten Satz).
+- Export ohne Korn, 18 Mbit/s. Selbstkontrolle bestanden.
+- Feedback des Owners: [AUSSTEHEND]

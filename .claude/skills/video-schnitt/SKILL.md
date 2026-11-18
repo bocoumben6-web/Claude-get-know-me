@@ -153,6 +153,17 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - Zusätzliche Pakete: `noisereduce`, `scipy`, `opencv-python-headless` (im Setup-Skript der Umgebung).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **18.11.2026, Video „Black Friday / Beanie-Deal" (mehr Hypermotion gewünscht), Skripte in `tools/owner-video-v2/beispiel-black-friday/`:**
+  - Neue Bausteine: **durchgestrichener Balken** (`struck_bar`: Balken knallt rein, gelbe Linie zieht durch, Kamera-Wackler),
+    **Slam** (Element kommt groß rein und schrumpft in 0,16 s auf Größe), **Kamera-Schläge** (`SHAKE`-Liste, 7–9 px, 0,16–0,2 s),
+    **Foto-Karussell** (Fotos wechseln im Takt am selben Platz), **Geheim-Karten** (`q_card`: schwarze Karte mit „?" und Nummer, klappt auf).
+  - **Geheime Produkte nie zeigen**, auch nicht verpixelt: nur „?"-Karten. Keine erfundenen Details zur Aktion („BALD MEHR INFOS").
+  - Die Clips waren 4K: im Master sauber auf 1080×1920 herunterrechnen (lanczos), dann halten auch stärkere Zooms (1,35–1,46) scharf.
+  - Wenn der Owner sehr breit im Bild steht: Zoom 1,35 mit linkem Bildrand, Kopf bei x≈680, Grafiken max. bis x≈470, Fotokarten 360 px.
+  - **Rauschprofil aus einer wirklich ruhigen Pause des Masters nehmen** (`NOISE` in plan.py), nicht aus dem Ton unter dem Logo
+    (dort war Atem). Damit vertrug diese Aufnahme 80 % ohne Wortverlust (Abstand 11,3 → 18,8 dB). Immer messen.
+  - Kein Whoosh direkt vor einem Abschnitt, wenn der vorige Satz bis an den Schnitt läuft („aber sonst…" → „Ah").
+  - Isoliert gehört klang „Wenn ich Glück hab" wie „Wenn ihr Glück habt"; im ganzen Satz eindeutig. **Wortlaut immer im Satzzusammenhang prüfen.**
 - **17.11.2026, Owner: „TikTok komprimiert das Video, sieht nach schlechter Qualität aus."** Gemessen mit nachgestellter
   TikTok-Komprimierung (H.264, ca. 2 Mbit/s): **Zeitliches Filmkorn ist der Hauptgrund** (Ähnlichkeit zum Original 0,937 mit Korn,
   0,966 ohne). Zusätzliches Entrauschen/Schärfen brachte nichts. Deshalb gilt für den **Export zum Hochladen**:
