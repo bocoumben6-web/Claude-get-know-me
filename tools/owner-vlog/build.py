@@ -74,37 +74,23 @@ def view(cv, y0, blur):
     k = int(blur)
     return cv2.blur(v, (1, k)) if k > 2 else v
 
-def switch_frames(A, B, seed=1):
-    sky = make_sky(seed); fr = []
-    ca, SH = canvas(A, sky); cb, _ = canvas(B, sky)
-    ease = lambda t: 1 - (1 - t) ** 3
-    per = 4; stops = [0, 0.33, 0.68, 1.0]                      # drei Sprünge nach oben
-    for j in range(3):
-        for f in range(per):
-            t = ease((f + 1) / per); p = stops[j] + (stops[j + 1] - stops[j]) * t
-            k = (j + t) / 3
-            cv = ca
-            y0 = SH * (1 - p)
-            speed = (stops[j + 1] - stops[j]) * SH * (ease((f + 1) / per) - ease(f / per))
-            fr.append(look(view(cv, y0, speed * 0.9), k) + (10 if f == 0 else 0))
-    n_pan = 6                                                   # Schwenk über den Himmel
-    for f in range(n_pan):
-        t = (f + 0.5) / n_pan; x0 = int(W * 0.9 * (t * t * (3 - 2 * t)))
-        v = sky[int(SH * 0.0):int(SH * 0.0) + H, x0:x0 + W]
-        fr.append(look(cv2.blur(v, (int(30 + 140 * np.sin(np.pi * t)), 1)), 1))
-    for j in range(3):                                          # drei Sprünge runter
-        for f in range(per):
-            t = ease((f + 1) / per); p = stops[j] + (stops[j + 1] - stops[j]) * t
-            k = 1 - (j + t) / 3
-            y0 = SH * p; cv = cb
-            speed = (stops[j + 1] - stops[j]) * SH * (ease((f + 1) / per) - ease(f / per))
-            fr.append(look(view(cv, y0, speed * 0.9), k) + (10 if f == 0 else 0))
+def whip_frames(A, B, n=12):
+    """Whip-Pan: A reißt nach links weg, B zieht von rechts rein. Unschärfe folgt dem Tempo."""
+    cv = np.concatenate([A, B], 1); fr = []
+    pos = lambda t: t * t * (3 - 2 * t)                       # langsam -> schnell -> langsam
+    pos2 = lambda t: pos(pos(t))                              # noch schärferer Riss in der Mitte
+    for f in range(n):
+        t0, t1 = f / n, (f + 1) / n
+        x = W * pos2((t0 + t1) / 2); speed = W * (pos2(t1) - pos2(t0))
+        v = cv[:, int(x):int(x) + W]
+        k = int(speed * 1.1)
+        fr.append(cv2.blur(v, (k, 1)) if k > 2 else v)
     return fr
 
 for i, it in enumerate(items):
     if it[0] != "switch": continue
     A, B = grab(items[i - 1][1], True), grab(items[i + 1][1], False)
-    fr = switch_frames(A, B, seed=i)
+    fr = whip_frames(A, B)
     it[2] = len(fr) / FPS
     p = subprocess.Popen([*FF, "-f", "rawvideo", "-pix_fmt", "bgr24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", *ENC, it[1]], stdin=subprocess.PIPE)
     for f in fr: p.stdin.write(np.clip(f, 0, 255).astype(np.uint8).tobytes())
@@ -159,10 +145,7 @@ def put(tt, s, g):
     i = int(tt * SR); sfx[i:i + len(s)] += s[:len(sfx) - i] * g
 for t0, it in timeline:
     if it[0] != "switch": continue
-    per = 4 / FPS
-    for j in range(3): put(t0 + j * per, thump(120 - j * 15, 50), 0.55)
-    put(t0 + 12 / FPS - 0.05, air(0.32), 0.35)
-    for j in range(3): put(t0 + (18 + j * 4) / FPS, thump(90 + j * 15, 45), 0.55 + 0.1 * j)
+    put(t0 + it[2] / 2 - 0.16, air(0.32), 0.40)             # ein Whoosh, Mitte des Risses
 
 mix = voice + sfx
 def w24(p, x):

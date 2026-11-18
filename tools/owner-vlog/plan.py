@@ -23,14 +23,13 @@ SEGMENTS = [
     ("4660", 0.00, 3.20, "voice"),     # Das ist die neue Location, der Rosa Tunnel
     ("4661", 0.00, 1.63, "music"),
     ("4662", 0.00, 1.93, "music"),
-    ("4663", 0.65, 2.90, "music"),
     ("4665", 0.00, 2.46, "voice"),     # Warte, warte, warte
     ("4668", 0.00, 2.50, "voice"),     # Ich verstehe diese Menschen nicht
     ("4705", 0.00, 2.79, "music"),     # Rückfahrt, Outro
 ]
-SWITCH_LEN = 1.0          # Sekunden
+SWITCH_LEN = 0.4          # Whip-Pan, Sekunden (12 Frames)
 ROTATE = {"4662": "transpose=2"}     # Metadaten falsch: Inhalt liegt quer
-PORTRAIT = {"4663"}                  # echtes Hochkant -> mittig auf unscharfem Hintergrund
+PORTRAIT = set()                     # Owner 19.11.: Hochkant-Clips raus
 NOISE = {"4653": (4.6, 6.4), "4659": (6.1, 7.2), "4660": (2.4, 3.2), "4665": (0.0, 0.3), "4668": (0.0, 1.1)}
 
 # (clip, [(wort, start_im_clip), ...], ende_im_clip)

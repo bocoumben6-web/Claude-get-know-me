@@ -38,7 +38,13 @@ Analysiert aus dem TikTok-Download (1024×576, 16:9 quer, 30 fps).
 - Musik läuft unter dem ganzen Video, Stimme darüber. In B-Roll-Strecken nur Musik.
 - Für unseren Export: Musik-Stellen **stumm** lassen (Owner legt Musik in der App drauf) + Zeitliste mitschicken.
 
-## GTA-Switch (Owner, 18.11.2026: „wie beim Charakterwechsel in GTA 5“)
+## Übergang bei Ortswechsel (Stand 19.11.2026)
+**Owner-Entscheidung beim ersten Vlog: GTA-Switch raus, stattdessen eine „coole Transition“.** Umgesetzt als
+**Whip-Pan** (`whip_frames`): 12 Frames (0,4 s), altes Bild reißt nach links weg, neues zieht von rechts rein,
+horizontale Bewegungsunschärfe folgt dem Tempo (Mitte am schnellsten), ein Whoosh in der Mitte.
+Ob der GTA-Switch später zurückkommt: offen. Der Owner wollte einen echten GTA-Clip als Vorlage schicken; dann danach bauen.
+
+### Alter Versuch: GTA-Switch (18.11.2026, „wie beim Charakterwechsel in GTA 5“), aktuell nicht verwenden
 - Bei **jedem Ortswechsel**. In Referenz 1 nicht zu sehen (dort nur harte Schnitte).
 - Umsetzung (`tools/owner-vlog/build.py`, `switch_frames`), 1,0 s bei 30 fps:
   1. **3 Sprünge nach oben** (je 4 Frames, schnell anfahren, weich abbremsen): Kamera fährt aus dem letzten Bild
@@ -51,11 +57,12 @@ Analysiert aus dem TikTok-Download (1024×576, 16:9 quer, 30 fps).
 - Himmel wird selbst erzeugt (blass, Wolken). Keine Grafiken, Sounds oder Karten aus dem Spiel verwenden.
 
 ## Festgelegt (Owner, 18.11.2026)
-- **Format quer 16:9** (1920×1080), wie der alte Vlog. Hochkant-Clips mittig auf unscharfem Hintergrund;
-  Clips mit falscher Drehung (Metadaten) im Bild prüfen und richtig drehen.
+- **Format quer 16:9** (1920×1080), wie der alte Vlog. **Hochkant-Clips kommen raus** (Owner, 19.11.2026), nicht auf unscharfen Hintergrund setzen.
+  Clips mit falscher Drehung (Metadaten) im Bild prüfen: Ist der Inhalt eigentlich quer, richtig drehen und behalten.
 - **Kein Logo am Ende**, harter Schluss wie im alten Vlog.
 - Stumme Stellen (B-Roll ohne Reden) bekommen Musik vom Owner; Zeitliste mitschicken.
 - Untertitel nur, wo die Spracherkennung sicher ist (mit zweitem Durchlauf prüfen); unsichere Stellen dem Owner nennen.
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
-- (noch keine)
+- Hochkant-Clips nicht verwenden (19.11.2026).
+- Kein GTA-Switch, solange der Owner ihn nicht wieder freigibt; Whip-Pan als Übergang (19.11.2026).
