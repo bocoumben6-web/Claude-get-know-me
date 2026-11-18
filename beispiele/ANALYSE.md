@@ -146,4 +146,6 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
   „3 NEUE COLORWAYS" (zählt) + drei „?"-Karten → „AKTION: BALD MEHR INFOS" → Logo.
 - Entfernt: unklarer Halbsatz nach dem letzten Satz (beim Losgehen). Überschrift „BLACK FRIDAY?" von Claude gewählt (aus dem ersten Satz).
 - Export ohne Korn, 18 Mbit/s. Selbstkontrolle bestanden.
-- Feedback des Owners: [AUSSTEHEND]
+- Feedback des Owners zu v1: „sieht aus wie ein starker Filter, weniger, so wie die Videos davor". Ursache HDR-Clips ohne Umrechnung.
+- **v2:** HDR richtig umgerechnet (hable), sonst identisch. Helligkeit/Sättigung jetzt wie in den vorigen Videos. Selbstkontrolle bestanden.
+- Feedback des Owners zu v2: [AUSSTEHEND]

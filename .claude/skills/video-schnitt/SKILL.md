@@ -153,6 +153,13 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - Zusätzliche Pakete: `noisereduce`, `scipy`, `opencv-python-headless` (im Setup-Skript der Umgebung).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **18.11.2026, Owner: „sieht aus wie ein starker Filter".** Ursache: Die Clips waren **iPhone-HDR** (HLG, BT.2020, 10 Bit) und wurden
+  ohne Umrechnung zu normalem Video gemacht (viel zu hell, blass). **Vor jedem Master das Format prüfen:**
+  `ffprobe -select_streams v -show_entries stream=color_transfer,color_primaries,pix_fmt`. Steht dort `arib-std-b67` (HLG) oder
+  `smpte2084` (PQ), im Master zuerst umrechnen:
+  `zscale=t=linear:npl=203,format=gbrpf32le,zscale=p=bt709,tonemap=hable:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p`,
+  dann skalieren. Danach mit den vorigen Videos vergleichen (Helligkeit ca. 130, Sättigung ca. 22–27 im fertigen Video).
+  Dem Owner kann man raten, für Lavish-Drehs in der iPhone-Kamera „HDR-Video" auszuschalten; nötig ist es nicht, die Umrechnung klappt.
 - **18.11.2026, Video „Black Friday / Beanie-Deal" (mehr Hypermotion gewünscht), Skripte in `tools/owner-video-v2/beispiel-black-friday/`:**
   - Neue Bausteine: **durchgestrichener Balken** (`struck_bar`: Balken knallt rein, gelbe Linie zieht durch, Kamera-Wackler),
     **Slam** (Element kommt groß rein und schrumpft in 0,16 s auf Größe), **Kamera-Schläge** (`SHAKE`-Liste, 7–9 px, 0,16–0,2 s),
