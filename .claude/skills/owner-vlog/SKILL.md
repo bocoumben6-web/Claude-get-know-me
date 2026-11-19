@@ -64,7 +64,8 @@ Ob der GTA-Switch später zurückkommt: offen. Der Owner wollte einen echten GTA
 - Untertitel nur, wo die Spracherkennung sicher ist (mit zweitem Durchlauf prüfen); unsichere Stellen dem Owner nennen.
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
-- Hochkant-Clips nicht verwenden (19.11.2026).
+- Hochkant-Clips nicht verwenden (19.11.2026). **Ausnahme (Owner):** Ist ein „Hochkant“-Clip eigentlich quer gefilmt und nur seitlich
+  gespeichert (Köpfe liegen im Bild auf der Seite), wird er quer gedreht und verwendet. Jeden Hochkant-Clip daraufhin ansehen.
 - **Untertitel unten und kleiner** (Owner, 19.11.2026): Bebas Neue Gelb, Größe 62 bei 1080p, Mitte bei 86 % der Bildhöhe
   (statt groß in der Bildmitte wie in Referenz 1).
 - Doppelt hochgeladene Dateien („IMG_xxxx (1).MOV“) prüfen: unterscheiden sich oft nur im Datei-Kopf -> nur einmal verwenden.

@@ -33,13 +33,16 @@ SEGMENTS = [
     ("4708", 5.60, 7.60, "music"),     # Pommes füttern
     ("4710", 0.00, 3.00, "music"),     # Nachtfahrt
     "SWITCH",
+    ("4711", 1.20, 4.70, "voice"),     # "Zu windig, Wallah, aber jetzt erstmal Motorworld, Autos gucken" (quer gedreht)
     ("4712", 0.00, 2.10, "voice"),     # Autohalle: "Gucken wir mal kurz, ein Schnäppchen"
     ("4712", 2.80, 9.25, "voice"),     # "entweder wird es der oder der ... ich weiß es doch nicht, Bro"
+    ("4714", 0.25, 2.45, "voice"),     # Parkhaus: "Ab nach Hause, es werden noch Videos geschnitten"
+    ("4714", 3.12, 4.80, "voice"),     # "Ja, das war der Tag für heute."  (quer gedreht) -> Schluss
 ]
 SWITCH_LEN = 0.4          # Whip-Pan, Sekunden (12 Frames)
-ROTATE = {"4662": "transpose=2"}     # Metadaten falsch: Inhalt liegt quer
+ROTATE = {"4662": "transpose=2", "4711": "transpose=2", "4714": "transpose=2"}     # Metadaten falsch: Inhalt liegt quer
 PORTRAIT = set()                     # Owner 19.11.: Hochkant-Clips raus
-NOISE = {"4704": (5.6, 6.5), "4712": (11.2, 13.6), "4653": (4.6, 6.4), "4659": (6.1, 7.2), "4660": (2.4, 3.2), "4665": (0.0, 0.3), "4668": (0.0, 1.1)}
+NOISE = {"4711": (4.7, 5.05), "4714": (0.0, 0.55), "4704": (5.6, 6.5), "4712": (11.2, 13.6), "4653": (4.6, 6.4), "4659": (6.1, 7.2), "4660": (2.4, 3.2), "4665": (0.0, 0.3), "4668": (0.0, 1.1)}
 
 # (clip, [(wort, start_im_clip), ...], ende_im_clip)
 SUBS = [
@@ -84,4 +87,14 @@ SUBS = [
     ("4712", [("ABER", 5.92), ("ES", 6.02), ("KANN", 6.16), ("AUCH", 6.36), ("SEIN", 6.54), ("BRUDER", 6.80)], 6.96),
     ("4712", [("ES", 6.96), ("WIRD", 7.08), ("DER", 7.20)], 7.58),
     ("4712", [("OH", 7.58), ("ICH", 7.88), ("WEISS", 8.02), ("ES", 8.30), ("DOCH", 8.48), ("NICHT", 8.64), ("BRO", 8.96)], 9.25),
+    ("4711", [("ZU", 1.30), ("WINDIG", 1.34)], 1.82),
+    ("4711", [("WALLAH", 1.82)], 2.12),
+    ("4711", [("ABER", 2.12), ("JETZT", 2.32), ("ERSTMAL", 2.58), ("MOTORWORLD", 2.90)], 3.60),
+    ("4711", [("AUTOS", 3.64), ("GUCKEN", 4.36)], 4.70),
+    ("4714", [("AB", 0.36), ("NACH", 0.66), ("HAUSE", 0.80)], 1.16),
+    ("4714", [("ES", 1.16), ("WERDEN", 1.26), ("NOCH", 1.42)], 1.58),
+    ("4714", [("VIDEOS", 1.58), ("GESCHNITTEN", 1.78)], 2.45),
+    ("4714", [("JA", 3.22)], 3.66),
+    ("4714", [("DAS", 3.66), ("WAR", 3.78), ("DER", 3.92), ("TAG", 4.00)], 4.18),
+    ("4714", [("FÜR", 4.18), ("HEUTE", 4.26)], 4.80),
 ]
