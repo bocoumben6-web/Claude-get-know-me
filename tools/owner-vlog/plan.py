@@ -35,7 +35,8 @@ SEGMENTS = [
     "SWITCH",
     ("4711", 1.20, 4.70, "voice"),     # "Zu windig, Wallah, aber jetzt erstmal Motorworld, Autos gucken" (quer gedreht)
     ("4712", 0.00, 2.10, "voice"),     # Autohalle: "Gucken wir mal kurz, ein Schnäppchen"
-    ("4712", 2.80, 9.25, "voice"),     # "entweder wird es der oder der ... ich weiß es doch nicht, Bro"
+    ("4712", 2.80, 15.10, "voice"),   # bis zum Ende: "wenn Lavish erst läuft" + komischer Blick (Owner-Wunsch)
+    #     # "entweder wird es der oder der ... ich weiß es doch nicht, Bro"
     ("4714", 0.25, 2.45, "voice"),     # Parkhaus: "Ab nach Hause, es werden noch Videos geschnitten"
     ("4714", 3.12, 4.80, "voice"),     # "Ja, das war der Tag für heute."  (quer gedreht) -> Schluss
 ]
@@ -86,7 +87,9 @@ SUBS = [
     ("4712", [("ES", 5.02), ("WIRD", 5.12), ("DER", 5.16), ("DA", 5.34), ("HINTEN", 5.44), ("BRUDER", 5.72)], 5.92),
     ("4712", [("ABER", 5.92), ("ES", 6.02), ("KANN", 6.16), ("AUCH", 6.36), ("SEIN", 6.54), ("BRUDER", 6.80)], 6.96),
     ("4712", [("ES", 6.96), ("WIRD", 7.08), ("DER", 7.20)], 7.58),
-    ("4712", [("OH", 7.58), ("ICH", 7.88), ("WEISS", 8.02), ("ES", 8.30), ("DOCH", 8.48), ("NICHT", 8.64), ("BRO", 8.96)], 9.25),
+    ("4712", [("OH", 7.58), ("ICH", 7.88), ("WEISS", 8.02), ("ES", 8.30), ("DOCH", 8.48), ("NICHT", 8.64), ("BRO", 8.96)], 9.22),
+    ("4712", [("DU", 9.22), ("HAST", 9.42), ("RECHT", 9.50)], 10.02),
+    ("4712", [("WENN", 10.02), ("LAVISH", 10.20), ("ERST", 10.40), ("LÄUFT", 10.60)], 11.0),   # Wortlaut vom Owner ("wenn Lavish erst läuft oder so")
     ("4711", [("ZU", 1.30), ("WINDIG", 1.34)], 1.82),
     ("4711", [("WALLAH", 1.82)], 2.12),
     ("4711", [("ABER", 2.12), ("JETZT", 2.32), ("ERSTMAL", 2.58), ("MOTORWORLD", 2.90)], 3.60),
