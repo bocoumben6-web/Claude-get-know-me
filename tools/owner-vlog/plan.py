@@ -72,7 +72,7 @@ SUBS = [
     ("4668", [("ICH", 1.20), ("VERSTEHE", 1.54), ("DIESE", 1.84), ("MENSCHEN", 1.92), ("NICHT", 2.06)], 2.5),
     ("4704", [("ICH", 0.0), ("BIN", 0.02), ("JETZT", 0.08), ("FERTIG", 0.20)], 0.24),
     ("4704", [("MIT", 0.24), ("DEM", 0.36), ("VIDEO", 0.48)], 0.72),
-    ("4704", [("DANKE", 0.72)], 1.30),                       # Name danach unsicher -> Owner fragen
+    ("4704", [("DANKE", 0.72), ("HAROUNA", 0.96)], 1.30),    # Name vom Owner bestätigt
     ("4704", [("DANKE", 1.30), ("ANDI", 1.46)], 1.74),
     ("4704", [("DANKE", 1.74), ("LUIS", 1.82)], 2.24),
     ("4704", [("DANKE", 2.24), ("MUSTAFA", 2.48)], 2.86),

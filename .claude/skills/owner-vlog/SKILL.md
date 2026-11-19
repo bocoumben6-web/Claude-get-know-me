@@ -63,6 +63,10 @@ Ob der GTA-Switch später zurückkommt: offen. Der Owner wollte einen echten GTA
 - Stumme Stellen (B-Roll ohne Reden) bekommen Musik vom Owner; Zeitliste mitschicken.
 - Untertitel nur, wo die Spracherkennung sicher ist (mit zweitem Durchlauf prüfen); unsichere Stellen dem Owner nennen.
 
+## Namen & Orte (vom Owner bestätigt)
+- Freunde: **Harouna**, Andi, Luis, Mustafa (filmt oft). Spracherkennung macht aus Harouna „Ronald/Haruna“.
+- **Motorworld** (München, Autohalle). Spracherkennung hört „Motorhaut/Motoruhr“.
+
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
 - Hochkant-Clips nicht verwenden (19.11.2026). **Ausnahme (Owner):** Ist ein „Hochkant“-Clip eigentlich quer gefilmt und nur seitlich
   gespeichert (Köpfe liegen im Bild auf der Seite), wird er quer gedreht und verwendet. Jeden Hochkant-Clip daraufhin ansehen.
