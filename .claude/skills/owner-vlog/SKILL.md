@@ -73,4 +73,7 @@ Ob der GTA-Switch später zurückkommt: offen. Der Owner wollte einen echten GTA
 - **Untertitel unten und kleiner** (Owner, 19.11.2026): Bebas Neue Gelb, Größe 62 bei 1080p, Mitte bei 86 % der Bildhöhe
   (statt groß in der Bildmitte wie in Referenz 1).
 - Doppelt hochgeladene Dateien („IMG_xxxx (1).MOV“) prüfen: unterscheiden sich oft nur im Datei-Kopf -> nur einmal verwenden.
+- **Stumme B-Roll-Clips kurz halten** (Owner, 19.11.2026): je ca. 1,2–2 s, nur der beste Moment (Umarmung, Pommes füttern …).
+  Clips, in denen geredet wird, behalten ihre Länge.
+- Clip-Enden prüfen: Kippt/schwenkt die Kamera am Ende weg, vorher schneiden (an einer Wortgrenze).
 - Kein GTA-Switch, solange der Owner ihn nicht wieder freigibt; Whip-Pan als Übergang (19.11.2026).

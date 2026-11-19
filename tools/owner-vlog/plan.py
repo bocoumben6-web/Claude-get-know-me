@@ -10,28 +10,28 @@ SEGMENTS = [
     ("4653", 0.00, 4.35, "voice"),     # Ich hab lange keinen Vlog mehr gehabt. Heute ist Content-Tag.
     ("4653", 6.55, 14.75, "voice"),    # Ja ich will ... Black Friday ... Beanies ... der Luis
     ("4653", 15.12, 16.55, "voice"),   # und los geht's
-    ("4654", 0.00, 3.36, "music"),     # Kumpel läuft auf die Kamera zu
+    ("4654", 1.40, 3.00, "music"),     # Kumpel läuft auf die Kamera zu
     "SWITCH",
     ("4655", 0.00, 0.73, "music"),     # Hand im Auto
-    ("4656", 0.00, 2.03, "music"),     # Fahrt
-    ("4657", 0.00, 1.66, "music"),     # Ankunft
-    ("4658", 0.00, 2.13, "music"),     # Begrüßung an der Station
+    ("4656", 0.40, 1.60, "music"),     # Fahrt
+    ("4657", 0.30, 1.50, "music"),     # Ankunft
+    ("4658", 0.70, 2.10, "music"),     # Begrüßung an der Station
     ("4659", 0.00, 6.05, "voice"),     # Location switchen, zu windig
     ("4659", 7.25, 9.62, "voice"),     # wir müssen in einen Tunnel gehen
     ("4659", 10.72, 13.95, "voice"),   # ja aber wird schon
     "SWITCH",
     ("4660", 0.00, 3.20, "voice"),     # Das ist die neue Location, der Rosa Tunnel
-    ("4661", 0.00, 1.63, "music"),
-    ("4662", 0.00, 1.93, "music"),
+    ("4661", 0.30, 1.50, "music"),
+    ("4662", 0.40, 1.70, "music"),
     ("4665", 0.00, 2.46, "voice"),     # Warte, warte, warte
     ("4668", 0.00, 2.50, "voice"),     # Ich verstehe diese Menschen nicht
-    ("4704", 0.00, 5.55, "voice"),     # "Ich bin jetzt fertig mit dem Video, danke ..." (Ende: Kamera kippt -> weg)
-    ("4705", 0.00, 2.79, "music"),     # Rückfahrt
+    ("4704", 0.00, 4.58, "voice"),     # "Ich bin jetzt fertig mit dem Video, danke ..." (Ende: Kamera kippt -> weg)
+    ("4705", 0.60, 2.00, "music"),     # Rückfahrt
     "SWITCH",
-    ("4706", 0.00, 3.60, "music"),     # Essen, Kumpel mit Flasche
-    ("4708", 2.20, 4.20, "music"),     # am Tisch
-    ("4708", 5.60, 7.60, "music"),     # Pommes füttern
-    ("4710", 0.00, 3.00, "music"),     # Nachtfahrt
+    ("4706", 1.30, 3.30, "music"),     # Essen, Kumpel mit Flasche
+    ("4708", 2.60, 3.80, "music"),     # am Tisch
+    ("4708", 6.00, 7.40, "music"),     # Pommes füttern
+    ("4710", 0.50, 2.00, "music"),     # Nachtfahrt
     "SWITCH",
     ("4711", 1.20, 4.70, "voice"),     # "Zu windig, Wallah, aber jetzt erstmal Motorworld, Autos gucken" (quer gedreht)
     ("4712", 0.00, 2.10, "voice"),     # Autohalle: "Gucken wir mal kurz, ein Schnäppchen"
@@ -78,7 +78,7 @@ SUBS = [
     ("4704", [("DANKE", 1.74), ("LUIS", 1.82)], 2.24),
     ("4704", [("DANKE", 2.24), ("MUSTAFA", 2.48)], 2.86),
     ("4704", [("HINTER", 2.86), ("DER", 3.18), ("KAMERA", 3.30)], 3.64),
-    ("4704", [("WIR", 3.64), ("GEHEN", 3.70), ("JETZT", 3.94), ("NATÜRLICH", 4.18)], 4.9),
+    ("4704", [("WIR", 3.64), ("GEHEN", 3.70), ("JETZT", 3.94), ("NATÜRLICH", 4.18)], 4.58),
     ("4712", [("GUCKEN", 0.0), ("WIR", 0.08), ("MAL", 0.20), ("BRUDER", 0.30)], 0.58),
     ("4712", [("SCHNÄPPCHEN", 0.58), ("WEISST", 1.14), ("DU", 1.38)], 2.06),
     ("4712", [("ENTWEDER", 2.82), ("WIRD", 3.14), ("ES", 3.30), ("DER", 3.44), ("BRUDER", 3.54)], 3.88),
