@@ -149,3 +149,12 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Feedback des Owners zu v1: „sieht aus wie ein starker Filter, weniger, so wie die Videos davor". Ursache HDR-Clips ohne Umrechnung.
 - **v2:** HDR richtig umgerechnet (hable), sonst identisch. Helligkeit/Sättigung jetzt wie in den vorigen Videos. Selbstkontrolle bestanden.
 - Feedback des Owners zu v2: [AUSSTEHEND]
+
+## Video „Fitpics / Karussell" (20.11.2026) – viertes Video im Lavish Setup
+- Material aus Dropbox: 1 Take (38,6 s, 4K, kein HDR), separate Mikro-Tonspur, Bildschirmaufnahme der Website („Lavish auf der Strasse"-Karussell),
+  4 Kunden-Fitpics, 2 Party-Fotos, Instagram-Profil-Screenshot. Alles verwendet.
+- 34,5 s inkl. Logo. Pausen mitten im Satz entfernt (vor „postet Fitpics", „Variationen | mit den Pieces", „die Lavish | natürlich gerockt").
+- Ablauf: Hook „EURE FITPICS" (von Claude gewählt) → „BESTELLT?" → gelber Balken rollt durch: POSTET FITPICS → EURE VARIATIONEN → REPOSTEN →
+  VERBREITEN → AUF DER WEBSITE → GANZ UNTEN → KARUSSELL → ALLE KUNDEN → DIE LAVISH ROCKEN; dazu Fitpic-Karussell, 2×2-Raster, Instagram-Karte,
+  laufende Website mit markiertem Karussell, Party-Fotos → „SCHICKT DURCH" + „MARKIERT @LLLAVISHCLO" → Owner geht raus → Logo.
+- Selbstkontrolle bestanden. Feedback des Owners: [AUSSTEHEND]

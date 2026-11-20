@@ -1,7 +1,7 @@
 """Final audio: speech (cleaned) -> phrase level rides -> gain to target -> + sounds -> transparent peak limiter.
 The limiter only touches real peaks, so sounds never push the voice down."""
 import sys, json, wave, subprocess, numpy as np
-J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job3"
+J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job5"
 SR = 48000; CEIL = 0.84
 def rd(p):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", J + "/" + p, "-f", "f32le", "-ac", "2", "-ar", str(SR), J + "/t/r.raw"])
@@ -39,8 +39,9 @@ for a, b, l in lv:
 json.dump(rides, open(J + "/rides.json", "w"))
 k = np.hanning(int(0.08 * SR)); k /= k.sum(); g = np.convolve(g, k, mode="same")
 sp = sp * g[:, None]
-wr("t/ride.wav", sp * 4.0)                      # provisional gain just to measure
-gain = 4.0 * 10 ** ((-14.0 - lufs("t/ride.wav") + 0.5) / 20)
+k0 = 0.9 / max(1e-6, np.abs(sp).max())         # provisional gain just to measure (never clips, works for quiet and loud sources)
+wr("t/ride.wav", sp * k0)
+gain = k0 * 10 ** ((-14.0 - lufs("t/ride.wav") + 0.5) / 20)
 sp, act0 = limiter(sp * gain)
 wr("a_speech.wav", sp)
 sx = rd("sfx.wav")[:n] if "--nosfx" not in sys.argv else np.zeros_like(sp)

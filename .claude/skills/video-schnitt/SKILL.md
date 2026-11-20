@@ -153,6 +153,18 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
 - Zusätzliche Pakete: `noisereduce`, `scipy`, `opencv-python-headless` (im Setup-Skript der Umgebung).
 
 ## Gelernte Regeln (wird laufend durch Feedback ergänzt)
+- **20.11.2026, Video „Fitpics / Karussell" (Material aus dem Dropbox-Ordner des Owners), Skripte in `tools/owner-video-v2/beispiel-fitpics/`:**
+  - **Dropbox-Freigabe-Link:** `?dl=1` lädt den Ordner als ZIP, aber Dropbox leitet auf einen wechselnden Server
+    `uc….dl.dropboxusercontent.com` um. Eine signierte URL holen (`curl -w %{redirect_url}`), genau diesen Host per
+    `update_environment` freischalten lassen, dann diese URL laden. ZIP sicher entpacken (keine Pfade mit `/` oder `..`).
+  - **Separate Tonspur (Mikro):** per Hüllkurven- und Feinkorrelation an das Video anlegen (hier +0,521 s, ohne Drift) und statt
+    des Kamera-Tons nehmen. `apad` immer mit `whole_dur=` begrenzen; ein endloses `apad` füllte 19 GB und die Platte lief voll.
+  - **Laute Quelle:** `mix.py` misst jetzt mit einer Vorverstärkung, die nie übersteuert (vorher fest ×4 → -12,5 statt -14 LUFS).
+  - **HEIC-Fotos:** `pillow-heif` installieren, mit `ImageOps.exif_transpose` drehen.
+  - **Bildschirmaufnahme als laufende Karte:** Frames mit 30 fps ausschneiden (nur den relevanten Bereich, Kontrollzentrum am Ende weglassen),
+    Karte spielt sie ab; das gezeigte Element (Karussell) gelb einrahmen, wenn es genannt wird.
+  - **Sound nie auf ein kurzes Wort direkt vor dem Schlüsselwort** („sie" in „ich möchte sie reposten", „Schickt"): in den Schnitt davor legen oder weglassen.
+  - **Rausgehen als Ende:** „Lavish Owner is out" + Owner läuft aus dem Bild, Kamera zoomt dabei langsam auf (1,30 → 1,00), dann Logo.
 - **18.11.2026, Owner: „sieht aus wie ein starker Filter".** Ursache: Die Clips waren **iPhone-HDR** (HLG, BT.2020, 10 Bit) und wurden
   ohne Umrechnung zu normalem Video gemacht (viel zu hell, blass). **Vor jedem Master das Format prüfen:**
   `ffprobe -select_streams v -show_entries stream=color_transfer,color_primaries,pix_fmt`. Steht dort `arib-std-b67` (HLG) oder
