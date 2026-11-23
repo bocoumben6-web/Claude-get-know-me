@@ -51,3 +51,5 @@ Jacquard, Position (mittig vorne auf dem Cuff? seitlich?), Garn-/Fadenfarbe, Au�
   die zu den echten Fotos des Owners passt.
 - Werkzeug: `mockups/beanies-drop-26/` enthält Ausgangsfotos, Designs und Ergebnisse. Ablauf: echte Silhouette aus dem Foto
   freistellen, Rippstrick prozedural nachbauen, Design auf die Bounding-Box der Silhouette mappen.
+- **„LAVSH“ ohne I auf der weißen Beanie (Drop 26) ist gewollt.** Nicht korrigieren und nicht erneut nachfragen.
+  Generell gilt: Schreibweisen im Design 1:1 übernehmen. Höchstens einmal nachfragen, nie eigenmächtig ändern.
