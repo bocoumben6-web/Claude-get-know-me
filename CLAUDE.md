@@ -10,6 +10,7 @@ Dieses Repository ist Claudes Gedächtnis für den Videostil von **Lavish**.
   Bei Widerspruch zu einem Skill gelten die Guidelines.
 - **Standard für jedes neue Video: Skill `lavish-setup`** (das vom Owner festgelegte Lavish-Videokonzept). Zuerst laden.
 - Immer gelten: `lavish-brand`, `video-schnitt`, `performance-check`.
+- **Real Mockups Lavish:** Designs des Owners fotorealistisch visualisieren → Skill `real-mockups-lavish`.
 - Wenn der Owner Feedback gibt, das für zukünftige Videos gilt: als Regel im
   Abschnitt „Gelernte Regeln“ des passenden Skills eintragen.
 - Felder mit `[AUSFÜLLEN]` sind noch unbekannt – nachfragen statt raten.
