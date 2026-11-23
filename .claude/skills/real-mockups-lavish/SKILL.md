@@ -48,6 +48,6 @@ Jacquard, Position (mittig vorne auf dem Cuff? seitlich?), Garn-/Fadenfarbe, Au�
 - **Lavish-Beanie-Blank (Drop 26):** dünner, feiner Rippstrick, ohne Umschlag, flache Dome-Form; flach gelegt fotografiert.
   „Schwarz“ = **Washed Black** (leicht ausgewaschen, kühler Grauton, ca. RGB 36/38/42). Prints sitzen als Druck auf den Rippen.
 - Der Owner fotografiert Pieces auf **hellen Sprenkel-Fliesen**. Neben dem Studio-Shot immer auch eine Fliesen-Version liefern,
-  die zu seinen echten Fotos passt.
+  die zu den echten Fotos des Owners passt.
 - Werkzeug: `mockups/beanies-drop-26/` enthält Ausgangsfotos, Designs und Ergebnisse. Ablauf: echte Silhouette aus dem Foto
   freistellen, Rippstrick prozedural nachbauen, Design auf die Bounding-Box der Silhouette mappen.
