@@ -158,3 +158,10 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
   VERBREITEN → AUF DER WEBSITE → GANZ UNTEN → KARUSSELL → ALLE KUNDEN → DIE LAVISH ROCKEN; dazu Fitpic-Karussell, 2×2-Raster, Instagram-Karte,
   laufende Website mit markiertem Karussell, Party-Fotos → „SCHICKT DURCH" + „MARKIERT @LLLAVISHCLO" → Owner geht raus → Logo.
 - Selbstkontrolle bestanden. Feedback des Owners: [AUSSTEHEND]
+
+## Video „2 Black Fridays" (24.11.2026) – erstes Video nach den Retention-Regeln
+- Material: IMG_4832–4834 (Dropbox „Cloud Lavish"), Showroom, Selfie quer in 4K → Master mit Gesichts-Verfolgung (`build_master.py`).
+- Aufbau (13,4 s inkl. 0,7 s Logo): Hook mit dem stärksten Satz („jedes Jahr muss ich immer zwei Black Friday vorbereiten"), Überschrift „2X BLACK FRIDAY" (abgeleitet, „2X" knallt auf „zwei") → „hier … und hier" mit rollendem Balken BLACK FRIDAY 1 / IM JOB → BLACK FRIDAY 2 / BEI LAVISH + 3 verdeckte Karten (offene Schleife) → ECHT TOUGH → NUR 1 BLACK FRIDAY wird bei „noch nicht" durchgestrichen → Schnitt auf die 3 Beanies (weiß, schwarz, camo) über dem unscharfen Showroom, „WELCHE NIMMST DU?" + „SCHREIB 1 2 ODER 3" → Logo 0,7 s.
+- Herausgeschnitten: Einleitung „Für die, die es nicht wissen …" (Arbeitgebername unklar), „By God", ein unverständlicher Einwurf + Satz in 4833 (ca. 4,1–8 s), der unklare Mittelteil von 4834 („wenn ihr mir mehr …"), „So, yeah".
+- Selbstkontrolle: qa.py ALLES BESTANDEN. Gefunden und behoben: „2X" lag über dem Untertitel, Balken am Kinn bei starkem Zoom, Pops verdeckten „it is".
+- Feedback Owner: [offen]
