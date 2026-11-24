@@ -27,6 +27,16 @@ Schlussbild und ob eine Grafik das Gesicht verdeckt. Zusätzlich immer selbst an
 Bilder vor/nach jedem Schnitt, jede Einblendung in voller Größe.
 **Grenze:** Claude kann das Video nicht anhören. Klang, Betonung und Gefühl prüft der Owner.
 
+## Retention-Check (ab 24.11.2026, Pflicht vor jedem Export)
+- [ ] Erstes Bild nah, mit Bewegung, und schon etwas Interessantes zu sehen (kein Owner klein in der Totale)
+- [ ] Erster Satz = stärkste Aussage oder offene Frage; Begrüßung/Einleitung nicht am Anfang
+- [ ] Hook-Text ist Versprechen oder Frage, nicht nur das Thema
+- [ ] Länge 12–22 s (Ausnahme nur mit Begründung)
+- [ ] Spätestens alle 2,5 s ändert sich etwas im Bild
+- [ ] Offene Schleife wird am Ende eingelöst
+- [ ] Schlussbild max. 0,8 s oder Logo über der letzten Einstellung; wenn möglich Loop zum Anfang
+- [ ] Eine konkrete Frage an die Zuschauer (Kommentar-Anreiz)
+
 ## Checkliste vor jedem Export
 - [ ] Die ersten **1–2 Sekunden** stoppen den Scroll (Bewegung, Aussage oder starkes Bild – kein Logo-Intro, kein „Hey Leute“)
 - [ ] Kein toter Moment > [AUSFÜLLEN, Standard 1,5] Sek.
