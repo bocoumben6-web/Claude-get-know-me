@@ -51,3 +51,14 @@ PROMPT = "Vlog. Lavish, Black Friday, Content, After Work."
 FIX = {"levelstand": "Lavish", "lebensstand": "Lavish", "levish": "Lavish", "lewis": "Lavish", "lavis": "Lavish",
        "konzentrieren": "Content drehen"}
 DROP = []
+REPLACE = [
+    ("UND DANN WAR ES JA SCHNELL", "ODER WAS WEISS ICH SCHNELL"),
+    ("MEIN GANZER MARKT", "WEIHNACHTSMARKT"),
+    ("ELF DWIGHT ARBEITEN", "… ARBEITEN"),
+    ("ICH WÜRDE AUCH NOCH EINEN", "ICH WILL DOCH NUR EINEN"),
+    ("ABER SO IST NOCH", "ABER SO IST ES NOCH"),
+    ("MIT DEN KARTONEN", "MIT DEM KARTON"),
+    ("MIT DEN KARTONEN", "MIT DEM KARTON"),
+    ("DIE HABEN GEKACKT", "DIE HABEN GAR KEINEN BOCK"),
+    ("IST FEHLERBAR", "IST VIEL ABER JA"),
+]

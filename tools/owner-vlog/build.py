@@ -187,6 +187,8 @@ else:
             if voice_spans and abs(voice_spans[-1][1] - t0) < 0.02: voice_spans[-1][1] = t0 + it[2]
             else: voice_spans.append([t0, t0 + it[2]])
     words = []
+    cache = f"{T}/auto_raw.json"
+    if os.path.exists(cache): words = json.load(open(cache)); voice_spans = []
     for v0, v1 in voice_spans:                     # jedes Sprach-Segment einzeln (keine Halluzinationen in Stille)
         x = _a[int(v0 * _sr):int(v1 * _sr)]
         x = np.concatenate([np.zeros(8000, np.float32), x, np.zeros(8000, np.float32)])
@@ -196,6 +198,7 @@ else:
             for x_ in sg.words:
                 st, en = max(v0, v0 + x_.start - 0.5), min(v1, v0 + x_.end - 0.5)
                 words.append([st, en, x_.word.strip(), x_.probability, sg.end])
+    json.dump(words, open(cache, "w"))
     FIX = globals().get("FIX", {}); DROP = set(globals().get("DROP", []))
     clean = []
     for st, en, wd, p, _ in words:
@@ -204,6 +207,17 @@ else:
         if not key or key in DROP or key.lower() in DROP: continue
         wd = FIX.get(key, FIX.get(key.lower(), key))
         clean.append([st, en, wd.upper(), punct])
+    # Wortfolgen ersetzen (geprüfter Wortlaut), Zeiten gleichmäßig über die alte Spanne verteilen
+    for old_seq, new_seq in globals().get("REPLACE", []):
+        o = old_seq.upper().split(); n = new_seq.upper().split()
+        for i in range(len(clean) - len(o) + 1):
+            if [w_[2] for w_ in clean[i:i + len(o)]] == o:
+                st, en = clean[i][0], clean[i + len(o) - 1][1]; pe = clean[i + len(o) - 1][3]
+                d = (en - st) / max(len(n), 1)
+                clean[i:i + len(o)] = [[st + k * d, st + (k + 1) * d, n[k], pe and k == len(n) - 1] for k in range(len(n))]
+                break
+        else:
+            print("REPLACE nicht gefunden:", old_seq)
     json.dump(clean, open(f"{T}/auto_words.json", "w"), ensure_ascii=False, indent=0)
     groups, cur = [], []
     for i, w_ in enumerate(clean):
