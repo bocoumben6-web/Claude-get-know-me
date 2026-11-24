@@ -2,7 +2,10 @@
 Aufruf: JOB=<ordner> python3 build.py   (plan.py liegt daneben)"""
 import os, sys, json, subprocess, wave, numpy as np, cv2
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from plan import *
+import importlib
+_plan = importlib.import_module(os.environ.get("PLAN", "plan"))       # PLAN=plan_vlog2 python3 build.py
+globals().update({k: v for k, v in vars(_plan).items() if not k.startswith("_")})
+SUBS = globals().get("SUBS"); OUTNAME = globals().get("OUTNAME", "vlog_v1.mp4")
 import noisereduce as nr
 from scipy.signal import butter, sosfiltfilt
 
@@ -163,11 +166,57 @@ def src_to_out(c, x):
             return t0 + min(max(x - it[3][1], 0), it[2])
     return None
 ev = []
-for c, words, end in SUBS:
+if SUBS:
+  for c, words, end in SUBS:
     for k, (wd, st) in enumerate(words):
         a = src_to_out(c, st); b = src_to_out(c, words[k + 1][1]) if k + 1 < len(words) else src_to_out(c, end)
         if a is None or b is None or b - a < 0.03: continue
         ev.append((a, b, " ".join(x[0] for x in words[:k + 1])))
+else:
+    # Automatisch: fertige Stimme (ohne Sounds) transkribieren -> Wortzeiten stimmen exakt mit dem Schnitt überein
+    import re
+    from faster_whisper import WhisperModel
+    w24(f"{T}/voice_only.wav", voice[:int(TOTAL * SR)])
+    run(*FF, "-i", f"{T}/voice_only.wav", "-ac", "1", "-ar", "16000", f"{T}/voice16.wav")
+    import scipy.io.wavfile as _wf
+    _sr, _a = _wf.read(f"{T}/voice16.wav"); _a = _a.astype(np.float32) / 32768
+    _m = WhisperModel("large-v3", device="cpu", compute_type="int8")
+    voice_spans = []
+    for t0, it in timeline:                        # zusammenhängende Sprach-Segmente zu einem Block
+        if it[0] == "seg" and it[3][3] == "voice":
+            if voice_spans and abs(voice_spans[-1][1] - t0) < 0.02: voice_spans[-1][1] = t0 + it[2]
+            else: voice_spans.append([t0, t0 + it[2]])
+    words = []
+    for v0, v1 in voice_spans:                     # jedes Sprach-Segment einzeln (keine Halluzinationen in Stille)
+        x = _a[int(v0 * _sr):int(v1 * _sr)]
+        x = np.concatenate([np.zeros(8000, np.float32), x, np.zeros(8000, np.float32)])
+        segs, _ = _m.transcribe(x, language="de", word_timestamps=True, condition_on_previous_text=False,
+                                initial_prompt=globals().get("PROMPT"))
+        for sg in segs:
+            for x_ in sg.words:
+                st, en = max(v0, v0 + x_.start - 0.5), min(v1, v0 + x_.end - 0.5)
+                words.append([st, en, x_.word.strip(), x_.probability, sg.end])
+    FIX = globals().get("FIX", {}); DROP = set(globals().get("DROP", []))
+    clean = []
+    for st, en, wd, p, _ in words:
+        punct = bool(re.search(r"[.,!?…]$", wd))
+        key = re.sub(r"[^\wÄÖÜäöüß'-]", "", wd)
+        if not key or key in DROP or key.lower() in DROP: continue
+        wd = FIX.get(key, FIX.get(key.lower(), key))
+        clean.append([st, en, wd.upper(), punct])
+    json.dump(clean, open(f"{T}/auto_words.json", "w"), ensure_ascii=False, indent=0)
+    groups, cur = [], []
+    for i, w_ in enumerate(clean):
+        cur.append(w_)
+        gap = clean[i + 1][0] - w_[1] if i + 1 < len(clean) else 9
+        if w_[3] or len(cur) >= 4 or gap > 0.35:
+            groups.append(cur); cur = []
+    if cur: groups.append(cur)
+    for g in groups:
+        for k, w_ in enumerate(g):
+            nxt = groups[groups.index(g) + 1][0][0] if groups.index(g) + 1 < len(groups) else 1e9
+            a = w_[0]; b = g[k + 1][0] if k + 1 < len(g) else min(w_[1] + 0.35, nxt)
+            if b - a >= 0.03: ev.append((a, b, " ".join(x[2] for x in g[:k + 1])))
 ass = f"""[Script Info]
 ScriptType: v4.00+
 PlayResX: {W}
@@ -191,7 +240,7 @@ run(*FF, "-i", f"{T}/video.mp4", "-i", f"{T}/mix.wav", "-vf", f"subtitles={T}/su
     "-map", "0:v", "-map", "1:a", "-c:v", "libx264", "-crf", "14", "-maxrate", "25M", "-bufsize", "50M", "-preset", "slow",
     "-profile:v", "high", "-level", "4.2", "-r", "30", "-g", "60", "-pix_fmt", "yuv420p",
     "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv",
-    "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", f"{OUT}/vlog_v1.mp4")
+    "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", f"{OUT}/{OUTNAME}")
 
 # Musik-Stellen (stumm) als Liste
 spans = []; inside = False
