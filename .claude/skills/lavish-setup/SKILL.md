@@ -15,7 +15,7 @@ Details stehen in `lavish-brand`, `owner-content`, `video-schnitt`, `performance
 | Baustein | So ist er umgesetzt |
 |---|---|
 | **Hook (0–3 s)** | Überschrift in Beige groß **hinter dem Owner**, Buchstaben poppen auf; eine Zahl zählt hoch, wenn es eine gibt. Den Text gibt der Owner vor, sonst aus seinem ersten Satz ableiten und das dazusagen. |
-| **Untertitel** | Bebas Neue, Gelb #F0CC38, Größe 54, Schatten, ganze Satzteile, Schlüsselwort in Beige, keine Satzzeichen |
+| **Untertitel** | Bebas Neue, Gelb #F0CC38, **Größe 72** (seit 24.11.2026, vorher 54), Schatten, ganze Satzteile, Schlüsselwort in Beige, keine Satzzeichen |
 | **Balken** | Gerade, sauber, erwachsen: Gelb/Schwarz, Schwarz/Beige, Beige/Schwarz. Ein großer Balken (96) + kleinere Zeilen (70), links an x=64 ab y=300. Erscheinen exakt auf das gesprochene Wort. |
 | **Motion** | Einflug mit Bewegungsunschärfe und Überschwingen, leichte Drift beim Halten, Text rollt im selben Balken weiter, Zahlen zählen hoch, ein Lichtstreifen, Kamerafahrt auf den Owner bei Pointen |
 | **Screenshots des Owners** | Als gerahmte Karte ohne Handy-Rahmen. Wichtige Stelle mit gelbem Rahmen markieren; kleiner Text springt groß heraus; Pop-ups „poppen" ins Bild |
@@ -50,7 +50,7 @@ bei einer kleinen Gruppe, und die wischt zu früh weg. Entscheidend sind die ers
 - **Loop:** Das letzte Bild passt zum ersten (gleiche Einstellung oder der Satz geht nahtlos in den Anfang über), damit das Video ein zweites Mal läuft.
 
 **4. Lesbarkeit ohne Ton (viele schauen stumm)**
-- Untertitel **größer** (ca. 72 statt 54) und ein Stück höher (über Brusthöhe). [Vorschlag, mit dem Owner abstimmen: bisher klein = sein Stil]
+- **Untertitel größer: Größe 72 statt 54** und etwas höher (ca. y=1100 statt 1186). **Vom Owner freigegeben am 24.11.2026.**
 - Schlüsselwort pro Satz weiter in Beige.
 
 **5. Interaktion**

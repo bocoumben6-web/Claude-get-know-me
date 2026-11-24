@@ -236,3 +236,4 @@ Ersetzt die Vorlage aus Test v1–v3 für neue Owner-Videos. Am Video „WhatsAp
   Test v1/v2 hatten 22 Wechsel. **Festgelegt:** ruhiger Schnitt wie in Referenz 3, Zooms nur bei Kernaussagen (ca. 4–8 pro Video); das Tempo kommt von den Einblendungen (siehe `owner-content`, „Grafik-Sprache“).
 - Hook-Überschrift: bis die Fontdatei von „Co Moderno“ vorliegt, Platzhalter **Rubik Black, horizontal auf 80 % gestaucht**.
 - Videos immer prüfen: Schnittstellen anhören (keine abgeschnittenen Wörter), Frames bei jedem Zoom ansehen.
+- **24.11.2026:** Untertitel ab jetzt Größe 72 (ASS-Style `Bebas Neue,72`), Position `\pos(540,1100)`. Vom Owner freigegeben (Retention, viele schauen ohne Ton).
