@@ -1,7 +1,7 @@
 """cut_a.wav (audio by plan), subs.ass, m_bursts.json"""
 import sys, json, subprocess, numpy as np
 from scipy.signal import butter, sosfiltfilt
-J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job6"
+J = "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/job7"
 sys.path.insert(0, J)
 from plan import P, SUBS, out_time, TOTAL, LOGO, TONE
 g = []
@@ -31,17 +31,18 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
 ev = []
 for k, (s, e, t) in enumerate(SUBS):
+    if not SUBS: break
     txt = t
     while "*" in txt: txt = txt.replace("*", "{\\c&HE4F0FC&}", 1).replace("*", "{\\r}", 1)
-    ev.append(f"Dialogue: 0,{ts(out_time(s) - 0.03)},{ts(min(out_time(e) + 0.06, out_time(SUBS[k+1][0]) - 0.04) if k + 1 < len(SUBS) else out_time(e) + 0.06)},Sub,,0,0,0,,{{\\an8\\pos(540,1122)}}{txt}")
+    ev.append(f"Dialogue: 0,{ts(out_time(s) - 0.03)},{ts(min(out_time(e) + 0.06, out_time(SUBS[k+1][0]) - 0.04) if k + 1 < len(SUBS) else min(out_time(e) + 0.06, TOTAL - 0.02))},Sub,,0,0,0,,{{\\an8\\pos(540,1100)}}{txt}")
 open(J + "/subs.ass", "w").write(head + "\n".join(ev) + "\n")
 # speech bursts on the master (for the cut check)
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", J + "/master.mkv", "-f", "f32le", "-ac", "1", "-ar", "16000", J + "/t/m.raw"])
 a = np.fromfile(J + "/t/m.raw", dtype=np.float32); b = sosfiltfilt(butter(4, [250, 3200], btype="band", fs=16000, output="sos"), a)
 e = np.sqrt(np.convolve(b ** 2, np.ones(400) / 400, "same")[::160]); db = 20 * np.log10(e + 1e-9)
 bursts = []
-for c0, c1 in ((0, 17.4), (17.4, 29.367), (29.367, len(db) / 100)):
-    seg = db[int(c0 * 100):int(c1 * 100)]; thr = np.percentile(seg, 10) + 12; on = seg > thr; i = 0
+for c0, c1 in ((0, len(db) / 100),):
+    seg = db[int(c0 * 100):int(c1 * 100)]; thr = np.percentile(seg[seg > -150], 10) + 12; on = seg > thr; i = 0
     while i < len(on):
         if on[i]:
             j = i

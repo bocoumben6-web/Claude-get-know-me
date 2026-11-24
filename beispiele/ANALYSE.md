@@ -165,3 +165,9 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Herausgeschnitten: Einleitung „Für die, die es nicht wissen …" (Arbeitgebername unklar), „By God", ein unverständlicher Einwurf + Satz in 4833 (ca. 4,1–8 s), der unklare Mittelteil von 4834 („wenn ihr mir mehr …"), „So, yeah".
 - Selbstkontrolle: qa.py ALLES BESTANDEN. Gefunden und behoben: „2X" lag über dem Untertitel, Balken am Kinn bei starkem Zoom, Pops verdeckten „it is".
 - Feedback Owner: [offen]
+
+## Video „Symposia" (24.11.2026) – Take IMG_4826 + Riem Arcaden 4
+- 22,2 s inkl. 0,7 s Logo. Hook: Frage „Was ist eigentlich Symposia?" (Überschrift hinter dem Owner, er läuft nah ins Bild) → FREITAG 27.11 / LAVISH IST DABEI → rollender Balken EIN ORT FÜR → CREATIVES → DJS → KÜNSTLER → TANZ → AUSDRUCKSTANZ → RAUS AUS DER / KOMFORTZONE → NEUE LEUTE → WIE WIRKT LAVISH? → FREITAG 27.11 + „SYMPOSIA · KOMMST DU?" → Logo.
+- Raus: „Warum habe ich mich dafür entschieden?", „am Ende des Tages … neues Klientel", Wiederholungen „außerhalb von den Leuten …", der gesprochene Satz mit dem Datum (steht als Grafik).
+- Offen beim Owner: Schreibweise „Symposia", Ort/Uhrzeit/Flyer.
+- Feedback Owner: [offen]
