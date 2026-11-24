@@ -53,3 +53,6 @@ Jacquard, Position (mittig vorne auf dem Cuff? seitlich?), Garn-/Fadenfarbe, Au�
   freistellen, Rippstrick prozedural nachbauen, Design auf die Bounding-Box der Silhouette mappen.
 - **„LAVSH“ ohne I auf der weißen Beanie (Drop 26) ist gewollt.** Nicht korrigieren und nicht erneut nachfragen.
   Generell gilt: Schreibweisen im Design 1:1 übernehmen. Höchstens einmal nachfragen, nie eigenmächtig ändern.
+- **Standard-Hintergrund für Produktbilder (vom Owner festgelegt, Nov. 2026):** flaches, neutrales Hellgrau
+  wie die Lavish-Flanell-Referenz (ca. RGB 229/228/228, unten minimal dunkler), weicher Schatten unter dem Piece,
+  Format 3:4, Piece mittig, ca. 64 % Bildbreite. **Jedes Piece als einzelnes Bild** liefern. Freigestellte PNGs nur zusätzlich.
