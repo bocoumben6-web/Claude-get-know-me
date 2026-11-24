@@ -171,3 +171,9 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Raus: „Warum habe ich mich dafür entschieden?", „am Ende des Tages … neues Klientel", Wiederholungen „außerhalb von den Leuten …", der gesprochene Satz mit dem Datum (steht als Grafik).
 - Offen beim Owner: Schreibweise „Symposia", Ort/Uhrzeit/Flyer.
 - Feedback Owner: [offen]
+
+## Video „Black Friday = Beanies" (24.11.2026) – Take IMG_4822 + Riem Arcaden 1
+- 12,8 s inkl. Logo. Hook: „Was bring ich zu Black Friday raus?" mit „BLACK FRIDAY?" hinter dem Owner (Zoom 1,8) → BEANIES knallt rein → „3 NEUE COLORWAYS" wird bei „beziehungsweise" durchgestrichen → „2 NEUE COLORWAYS" mit 2 verdeckten Karten → „2 NEU + 1 RESTOCK" (dritte Karte CAMO) → Camo-Beanie als Cutout + „CAMO BEANIE / IST ZURÜCK" → „2 FARBEN NOCH GEHEIM" + „RATET MAL: WELCHE?" → Logo.
+- Raus: Begrüßung, „beim letzten Mal habe ich euch gefragt", das erste „wir gehen mit Beanies", Versprecher „Es wird eine Beanie".
+- Unsicher: „Was bring ich" oder „Was bringt" (Erkenner uneinig).
+- Feedback Owner: [offen]
