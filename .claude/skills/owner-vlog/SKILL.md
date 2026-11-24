@@ -63,6 +63,14 @@ Ob der GTA-Switch später zurückkommt: offen. Der Owner wollte einen echten GTA
 - Stumme Stellen (B-Roll ohne Reden) bekommen Musik vom Owner; Zeitliste mitschicken.
 - Untertitel nur, wo die Spracherkennung sicher ist (mit zweitem Durchlauf prüfen); unsichere Stellen dem Owner nennen.
 
+## Werkzeug (Stand Vlog 2, 24.11.2026)
+- `tools/owner-vlog/build.py` mit `PLAN=plan_<name> JOB=<ordner> python3 build.py`. Plan pro Vlog als eigene Datei.
+- `SUBS = None` -> Untertitel automatisch aus der fertig geschnittenen Stimme (Wortzeiten passen exakt).
+  Danach den Wortlaut **immer selbst lesen** und Fehler über `REPLACE`/`FIX` im Plan korrigieren
+  (Beispiele: „die haben gekackt“ statt „gar keinen Bock“, „Levelstand/Levish“ statt „Lavish“).
+- Clips mit Musik im Original (Tanz/Flex) als stumme B-Roll behandeln, nicht untertiteln.
+- Immer zusätzlich eine **Handy-Fassung** (~6 Mbit/s, unter 100 MB) schicken: große Dateien lassen sich in der App nicht laden.
+
 ## Namen & Orte (vom Owner bestätigt)
 - Freunde: **Harouna**, Andi, Luis, Mustafa (filmt oft). Spracherkennung macht aus Harouna „Ronald/Haruna“.
 - **Motorworld** (München, Autohalle). Spracherkennung hört „Motorhaut/Motoruhr“.
