@@ -39,13 +39,17 @@ tail = x[-int(0.03 * 48000):]; chk("Ende ohne harten Abbruch (letzte 30 ms leise
 
 print("3 SCHNITTE: keine Sprache in weggeschnittenen Bereichen")
 bursts = json.load(open(J + "/m_bursts.json"))
+NEXTWORD = {("nur1", "Ende"): "'machen' endet 30,50, Schnitt in der Lücke vor 'aber' (30,66)",
+            ("nicht", "Anfang"): "davor endet der herausgeschnittene Mittelteil (Lücke 36,22-36,27)",
+            ("nicht", "Ende"): "'nicht' endet 37,02, danach nur Raumrauschen bis 'So' (37,82)",
+            ("boy", "Ende"): "Ende der Aufnahme IMG_4832 (17,40); was danach kommt, ist der nächste Clip"}
 kept = [(s, e_) for s, e_, _ in P]
 ALLOWED = []
 for a0_, a1_, w_ in ((0.0, 7.50, "Einleitung + 'jedes Black Friday': Hook startet mit dem stärksten Satz, Arbeitgebername unklar"),
                      (12.05, 15.05, "'By God' bringt nichts Neues"),
                      (21.50, 29.367, "Einwurf + Satz danach unverständlich (3 Erkenner uneinig), danach Kamera abgelegt"),
                      (30.55, 36.27, "'aber so mäßig, wenn ihr mir mehr [unklar]...' unverständlich, Wiederholung"),
-                     (37.40, 40.0, "'So, yeah' Füllwort")):
+                     (37.63, 40.0, "'So, yeah' Füllwort")):
     ALLOWED += [(b0, b1, w_) for b0, b1 in bursts if a0_ <= b0 and b1 <= a1_ + 0.3]
 for b0, b1 in bursts:
     inside = any(s - 0.02 <= b0 and b1 <= e_ + 0.02 for s, e_ in kept)
@@ -53,6 +57,13 @@ for b0, b1 in bursts:
     if not inside: chk(f"Sprach-Abschnitt {b0:.2f}-{b1:.2f} bewusst entfernt", why is not None, f"({why})" if why else "NICHT BEGRÜNDET")
 chk("alle übrigen Sprach-Abschnitte vollständig enthalten", all(any(s - 0.02 <= b0 and b1 <= e_ + 0.02 for s, e_ in kept) or any(abs(a0 - b0) < 0.05 for a0, _, w in ALLOWED if w) for b0, b1 in bursts))
 
+import subprocess as _sp
+_sp.run(["python3", "-I", "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/cutcheck.py", J], capture_output=True)
+_bad = [tuple(x) for x in json.load(open(J + "/cutcheck.json"))]
+_un = [b_ for b_ in _bad if b_ not in NEXTWORD]
+for b_ in _bad:
+    if b_ in NEXTWORD: print(f"  [OK ] Schnitt {b_[0]} {b_[1]}: {NEXTWORD[b_]}")
+chk("kein Wort an einem Schnitt angeschnitten (auch s/z/ch/t am Wortende)", not _un, str(_un))
 print("4 SPRACHE: fertiges Video gegen die Rohaufnahme (drei Erkenner)")
 # Maßstab ist die Rohaufnahme: Was dort klar verständlich ist (mind. 2 von 3 Erkennern), muss es im fertigen Video auch sein.
 # Wörter, die schon roh undeutlich sind, kann keine Bearbeitung retten; sie werden nur aufgelistet (die Untertitel tragen sie).

@@ -184,3 +184,4 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Raus: die langsame Frage „Wie machen wir das mit der …?", „Also", „Und ihr könnt euch das dann auswählen. Und ja".
 - Unsicher: „Bundles" (Erkenner hören „Bannens"/„uns").
 - Feedback Owner: [offen]
+- **25.11.2026 Owner-Feedback zu allen Videos: „manchmal schneidest du mein Wort komplett ab, bei 60 schon bei 6".** Ursache: Schnittmessung nur im Stimmband, leise Zischlaut-Enden („-zig") fehlten. Alle 4 Videos neu geschnitten (Enden bis zur echten Lücke in beiden Bändern) und als v2 geschickt; `cutcheck.py` ist jetzt Pflichtpunkt in `qa.py`.

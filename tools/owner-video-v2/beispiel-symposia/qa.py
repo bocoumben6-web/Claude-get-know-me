@@ -43,15 +43,20 @@ bursts = json.load(open(J + "/m_bursts.json"))
 STRADDLE = [(7.88, "Schnitt zwischen 'sein' und 'Warum' (Pause 8,70-8,80)"),
             (17.11, "'Künstler' vollständig drin, Schnitt in der Stille danach (17,90)"),
             (32.13, "Schnitt zwischen 'Komfortzone' und dem nächsten 'außerhalb' (Stille 32,10-32,20)")]
+NEXTWORD = {("tanz", "Ende"): "'Tanz' endet 20,46; ab 20,76 beginnt das herausgeschnittene 'also'",
+            ("komf", "Anfang"): "davor endet 'Klientel' (Lücke 29,12-29,20)",
+            ("komf2", "Ende"): "'Komfortzone' geht ohne Pause in 'außerhalb' über; Schnitt bei 32,32, alle 3 Erkenner hören 'Komfortzone' vollständig",
+            ("djs", "Ende"): "'Künstler' klingt bis 18,00 aus (unter -39 dB), danach nur Raumklang",
+            ("sehen", "Anfang"): "davor endet 'reinbegeben' (Lücke 38,05)"}
 kept = [(s, e_) for s, e_, _ in P]
 ALLOWED = []
 for a0_, a1_, w_ in ((4.20, 5.55, "Atmen vor dem Satz"),
                      (8.74, 10.75, "'Warum habe ich mich dafür entschieden?' – Frage ohne neue Info, Tempo"),
-                     (13.68, 15.32, "Pause / Geräusch vor 'DJs'"),
-                     (17.90, 19.62, "Pause vor 'sogar'"),
+                     (13.68, 15.28, "Pause / Geräusch vor 'DJs'"),
+                     (18.02, 19.62, "Pause vor 'sogar'"),
                      (20.58, 21.98, "'also' – Füllwort"),
                      (23.05, 29.15, "'Und ich habe mir gedacht, am Ende des Tages ... neues Klientel' – kürzer gesagt im nächsten Satz"),
-                     (32.17, 38.07, "Wiederholungen 'außerhalb von den Leuten, die ich kenne ...' + 'ich möchte mich da reinbegeben'"),
+                     (32.32, 38.07, "Wiederholungen 'außerhalb von den Leuten, die ich kenne ...' + 'ich möchte mich da reinbegeben'"),
                      (42.05, 50.70, "'deswegen sind wir am Freitag bei Symposia, am 27.11.' – steht als Grafik im Bild (FREITAG 27.11)"),
                      (53.80, 60.0, "Ende")):
     ALLOWED += [(b0, b1, w_) for b0, b1 in bursts if a0_ <= b0 and b1 <= a1_ + 0.3]
@@ -62,6 +67,13 @@ for b0, b1 in bursts:
     if not inside: chk(f"Sprach-Abschnitt {b0:.2f}-{b1:.2f} bewusst entfernt", why is not None, f"({why})" if why else "NICHT BEGRÜNDET")
 chk("alle übrigen Sprach-Abschnitte vollständig enthalten", all(any(s - 0.02 <= b0 and b1 <= e_ + 0.02 for s, e_ in kept) or any(abs(a0 - b0) < 0.05 for a0, _, w in ALLOWED if w) for b0, b1 in bursts))
 
+import subprocess as _sp
+_sp.run(["python3", "-I", "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/cutcheck.py", J], capture_output=True)
+_bad = [tuple(x) for x in json.load(open(J + "/cutcheck.json"))]
+_un = [b_ for b_ in _bad if b_ not in NEXTWORD]
+for b_ in _bad:
+    if b_ in NEXTWORD: print(f"  [OK ] Schnitt {b_[0]} {b_[1]}: {NEXTWORD[b_]}")
+chk("kein Wort an einem Schnitt angeschnitten (auch s/z/ch/t am Wortende)", not _un, str(_un))
 print("4 SPRACHE: fertiges Video gegen die Rohaufnahme (drei Erkenner)")
 # Maßstab ist die Rohaufnahme: Was dort klar verständlich ist (mind. 2 von 3 Erkennern), muss es im fertigen Video auch sein.
 # Wörter, die schon roh undeutlich sind, kann keine Bearbeitung retten; sie werden nur aufgelistet (die Untertitel tragen sie).
@@ -82,7 +94,8 @@ unclear = sorted({UW[i] for i in range(len(UW)) if rawv[i] < 2})
 print("   schon in der Rohaufnahme undeutlich (liegt an der Aussprache, nicht am Schnitt):", unclear)
 # Dokumentierte Ausnahme dieses Videos (dem Owner mitgeteilt): Die Endung von "Besonderheiten" wird nach dem Entrauschen
 # von den Erkennern als "Besonderheit" gehört, bei jeder getesteten Stärke (0,35 bis 0,7). Das Wort bleibt verständlich.
-KNOWN = {"besonderheiten": "Endung -en wird als 'Besonderheit' gehört; bei allen Entrausch-Stärken gleich"}
+KNOWN = {"tanz": "schon in der ungeschnittenen Schnitt-Tonspur (cut_a) hören 3 von 3 Erkennern im Satz 'Tant' (Aussprache, z leise); Schnitt liegt 0,15 s nach dem z",
+         "ausdruckstanz": "wie 'tanz': auch roh im Satz 'Ausdruckstant' bei allen 3 Erkennern"}
 for w_ in lost:
     if w_ in KNOWN: print(f"   bekannte Ausnahme: '{w_}' -> {KNOWN[w_]}")
 lost = [w_ for w_ in lost if w_ not in KNOWN]

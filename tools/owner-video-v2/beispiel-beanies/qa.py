@@ -41,14 +41,17 @@ print("3 SCHNITTE: keine Sprache in weggeschnittenen Bereichen")
 bursts = json.load(open(J + "/m_bursts.json"))
 # Sprach-Abschnitte, die über eine Schnittstelle reichen: Schnitt liegt an einer Wortgrenze in einer Pause (Hüllkurve + 3 Erkenner geprüft)
 STRADDLE = [(7.46, "Schnitt zwischen 'gefragt' und 'was' (Stille 7,75-7,84)")]
+NEXTWORD = {("hook", "Anfang"): "davor endet 'gefragt' (Lücke 7,74-7,82, beide Bänder geprüft)",
+            ("col", "Ende"): "'Restock' endet 22,22; danach nur Atmer ab 22,56",
+            ("out", "Anfang"): "davor nur Raumklang/Atmer (unter -40 dB), 'Lavish' beginnt 29,54"}
 kept = [(s, e_) for s, e_, _ in P]
 ALLOWED = []
 for a0_, a1_, w_ in ((0.0, 7.78, "'Meine lieben Damen und Herren, beim letzten Mal habe ich euch gefragt' – Einleitung, Hook startet mit der Frage"),
-                     (9.25, 14.45, "'Und ja, wir gehen mit Beanies' – das erste Mal; das zweite, betontere bleibt"),
-                     (15.40, 17.98, "'Es wird eine Beanie' – Versprecher, danach korrekt"),
-                     (22.32, 25.00, "Pause"),
+                     (9.43, 14.45, "'Und ja, wir gehen mit Beanies' – das erste Mal; das zweite, betontere bleibt"),
+                     (15.50, 17.98, "'Es wird eine Beanie' – Versprecher, danach korrekt"),
+                     (22.42, 25.00, "Pause"),
                      (29.05, 29.50, "Pause"),
-                     (30.75, 60.0, "Ende, Owner geht aus dem Bild")):
+                     (31.07, 60.0, "Ende, Owner geht aus dem Bild")):
     ALLOWED += [(b0, b1, w_) for b0, b1 in bursts if a0_ <= b0 and b1 <= a1_ + 0.3]
 ALLOWED += [(b0, b1, w_) for b0, b1 in bursts for s_, w_ in STRADDLE if abs(b0 - s_) < 0.02]
 for b0, b1 in bursts:
@@ -57,6 +60,13 @@ for b0, b1 in bursts:
     if not inside: chk(f"Sprach-Abschnitt {b0:.2f}-{b1:.2f} bewusst entfernt", why is not None, f"({why})" if why else "NICHT BEGRÜNDET")
 chk("alle übrigen Sprach-Abschnitte vollständig enthalten", all(any(s - 0.02 <= b0 and b1 <= e_ + 0.02 for s, e_ in kept) or any(abs(a0 - b0) < 0.05 for a0, _, w in ALLOWED if w) for b0, b1 in bursts))
 
+import subprocess as _sp
+_sp.run(["python3", "-I", "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/cutcheck.py", J], capture_output=True)
+_bad = [tuple(x) for x in json.load(open(J + "/cutcheck.json"))]
+_un = [b_ for b_ in _bad if b_ not in NEXTWORD]
+for b_ in _bad:
+    if b_ in NEXTWORD: print(f"  [OK ] Schnitt {b_[0]} {b_[1]}: {NEXTWORD[b_]}")
+chk("kein Wort an einem Schnitt angeschnitten (auch s/z/ch/t am Wortende)", not _un, str(_un))
 print("4 SPRACHE: fertiges Video gegen die Rohaufnahme (drei Erkenner)")
 # Maßstab ist die Rohaufnahme: Was dort klar verständlich ist (mind. 2 von 3 Erkennern), muss es im fertigen Video auch sein.
 # Wörter, die schon roh undeutlich sind, kann keine Bearbeitung retten; sie werden nur aufgelistet (die Untertitel tragen sie).

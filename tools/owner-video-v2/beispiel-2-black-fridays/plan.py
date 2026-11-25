@@ -3,10 +3,10 @@
 P = [  # (src_start, src_end, name)
  (7.50, 10.22, "hook"),    # jedes Jahr muss ich immer zwei Black Friday vorbereiten
  (17.40, 21.50, "hier"),   # Wenn ich sage vorbereiten, dann heißt es, ich muss hier BF Sachen machen und ich muss hier | (cut: unclear interjection + unclear sentence)
- (10.80, 12.05, "tough"),  # Das ist echt tough
- (29.37, 30.55, "nur1"),   # Ich würde auch nur einen Black Friday machen
- (36.27, 37.40, "nicht"),  # aber so ist es noch nicht
- (15.05, 17.35, "boy"),    # Boy, it is what it is, bro  (+ quiet tail for the beanie question)
+ (10.80, 12.19, "tough"),  # Das ist echt tough
+ (29.37, 30.59, "nur1"),   # Ich würde auch nur einen Black Friday machen
+ (36.27, 37.62, "nicht"),  # aber so ist es noch nicht
+ (15.05, 17.41, "boy"),    # Boy, it is what it is, bro  (+ quiet tail for the beanie question)
 ]
 SUBS = [  # (src_start, src_end, text) ; *keyword*
  (7.50, 8.80, "JEDES JAHR MUSS ICH IMMER"),

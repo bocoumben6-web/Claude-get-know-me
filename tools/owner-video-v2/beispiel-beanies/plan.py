@@ -1,10 +1,10 @@
 # Video "Black Friday = Beanies" (IMG_4822 + Riem_Arcaden mic, +3.55 s)
 P = [  # (src_start, src_end, name)
- (7.78, 9.25, "hook"),    # was bringt zu Black Friday raus?
- (14.45, 15.40, "bean"),  # Wir gehen mit Beanies.
- (17.98, 22.32, "col"),   # Es werden drei neue Colorways kommen, beziehungsweise zwei neue Colorways, ein Restock.
+ (7.78, 9.43, "hook"),    # was bringt zu Black Friday raus?
+ (14.45, 15.50, "bean"),  # Wir gehen mit Beanies.
+ (17.98, 22.42, "col"),   # Es werden drei neue Colorways kommen, beziehungsweise zwei neue Colorways, ein Restock.
  (25.00, 29.05, "camo"),  # Ja, ihr wolltet alle die Camo Beanie? Also kriegt ihr die Camo Beanie.
- (29.50, 30.75, "out"),   # Lavish Owner is out
+ (29.50, 31.07, "out"),   # Lavish Owner is out
 ]
 SUBS = [
  (7.80, 9.20, "WAS BRING ICH ZU *BLACK FRIDAY* RAUS"),
