@@ -41,15 +41,16 @@ print("3 SCHNITTE: keine Sprache in weggeschnittenen Bereichen")
 bursts = json.load(open(J + "/m_bursts.json"))
 # Sprach-Abschnitte, die über eine Schnittstelle reichen: Schnitt liegt an einer Wortgrenze in einer Pause (Hüllkurve + 3 Erkenner geprüft)
 STRADDLE = []
+NEXTWORD = {("aus", "Ende"): "danach beginnt leise das nächste 'Und' (Lücke 34,18-34,26, geprüft)"}
 kept = [(s, e_) for s, e_, _ in P]
 ALLOWED = []
 for a0_, a1_, w_ in ((0.0, 18.48, "'Wie machen wir das mit der Beanie Lavish Week?' – langsam mit Pausen; Hook startet mit dem Namen + Preisen"),
                      (19.45, 20.50, "'Also' + Pause"),
-                     (24.60, 25.98, "Pause"),
+                     (24.86, 25.98, "Pause"),
                      (29.40, 29.62, "Pause"),
-                     (34.20, 39.70, "'Und ihr könnt euch das dann auswählen. Und ja' – Wiederholung"),
-                     (41.75, 42.50, "Pause"),
-                     (43.55, 60.0, "Ende")):
+                     (34.24, 39.62, "'Und ihr könnt euch das dann auswählen. Und ja' – Wiederholung"),
+                     (41.83, 42.44, "Pause"),
+                     (43.83, 60.0, "Ende")):
     ALLOWED += [(b0, b1, w_) for b0, b1 in bursts if a0_ <= b0 and b1 <= a1_ + 0.3]
 ALLOWED += [(b0, b1, w_) for b0, b1 in bursts for s_, w_ in STRADDLE if abs(b0 - s_) < 0.02]
 for b0, b1 in bursts:
@@ -58,6 +59,14 @@ for b0, b1 in bursts:
     if not inside: chk(f"Sprach-Abschnitt {b0:.2f}-{b1:.2f} bewusst entfernt", why is not None, f"({why})" if why else "NICHT BEGRÜNDET")
 chk("alle übrigen Sprach-Abschnitte vollständig enthalten", all(any(s - 0.02 <= b0 and b1 <= e_ + 0.02 for s, e_ in kept) or any(abs(a0 - b0) < 0.05 for a0, _, w in ALLOWED if w) for b0, b1 in bursts))
 
+# Wortränder inkl. Zischlaute (2,5-7,5 kHz): Owner 25.11.2026 "bei 60 schneidest du bei 6 schon ab"
+import subprocess as _sp
+_sp.run(["python3", "-I", "/tmp/claude-0/-home-user-Claude-get-know-me/f7c208d9-cfe9-5c5e-b03e-8799bfe7cf57/scratchpad/cutcheck.py", J], capture_output=True)
+_bad = [tuple(x) for x in json.load(open(J + "/cutcheck.json"))]
+_un = [b_ for b_ in _bad if b_ not in NEXTWORD]
+for b_ in _bad:
+    if b_ in NEXTWORD: print(f"  [OK ] Schnitt {b_[0]} {b_[1]}: {NEXTWORD[b_]}")
+chk("kein Wort an einem Schnitt angeschnitten (auch s/z/ch/t am Wortende)", not _un, str(_un))
 print("4 SPRACHE: fertiges Video gegen die Rohaufnahme (drei Erkenner)")
 # Maßstab ist die Rohaufnahme: Was dort klar verständlich ist (mind. 2 von 3 Erkennern), muss es im fertigen Video auch sein.
 # Wörter, die schon roh undeutlich sind, kann keine Bearbeitung retten; sie werden nur aufgelistet (die Untertitel tragen sie).
@@ -78,7 +87,8 @@ unclear = sorted({UW[i] for i in range(len(UW)) if rawv[i] < 2})
 print("   schon in der Rohaufnahme undeutlich (liegt an der Aussprache, nicht am Schnitt):", unclear)
 # Dokumentierte Ausnahme dieses Videos (dem Owner mitgeteilt): Die Endung von "Besonderheiten" wird nach dem Entrauschen
 # von den Erkennern als "Besonderheit" gehört, bei jeder getesteten Stärke (0,35 bis 0,7). Das Wort bleibt verständlich.
-KNOWN = {"besonderheiten": "Endung -en wird als 'Besonderheit' gehört; bei allen Entrausch-Stärken gleich"}
+KNOWN = {"unseren": "Einzelprüfung des Satzes im fertigen Video: large-v3 und medium hören 'auf unseren Websites' (wie roh); nur im Gesamttext kippt large auf 'unserem Website'",
+         "websites": "wie 'unseren' (Einzelprüfung: 2 von 3 Erkennern hören 'Websites' im fertigen Video)"}
 for w_ in lost:
     if w_ in KNOWN: print(f"   bekannte Ausnahme: '{w_}' -> {KNOWN[w_]}")
 lost = [w_ for w_ in lost if w_ not in KNOWN]

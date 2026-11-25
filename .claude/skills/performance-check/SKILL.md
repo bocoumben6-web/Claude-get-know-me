@@ -12,7 +12,7 @@ Erst wenn alle Punkte geprüft und bestanden sind, wird gesendet. Fehler vorher 
 2. **Jede Einblendung einzeln:** Anfang, Mitte, Ende als Vollbild ansehen (lesbar? im Bild? nichts verdeckt Gesicht? richtige Farbe/Schrift?)
 3. **Untertitel Wort für Wort** gegen den Ton prüfen (zweites Transkript des fertigen Videos); „Lavish“ und Namen richtig
 4. **Timing:** jede Grafik erscheint auf das gesprochene Wort (± 0,15 s)
-5. **Ton:** keine abgeschnittenen Wörter an Schnitten, kein Knacken, Lautheit ca. -14 LUFS, kein Clipping
+5. **Ton:** keine abgeschnittenen Wörter an Schnitten, **auch nicht das leise Wortende (s/z/ch/t, z. B. „sech-zig“), geprüft mit `cutcheck.py` im hohen Band**, kein Knacken, Lautheit ca. -14 LUFS, kein Clipping
 6. **Technik:** 1080x1920, 30 fps, H.264 + AAC, Dauer stimmt, Datei spielt ab
 7. **Safe-Zones** TikTok und Instagram-Story frei (oben 15 %, unten 25 %, rechts 15 %)
 8. **Lavish-Logo am Ende** vorhanden

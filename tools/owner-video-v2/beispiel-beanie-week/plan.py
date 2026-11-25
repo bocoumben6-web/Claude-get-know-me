@@ -2,12 +2,12 @@
 P = [
  (18.48, 19.45, "dbl"),   # Die Beanie Lavish Week.
  (20.50, 21.80, "p1"),    # ein Beanie 30
- (21.82, 23.10, "p2"),    # zwei Beanies 50
- (23.15, 24.60, "p3"),    # drei Beanies kriegt ihr für 60
+ (21.82, 23.18, "p2"),    # zwei Beanies 50
+ (23.15, 24.86, "p3"),    # drei Beanies kriegt ihr für 60
  (25.98, 29.40, "web"),   # Wir werden Bundles auf unserer Website natürlich noch dementsprechend anpassen.
- (29.62, 34.20, "aus"),   # Ihr könnt euch selber aussuchen, welche Beanie ihr mit welcher Beanie haben wollt.
- (39.70, 41.75, "rockt"), # dann rockt mal alle die Beanie
- (42.50, 43.55, "out"),   # Lavish Owner is out
+ (29.62, 34.24, "aus"),   # Ihr könnt euch selber aussuchen, welche Beanie ihr mit welcher Beanie haben wollt.
+ (39.62, 41.83, "rockt"), # dann rockt mal alle die Beanie
+ (42.44, 43.83, "out"),   # Lavish Owner is out
 ]
 SUBS = [
  (18.50, 19.42, "DIE *BEANIE LAVISH WEEK*"),
