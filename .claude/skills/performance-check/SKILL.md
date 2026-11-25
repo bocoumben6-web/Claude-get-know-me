@@ -36,6 +36,7 @@ Bilder vor/nach jedem Schnitt, jede Einblendung in voller Größe.
 - [ ] Offene Schleife wird am Ende eingelöst
 - [ ] Schlussbild max. 0,8 s oder Logo über der letzten Einstellung; wenn möglich Loop zum Anfang
 - [ ] Eine konkrete Frage an die Zuschauer (Kommentar-Anreiz)
+- [ ] Lavish-Pieces sind regelmäßig voll im Bild (mind. alle 4–5 s, ca. ein Drittel der Zeit), nicht nur Gesicht + fremde Jacke
 
 ## Checkliste vor jedem Export
 - [ ] Die ersten **1–2 Sekunden** stoppen den Scroll (Bewegung, Aussage oder starkes Bild – kein Logo-Intro, kein „Hey Leute“)

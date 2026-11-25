@@ -19,7 +19,7 @@ Details stehen in `lavish-brand`, `owner-content`, `video-schnitt`, `performance
 | **Balken** | Gerade, sauber, erwachsen: Gelb/Schwarz, Schwarz/Beige, Beige/Schwarz. Ein großer Balken (96) + kleinere Zeilen (70), links an x=64 ab y=300. Erscheinen exakt auf das gesprochene Wort. |
 | **Motion** | Einflug mit Bewegungsunschärfe und Überschwingen, leichte Drift beim Halten, Text rollt im selben Balken weiter, Zahlen zählen hoch, ein Lichtstreifen, Kamerafahrt auf den Owner bei Pointen |
 | **Screenshots des Owners** | Als gerahmte Karte ohne Handy-Rahmen. Wichtige Stelle mit gelbem Rahmen markieren; kleiner Text springt groß heraus; Pop-ups „poppen" ins Bild |
-| **Bildausschnitt** | Owner per Zoom 1,18 nach rechts (Kopf bei x≈650), links ist Platz für Grafik. Nie eine Grafik über dem Gesicht. |
+| **Bildausschnitt** | Owner per Zoom 1,18 nach rechts (Kopf bei x≈650), links ist Platz für Grafik. Nie eine Grafik über dem Gesicht. **Lavish-Pieces immer wieder voll zeigen (Owner 25.11.2026):** Zoom wechseln, regelmäßig rauszoomen, damit z. B. die Lavish-Hose ganz zu sehen ist (siehe `owner-content`). |
 | **Farbe** | Leicht entsättigt, Lichter gedämpft, oben etwas abgedunkelt. **Kein Korn** (TikTok macht daraus Matsch, gemessen 17.11.2026) |
 | **Export** | Hohe Qualität ohne Korn, ca. 18 Mbit/s, bt709-Farbangaben (Details in `video-schnitt`). Owner an „Hochladen in hoher Qualität" in TikTok erinnern. |
 | **Sounds** | Whoosh, Pop, Ticken, Klingel/Chime, tiefer Schlag bei Hook und Logo. Alle selbst erzeugt. Regeln siehe unten. |

@@ -203,3 +203,4 @@ Eine eigene Instagram-Fassung nur, wenn der Owner sie ausdrücklich verlangt.
 - Test v1 (nur Schnitt + Zooms) gefiel dem Owner. Gewünscht: mehr Betonung von Wörtern mit Text-Grafiken wie bei None of Us (umgesetzt in v2).
 - Auto-Untertitel (CapCut/Whisper) schreiben „Lavish“ oft falsch, z. B. als „Lewis“.
   **Immer zu „Lavish“ korrigieren.** Namen wie Pajel, Tom Bischof, Benno ebenfalls prüfen.
+- **25.11.2026 (Owner): Die Lavish-Pieces müssen immer zu sehen sein.** Der Owner trägt oft fremde Teile (z. B. Jacke nicht von Lavish, Hose von Lavish). Deshalb **öfter rauszoomen**: Zoom-Stufen wechseln, und regelmäßig, mindestens alle 4–5 s und insgesamt etwa ein Drittel der Zeit, eine Einstellung, in der das Lavish-Piece voll im Bild ist (bei einer Lavish-Hose der ganze Körper bis zu den Schuhen). Nur oberer Körper (Gesicht + Jacke) über lange Strecken ist falsch. Vor dem Schnitt klären oder im Bild erkennen, welche Teile von Lavish sind (Logo „L" auf der Hose).
