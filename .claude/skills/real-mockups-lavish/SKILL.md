@@ -56,3 +56,8 @@ Jacquard, Position (mittig vorne auf dem Cuff? seitlich?), Garn-/Fadenfarbe, Au�
 - **Standard-Hintergrund f체r Produktbilder (vom Owner festgelegt, Nov. 2026):** flaches, neutrales Hellgrau
   wie die Lavish-Flanell-Referenz (ca. RGB 229/228/228, unten minimal dunkler), weicher Schatten unter dem Piece,
   Format 3:4, Piece mittig, ca. 64 % Bildbreite. **Jedes Piece als einzelnes Bild** liefern. Freigestellte PNGs nur zus채tzlich.
+- **Realismus-Anspruch (Owner, Nov. 2026):** Kleidung mit Falten (Hoodies, Shirts) muss **fotoecht** aussehen, wie ein echtes
+  Produktfoto mit Ghost-Mannequin. Prozedurales Rendering reicht daf체r **nicht**. Es geht nur f체r flache Teile wie Beanies.
+  F체r Hoodies und Shirts deshalb: (a) echtes Blank-Foto des Owners bzw. Herstellers + Compositing, oder (b) Bild-KI-Prompt
+  (`mockups/hoodie-lavish-collective-24/KI-PROMPT.md` als Vorlage), oder (c) Bild-API direkt, wenn der Owner einen Key hinterlegt.
+  Fremde Produktfotos anderer Brands nur als Stil-Referenz verwenden, nie als Bildbasis.
