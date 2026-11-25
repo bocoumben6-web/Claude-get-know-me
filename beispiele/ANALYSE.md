@@ -185,3 +185,4 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Unsicher: „Bundles" (Erkenner hören „Bannens"/„uns").
 - Feedback Owner: [offen]
 - **25.11.2026 Owner-Feedback zu allen Videos: „manchmal schneidest du mein Wort komplett ab, bei 60 schon bei 6".** Ursache: Schnittmessung nur im Stimmband, leise Zischlaut-Enden („-zig") fehlten. Alle 4 Videos neu geschnitten (Enden bis zur echten Lücke in beiden Bändern) und als v2 geschickt; `cutcheck.py` ist jetzt Pflichtpunkt in `qa.py`.
+- Beanie Lavish Week v3 (25.11.): Owner-Grafik „LAVISH BEANIE WEEK FREITAG 27.11" (blau, `assets/owner-grafiken/beanie-week-freitag-27-11.jpg`) als gerahmte Karte bei „dann rockt mal alle die Beanie"; am Ende „WELCHE KOMBI?" + „BEANIE WEEK · FREITAG 27.11". Karte nicht bis zum Schluss stehen lassen: Der Owner läuft am Ende nach links aus dem Bild, unter die Karte.

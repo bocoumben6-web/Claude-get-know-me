@@ -254,15 +254,18 @@ BG = [beanie(p, 200) for p in BP]
 for i in range(3):
     E.append(El(o(31.70) + i * 0.20, ea, 40 + i * 220, RW + 8, slam(BG[i], dur=0.16), enter=(0, 0), dist=0, din=0.06, drift=(0, 3), dout=0.10))
 
-# ---- "dann rockt mal alle die Beanie" ----
+# ---- "dann rockt mal alle die Beanie": the owner's Beanie Week graphic (Owner 25.11.2026) pops in and stays to the end ----
 sr, er = po("rockt")
-E.append(El(o(40.52), er, X0, Y1, slam(make_bar("ROCKT DIE BEANIE", "K", BIG)), enter=(0, 0), dist=0, din=0.06, dout=0.08))
+_bw = Image.open(J + "/img/beanieweek.jpg").convert("RGB"); _bw = _bw.crop((4, 4, _bw.width - 8, _bw.height - 10))
+_bw.save(J + "/img/beanieweek_c.png")
+BW_CARD = framed(J + "/img/beanieweek_c.png", 320, b=8)
+E.append(El(sr + 0.06, er, X0, Y1, pop_card(BW_CARD, k0=0.80, dur=0.28), enter=(0, 0), dist=0, din=0.08, drift=(0, 4), dout=0.10))
 SHAKE.append((o(40.52) + 0.02, 0.16, 8))
 
-# ---- out: one question ----
+# ---- out: one question, under the card ----
 s_o, _ = po("out")
 E.append(El(s_o + 0.02, END, X0, Y1, slam(make_bar("WELCHE KOMBI?", "K", BIG)), enter=(0, 0), dist=0, din=0.06, cut_out=True, do_sweep=True))
-E.append(El(s_o + 0.35, END, X0, RW, static(make_bar("SCHREIBS IN DIE KOMMENTARE", "Y", MID)), enter=(-1, 0), dist=300, cut_out=True))
+E.append(El(s_o + 0.30, END, X0, RW, static(make_bar("BEANIE WEEK · FREITAG 27.11", "Y", MID)), enter=(-1, 0), dist=300, cut_out=True))
 CUTAWAY = (-1, -1)
 
 # ---------------- hook title behind the owner ----------------
@@ -305,7 +308,7 @@ def grade(arr):
 
 # ---------------- camera: follows the head (head.json), zoom per piece, head kept below the bar zone ----------------
 HD = json.load(open(J + "/head.json"))
-CAM = {"dbl": (1.60, 1.66), "p1": (1.0, 1.0), "p2": (1.40, 1.44), "p3": (1.0, 1.0), "web": (1.30, 1.36), "aus": (1.0, 1.0), "rockt": (1.45, 1.50), "out": (1.0, 1.0)}
+CAM = {"dbl": (1.60, 1.66), "p1": (1.0, 1.0), "p2": (1.40, 1.44), "p3": (1.0, 1.0), "web": (1.30, 1.36), "aus": (1.0, 1.0), "rockt": (1.30, 1.34), "out": (1.0, 1.0)}
 HEAD_T = (560, 840)
 def cam_matrix(name, p, idx):
     z0, z1 = CAM[name]; z = z0 + (z1 - z0) * (p * p * (3 - 2 * p))
