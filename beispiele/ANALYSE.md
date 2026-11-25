@@ -191,3 +191,8 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - 20,7 s inkl. Logo. Hook „Für die meisten Leute ist vielleicht genau diese Beanie, was sie immer haben wollten" (Owner läuft nah ins Bild, „GENAU DIESE / BEANIE?" dahinter) → WAS IHR IMMER WOLLTET → DIESEN WINTER / WIEDER BEANIES → 1 RESTOCK + 2 NEUE FARBEN mit Camo, Schwarz, Weiß auf die Wörter → TRUST ME → AUF DIE BEANIES / VON LAVISH → IST VERLASS → STAY ACTIVE / STAY WOKE → WELCHE FARBE? + BEANIE WEEK · FREITAG 27.11 → Logo.
 - Schnitte erstmals direkt aus `segs.py` (beide Bänder) gesetzt: `cutcheck` ohne Befund beim ersten Versuch.
 - Feedback Owner: [offen]
+
+## Video „King of Beanies" (25.11.2026) – Take IMG_4828 + Riem Arcaden 6
+- 24,2 s inkl. Logo (über 22 s, weil Preise + kostenloser Versand drin sind). Hook „Unsere Beanies sind back" mit „BEANIES / SIND BACK" hinter dem Owner → TRUST ME → DIESE BEANIE / NICHT TOUGH? mit allen 3 Beanies → LAVISH IST → KING OF BEANIES (Ganzkörper, Schlag) → 3 BEANIES · 3 FARBEN → CAMO · WEISS · SCHWARZ → Preise 30/50/60 € → SCHNÄPPCHEN → WHATSAPP-GRUPPE / CODE FÜR KOSTENLOSEN VERSAND → WELCHE FARBE? + BEANIE WEEK · FREITAG 27.11 → Logo.
+- Raus: Fluch am Anfang („Oh my f*** days, bro"), „Sagt mir, dieses Bild …", zwei weitere „Trust me", „Nichts machst du falsch damit … stay woke", „Ja, so machen wir das".
+- Feedback Owner: [offen]

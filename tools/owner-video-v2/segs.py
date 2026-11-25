@@ -2,7 +2,7 @@
 import sys, subprocess, numpy as np
 from scipy.signal import butter, sosfiltfilt
 J = sys.argv[1]; t0 = float(sys.argv[2]) if len(sys.argv) > 2 else 0; t1 = float(sys.argv[3]) if len(sys.argv) > 3 else 1e9
-SR = 32000
+SR = 32000; GAP = int(sys.argv[4]) if len(sys.argv) > 4 else 4
 a = np.frombuffer(subprocess.run(["ffmpeg", "-loglevel", "error", "-i", J + "/master.mkv", "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"], capture_output=True).stdout, np.float32)
 def env(lo, hi):
     b = sosfiltfilt(butter(4, [lo, hi], btype="band", fs=SR, output="sos"), a)
@@ -16,7 +16,7 @@ while i < len(sp):
     if sp[i]:
         j = i
         while j < len(sp) and sp[j]: j += 1
-        if segs and i - segs[-1][1] < 4: segs[-1][1] = j
+        if segs and i - segs[-1][1] < GAP: segs[-1][1] = j
         else: segs.append([i, j])
         i = j
     else: i += 1
