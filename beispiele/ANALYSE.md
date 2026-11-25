@@ -202,3 +202,9 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Raus: „aber jetzt so auf jeden Fall in der nächsten Zeit …", der unklare Schlusssatz („das wird die Zeit/Welt … mitbekommen", Erkenner uneinig).
 - Schwäche: die ersten ~0,8 s nur Wand + Überschrift, der Owner läuft erst ins Bild.
 - Feedback Owner: [offen]
+
+## Video „Fitpic Love" (25.11.2026) – Take IMG_4829 + Riem Arcaden 7
+- 12,3 s inkl. Logo. Owner ist beim ersten Satz noch nicht im Bild → Einstieg mit 3 Kunden-Fitpics (aus dem Fitpics-Video) auf der Wand zu „Wisst ihr, was ich liebe?" → Owner läuft rein, „FITPIC / LOVE" hinter ihm → IHR ROCKT LAVISH + 2 weitere Fitpics → SO FRISCH → ON MY LIFE → LOVE / FÜR EUCH → WO IST DEIN FITPIC? + MARKIERT @LLLAVISHCLO → Logo.
+- Lachen vor „Peace" raus; „Peace" liegt erst bei 21,1 s (Whisper-Zeit 20,8 war zu früh).
+- QA: Gesichtsprüfung im Einstieg aus (`skip_face`), weil dort nur Kundengesichter in den Fotokarten sind.
+- Feedback Owner: [offen]
