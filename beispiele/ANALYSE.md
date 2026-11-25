@@ -196,3 +196,9 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - 23,5 s inkl. Logo (knapp über 22 s, weil Preise + kostenloser Versand drin sind). Hook „Unsere Beanies sind back" mit „BEANIES / SIND BACK" hinter dem Owner → TRUST ME → DIESE BEANIE / NICHT TOUGH? mit allen 3 Beanies → LAVISH IST → KING OF BEANIES (Ganzkörper, Schlag) → 3 BEANIES · 3 FARBEN → CAMO · WEISS · SCHWARZ → Preise 30/50/60 € → SCHNÄPPCHEN → WHATSAPP-GRUPPE / CODE FÜR KOSTENLOSEN VERSAND → WELCHE FARBE? + BEANIE WEEK · FREITAG 27.11 → Logo.
 - Raus: Fluch am Anfang („Oh my f*** days, bro"), „Sagt mir, dieses Bild …", zwei weitere „Trust me", „Nichts machst du falsch damit … stay woke", „Ja, so machen wir das".
 - Feedback Owner: [offen]
+
+## Video „1 gegen 1 Turnier" (25.11.2026) – Take IMG_4827 + Riem Arcaden 5
+- 19,2 s inkl. Logo. Hook „Wir wären ja nicht Lavish, wenn wir nicht noch irgendwelche Sachen planen würden" (Owner läuft von rechts rein, „1 GEGEN 1 / BALD?" dahinter) → GERÜCHT → FUSSBALL → 1 GEGEN 1 TURNIER (Schlag) + VON WEM? / WANN? → WIE LAVISH DA IST / SEHT IHR BALD → WÄRST DU DABEI? + 1 GEGEN 1 · BALD → Logo.
+- Raus: „aber jetzt so auf jeden Fall in der nächsten Zeit …", der unklare Schlusssatz („das wird die Zeit/Welt … mitbekommen", Erkenner uneinig).
+- Schwäche: die ersten ~0,8 s nur Wand + Überschrift, der Owner läuft erst ins Bild.
+- Feedback Owner: [offen]
