@@ -177,3 +177,10 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Raus: Begrüßung, „beim letzten Mal habe ich euch gefragt", das erste „wir gehen mit Beanies", Versprecher „Es wird eine Beanie".
 - Unsicher: „Was bring ich" oder „Was bringt" (Erkenner uneinig).
 - Feedback Owner: [offen]
+
+## Video „Beanie Lavish Week" (25.11.2026) – Take IMG_4824 + Riem Arcaden 2
+- 16,8 s inkl. Logo. Erstes Video nach der Regel „Lavish-Pieces immer zeigen": Zoom wechselt zwischen nah (1,3–1,66) und Ganzkörper (1,0, Lavish-Hose ganz im Bild), etwa die Hälfte der Zeit Ganzkörper.
+- Hook „Die Beanie Lavish Week" mit „3 BEANIES / 60 €" hinter dem Owner → rollender Preisbalken 1 BEANIE · 30 € → 2 · 50 € → 3 · 60 €, je eine Beanie poppt dazu → BUNDLES / AUF DER WEBSITE → DU SUCHST AUS → FREI KOMBINIEREN mit allen 3 Beanies → ROCKT DIE BEANIE → WELCHE KOMBI? / SCHREIBS IN DIE KOMMENTARE → Logo.
+- Raus: die langsame Frage „Wie machen wir das mit der …?", „Also", „Und ihr könnt euch das dann auswählen. Und ja".
+- Unsicher: „Bundles" (Erkenner hören „Bannens"/„uns").
+- Feedback Owner: [offen]
