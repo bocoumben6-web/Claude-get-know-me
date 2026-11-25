@@ -2,6 +2,7 @@
 
 Design-Quelle: `Probe_tracky.pdf`, PNG-Auszüge liegen in `design/`
 (Variante 1 = großer Brustprint, Variante 2 = kleiner Brustprint).
+**Beide Varianten sind zwei eigene Hoodies im Drop** (vom Owner bestätigt).
 Jeden Prompt im **selben ChatGPT-Chat** wie das gelungene Hoodie-Bild verwenden, damit Farbe und Waschung gleich bleiben.
 
 ---
@@ -17,7 +18,18 @@ Keep this exact hoodie photo: same garment, color, sand wash, folds, lighting, b
 Nothing else changes. No other text or logos.
 ```
 
-## 2. Hoodie hinten
+## 1b. Hoodie Variante 2 vorne (kleiner Brustprint)
+Anhängen: korrigiertes Hoodie-Bild (Variante 1) + `design/detail-brustprint-variante-2.png`
+```
+Same hoodie photo: same garment, olive color, sand wash, folds, lighting, background and camera angle. Replace the whole chest print with a SMALL chest logo exactly like the attached design detail:
+- Placed high on the chest on the VIEWER'S LEFT side (wearer's right chest), about a hand's width from the center.
+- Small off-white numbers "2" above "4", stacked vertically, tall condensed numerals with fine speckled distress, about 8 cm tall in total.
+- Directly left of the "4": a tiny off-white rounded badge with olive text "EST. 2024".
+- Behind them, an extremely subtle tonal "LAVISH" / "COLLECTIVE" (slightly arched, only slightly darker than the fabric, almost invisible), same small scale.
+Nothing on the rest of the front. No other text or logos. Spell everything exactly.
+```
+
+## 2. Hoodie hinten (gleich für beide Varianten)
 ```
 Same hoodie, same color, sand wash, lighting and background, now photographed from the BACK. Plain back: no print, no text, no logo. Hood lying flat on the back. Ribbed cuffs and waistband, same fit.
 ```
