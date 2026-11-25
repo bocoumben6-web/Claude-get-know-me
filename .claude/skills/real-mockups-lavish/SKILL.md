@@ -61,3 +61,5 @@ Jacquard, Position (mittig vorne auf dem Cuff? seitlich?), Garn-/Fadenfarbe, Au�
   Für Hoodies und Shirts deshalb: (a) echtes Blank-Foto des Owners bzw. Herstellers + Compositing, oder (b) Bild-KI-Prompt
   (`mockups/hoodie-lavish-collective-24/KI-PROMPT.md` als Vorlage), oder (c) Bild-API direkt, wenn der Owner einen Key hinterlegt.
   Fremde Produktfotos anderer Brands nur als Stil-Referenz verwenden, nie als Bildbasis.
+- **Tracksuit „Lavish Collective 24“ (Nov. 2026):** zwei komplette Sets (Set 1 = großer Brustprint, Set 2 = kleiner Brustprint, Hose gleich).
+  Die „24“ an der Hose sitzt seitlich auf der Außennaht, von vorne und hinten sichtbar. Hellere Streifen in Designs = **Acid Wash**.
