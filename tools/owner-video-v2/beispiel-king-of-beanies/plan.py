@@ -1,6 +1,6 @@
 # Video "King of Beanies" (IMG_4828 + Riem_Arcaden_6 mic, +7.71 s). 23.5 s: prices + free-shipping info justify > 22 s.
 P = [
- (10.24, 12.10, "back"),   # Unsere Beanies sind back.
+ (10.86, 12.10, "back"),   # Unsere Beanies sind back.
  (12.64, 13.56, "trust1"), # Trust me.
  (13.92, 16.08, "tough1"), # Wer sagt mir, diese Beanie sieht nicht tough aus?
  (17.94, 19.40, "king1"),  # Bro, Lavish ist King
@@ -13,7 +13,7 @@ P = [
  (50.06, 52.06, "out"),    # Lavish Owner is out
 ]
 SUBS = [
- (10.28, 12.06, "UNSERE *BEANIES* SIND BACK"),
+ (10.88, 12.06, "UNSERE *BEANIES* SIND BACK"),
  (12.68, 13.52, "*TRUST ME*"),
  (13.96, 14.85, "WER SAGT MIR DIESE BEANIE"),
  (14.87, 16.04, "SIEHT NICHT *TOUGH* AUS"),

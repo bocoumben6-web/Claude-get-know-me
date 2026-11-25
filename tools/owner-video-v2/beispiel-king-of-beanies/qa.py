@@ -47,7 +47,7 @@ NEXTWORD = {("e1", "Anfang"): "davor endet 'woke' (35,96); 'Eine' beginnt 36,02"
             ("wa", "Ende"): "'Versand' endet 48,18 (auch das d im hohen Band); danach Atmen bis 'Ja' 48,40"}
 kept = [(s, e_) for s, e_, _ in P]
 ALLOWED = []
-for a0_, a1_, w_ in ((0.0, 10.24, "'Oh my f*** days, bro' – Fluch am Anfang, Hook startet mit 'Unsere Beanies sind back'"),
+for a0_, a1_, w_ in ((0.0, 10.86, "'Oh my f*** days, bro' – Fluch am Anfang, Hook startet mit 'Unsere Beanies sind back'"),
                      (12.10, 12.64, "Pause"), (13.56, 13.92, "Pause"),
                      (16.08, 17.94, "'Sagt mir, dieses Bild sieht nicht tough aus' – Wiederholung"),
                      (19.40, 20.12, "Pause in 'King … of'"),
