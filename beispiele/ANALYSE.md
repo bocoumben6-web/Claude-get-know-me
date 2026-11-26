@@ -208,3 +208,9 @@ Der Owner hat None of Us (Lager-Challenge) und Villain (1-€-Drop) erneut als R
 - Lachen vor „Peace" raus; „Peace" liegt erst bei 21,1 s (Whisper-Zeit 20,8 war zu früh).
 - QA: Gesichtsprüfung im Einstieg aus (`skip_face`), weil dort nur Kundengesichter in den Fotokarten sind.
 - Feedback Owner: [offen]
+
+## Video „WhatsApp-Gruppe in 4 Sprachen" (26.11.2026) – Take IMG_4830 + Riem Arcaden 8
+- Owner-Wunsch 26.11.: alle 4 Versionen drin („mich tatsächlich in 4 Sprachen dasselbe sagen lassen"). In der Aufnahme sagt er alle 4 auf Deutsch mit Akzent (der Witz). Stimme kann Claude nicht umvertonen → Ton bleibt, **Untertitel der Englisch-/Französisch-/Spanisch-Teile sind echte Übersetzungen**, Ansagen („Und jetzt auf Englisch") bleiben deutsch.
+- 40,3 s inkl. Logo (Ausnahme von 12–22 s: Owner will alle 4 Sprachen). Hook „… auf 4 oder 5 Sprachen jetzt erläutern" mit „4 / SPRACHEN" hinter dem Owner → je Sprache schwarzer Balken DEUTSCH / ENGLISH / FRANÇAIS / ESPAÑOL + gelber Balken mit den Vorteilen in dieser Sprache → QR-Code zum WhatsApp-Kanal ab dem Spanisch-Teil bis zum Ende (> 4 s) → WELCHE SPRACHE WAR AM BESTEN? → Logo. Zoom wechselt bei jedem Satzteil zwischen Ganzkörper und nah.
+- Technik: `SUBS_HEAR` in plan.py = was gesprochen wird (für hear3/sound_words/qa), `SUBS` = was im Bild steht.
+- Feedback Owner: [offen]
