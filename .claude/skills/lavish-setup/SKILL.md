@@ -47,6 +47,7 @@ bei einer kleinen Gruppe, und die wischt zu früh weg. Entscheidend sind die ers
 **3. Bis zum Ende halten**
 - **Offene Schleife:** früh ankündigen, was am Ende kommt („am Ende zeig ich euch die Farbe"), und es wirklich am Ende zeigen.
 - **Kein langes Schlussbild:** Logo nur 0,6–0,8 s, oder als kleines Logo über die letzte Einstellung. 2,2 s Schwarz kostet Zuschauer.
+- **Text am Ende lange genug zeigen (Owner 26.11.2026):** Die Frage bzw. der letzte Text (z. B. „WELCHE FARBE?“ + zweite Zeile) steht **mindestens 2,5 s komplett im Bild**, bevor das Logo kommt; bei zwei Zeilen oder mehr als 5 Wörtern 3 s (Faustregel: 0,4 s pro Wort + 1 s). Reicht die letzte gesprochene Einstellung nicht, läuft das Bild nach dem letzten Wort weiter (Owner steht noch im Bild, Umgebungston leise) oder die Frage kommt schon früher. Das Logo danach bleibt kurz (0,6–0,8 s).
 - **Loop:** Das letzte Bild passt zum ersten (gleiche Einstellung oder der Satz geht nahtlos in den Anfang über), damit das Video ein zweites Mal läuft.
 
 **4. Lesbarkeit ohne Ton (viele schauen stumm)**
