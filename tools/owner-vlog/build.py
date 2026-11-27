@@ -115,7 +115,12 @@ def load(c):
 hp = lambda x, f: sosfiltfilt(butter(2, f, "hp", fs=SR, output="sos"), x)
 clean = {}
 for c in {s[0] for s in SEGMENTS if s != "SWITCH" and s[3] == "voice"}:
-    x = hp(load(c), 75); a, b = NOISE[c]
+    x = hp(load(c), 75)
+    if c in NOISE: a, b = NOISE[c]
+    else:   # leiseste halbe Sekunde des Clips als Rauschprofil
+        win = int(0.5 * SR); hop = int(0.05 * SR)
+        en = [np.mean(x[i:i + win] ** 2) for i in range(0, max(1, len(x) - win), hop)]
+        k = int(np.argmin(en)); a, b = k * hop / SR, (k * hop + win) / SR
     clean[c] = nr.reduce_noise(y=x, sr=SR, y_noise=x[int(a * SR):int(b * SR)], stationary=True, prop_decrease=0.70, n_fft=2048)[:len(x)]
 
 voice = np.zeros(int((TOTAL + 0.5) * SR)); musicmask = np.zeros_like(voice)
