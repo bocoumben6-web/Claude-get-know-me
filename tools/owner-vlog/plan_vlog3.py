@@ -51,5 +51,9 @@ NOISE = {}
 SUBS = None
 PROMPT = "Vlog. Black Friday, Ansturm, Tidi, Lavish."
 FIX = {"levish": "Lavish", "levelstand": "Lavish", "red": "Bruder"}
-DROP = []
-REPLACE = []
+DROP = ["lüge", "leid", "man"]
+REPLACE = [
+    ("F2I", "11 UHR"),
+    ("WE DONE", "WE'RE DONE"),
+    ("ZWISCHENSTAND HAARE", "ZWISCHENSTAND DER HAARE"),
+]
