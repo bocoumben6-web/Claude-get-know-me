@@ -8,7 +8,7 @@ SINGLE=float(sys.argv[2]) if len(sys.argv)>2 else 30.0
 FULL=3*SINGLE
 ANTON=R+'assets/fonts/Anton-Regular.ttf'; BEBAS=R+'assets/fonts/BebasNeue-Regular.ttf'
 BLUE=(2,9,176); BLUE_HI=(40,70,255); WHITE=(245,244,240)
-def fmt(v): v=float(v); return (f'{v:.0f}' if v==int(v) else f'{v:.2f}'.replace('.',','))+' €'
+def fmt(v): v=float(v); return '€'+(f'{v:.0f}' if v==int(v) else f'{v:.2f}')
 pct=None if PRICE is None else round((1-float(PRICE.replace(',','.'))/FULL)*100)
 beanies=[Image.open(R+f'mockups/beanies-drop-26/beanie-{n}-freigestellt.png').convert('RGBA') for n in ['black','camo-vorne','white']]
 Lg=Image.open(R+'assets/logo.png').convert('RGBA')
@@ -65,14 +65,14 @@ def pill(d,cx,cy,t,size,fg=WHITE,bgc=BLUE,padx=0.45,pady=0.22,font=ANTON):
     d.text((cx,cy),t,font=f,fill=fg,anchor='mm')
 
 def price_line(d,cx,cy,size):
-    old=fmt(FULL); new=fmt(PRICE.replace(',','.')) if PRICE else '?? €'
+    old=fmt(FULL); new=fmt(PRICE.replace(',','.')) if PRICE else '€??'
     f1=ImageFont.truetype(BEBAS,int(size*0.62)); f2=ImageFont.truetype(ANTON,size)
-    w1=d.textlength('STATT '+old,font=f1); w2=d.textlength('NUR '+new,font=f2); gap=size*0.5
+    w1=d.textlength('WAS '+old,font=f1); w2=d.textlength('NOW '+new,font=f2); gap=size*0.5
     x=cx-(w1+gap+w2)/2
-    d.text((x,cy),'STATT '+old,font=f1,fill=(170,170,175),anchor='lm')
-    sb=d.textbbox((x,cy),'STATT '+old,font=f1,anchor='lm'); ox=x+d.textlength('STATT ',font=f1)
+    d.text((x,cy),'WAS '+old,font=f1,fill=(170,170,175),anchor='lm')
+    sb=d.textbbox((x,cy),'WAS '+old,font=f1,anchor='lm'); ox=x+d.textlength('WAS ',font=f1)
     d.line((ox-4,cy+2,sb[2]+4,cy-2),fill=BLUE_HI,width=max(3,size//14))
-    d.text((x+w1+gap,cy),'NUR '+new,font=f2,fill=WHITE,anchor='lm')
+    d.text((x+w1+gap,cy),'NOW '+new,font=f2,fill=WHITE,anchor='lm')
 
 def desktop():
     W,H=2400,1200
@@ -81,9 +81,9 @@ def desktop():
     paste_beanies(im,int(W*0.285),int(H*0.80),int(H*0.40),-int(H*0.025))
     d=ImageDraw.Draw(im); cx=int(W*0.745)
     lavish_word(im,cx,int(H*0.15),110)
-    text(d,(cx,int(H*0.255)),'BEANIE WEEK · FREITAG 27.11',BEBAS,64,(200,200,205))
+    text(d,(cx,int(H*0.255)),'BEANIE WEEK',BEBAS,64,(200,200,205))
     pill(d,cx,int(H*0.38),'BUNDLE 01',70)
-    text(d,(cx,int(H*0.53)),'3 BEANIES. 1 PREIS.',ANTON,92,WHITE)
+    text(d,(cx,int(H*0.53)),'3 BEANIES. 1 PRICE.',ANTON,92,WHITE)
     big=f'-{pct}%' if pct is not None else '-??%'
     f=ImageFont.truetype(ANTON,250)
     gl=Image.new('L',(W,H),0); ImageDraw.Draw(gl).text((cx,int(H*0.735)),big,font=f,anchor='mm',fill=255)
@@ -99,11 +99,11 @@ def mobile():
     im=Image.fromarray(np.clip(a,0,255).astype(np.uint8)).convert('RGBA')
     d=ImageDraw.Draw(im)
     lavish_word(im,W//2,int(H*0.06),62)
-    text(d,(W//2,int(H*0.115)),'BEANIE WEEK · FREITAG 27.11',BEBAS,40,(200,200,205))
+    text(d,(W//2,int(H*0.115)),'BEANIE WEEK',BEBAS,40,(200,200,205))
     paste_beanies(im,W//2,int(H*0.47),int(H*0.29),-int(H*0.02))
     d=ImageDraw.Draw(im)
     pill(d,W//2,int(H*0.55),'BUNDLE 01',52)
-    text(d,(W//2,int(H*0.645)),'3 BEANIES. 1 PREIS.',ANTON,82,WHITE)
+    text(d,(W//2,int(H*0.645)),'3 BEANIES. 1 PRICE.',ANTON,82,WHITE)
     big=f'-{pct}%' if pct is not None else '-??%'
     f=ImageFont.truetype(ANTON,220)
     gl=Image.new('L',(W,H),0); ImageDraw.Draw(gl).text((W//2,int(H*0.80)),big,font=f,anchor='mm',fill=255)
