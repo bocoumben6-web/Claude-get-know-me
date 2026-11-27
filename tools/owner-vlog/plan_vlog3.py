@@ -54,6 +54,8 @@ FIX = {"levish": "Lavish", "levelstand": "Lavish", "red": "Bruder"}
 DROP = ["lüge", "leid", "man"]
 REPLACE = [
     ("F2I", "11 UHR"),
+    ("GETRÄNK FÜR", "GETRÄNKE FÜR"),
+    ("JETZT ANKOMMEN", "JETZT ANGEKOMMEN"),
     ("WE DONE", "WE'RE DONE"),
     ("ZWISCHENSTAND HAARE", "ZWISCHENSTAND DER HAARE"),
 ]
