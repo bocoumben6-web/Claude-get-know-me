@@ -51,4 +51,15 @@ SUBS = None
 PROMPT = "Vlog. Express-Lieferung, Andi, Joel, Lavish, Roomtour."
 FIX = {"levish": "Lavish", "espresslieferung": "Expresslieferung", "festlieferung": "Expresslieferung"}
 DROP = []
-REPLACE = []
+REPLACE = [
+    ("EXPRESS -LIEFERUNGEN", "EXPRESS-LIEFERUNGEN"),
+    ("EXPRESS -LIEFERUNG", "EXPRESS-LIEFERUNG"),
+    ("EXPRESS -LIEFERUNG", "EXPRESS-LIEFERUNG"),
+    ("BYE", "MOIN"),
+    ("VERSTEHST DU VERSTEHST DU", "VERSTEHST DU"),
+    ("AUCH GUTE FÜR", "AUCH GUT FÜR"),
+    ("CHAUVIN -RE -ESSEN", "ESSEN"),
+    ("WILLST DU EIN BISSCHEN BESUCHEN", "WENN DU EIN MÄDCHEN BESUCHST"),
+    ("MAX", "MAGST"),
+    ("SAFE -SAFT", "SAFTIG"),
+]
