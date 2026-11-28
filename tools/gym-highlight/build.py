@@ -35,18 +35,27 @@ PLAN = [
     ("c12", 4.55, 0.14, 0.5, {}),
     ("c03", 6.10, 0.27, 1.0, {}),
     # Beanie aufsetzen (VHS)
-    ("c02", 0.60, 2.00, 1.0, {"vhs_x": 110}),
-    # Gym: Scheibe laden (Slow-Mo), Deadlift, Gürtel
-    ("c03", 1.20, 1.20, 0.5, {}),
-    ("c04", 0.50, 1.80, 1.0, {}),
+    ("c02", 0.60, 1.40, 1.0, {"vhs_x": 110}),
+    # Trainings-Montage (Owner 28.11.: schneller, man soll sehen, dass trainiert wird, motivierend)
+    # Jeder Schnitt zeigt eine ganze Wiederholung; "hit" = kurzer Kamera-Ruck am Schnitt
+    ("c05", 0.30, 1.20, 1.0, {"hit": 1}),
+    ("c04", 0.40, 0.90, 1.0, {"hit": 1}),
+    ("c03", 14.20, 0.90, 1.0, {"hit": 1}),
+    ("c07", 3.00, 0.70, 1.0, {"hit": 1}),
+    ("c10", 2.00, 0.70, 1.0, {"hit": 1}),
+    ("c07", 5.00, 0.60, 1.0, {"hit": 1}),
+    ("c04", 2.40, 0.70, 1.0, {"hit": 1}),
+    ("c10", 4.60, 0.60, 1.0, {"hit": 1}),
+    ("c07", 6.50, 0.60, 1.0, {"hit": 1}),
+    ("c03", 15.40, 0.60, 1.0, {"hit": 1}),
+    ("c07", 8.00, 0.70, 1.0, {"hit": 1}),
+    # Durchatmen: Rücken + Gürtel in Slow-Mo, Ringlicht, ganzer Klimmzug
     ("c05", 3.40, 1.00, 0.5, {}),
-    # Klimmzüge von unten, Kabelzug im Ringlicht (Underground)
-    ("c07", 2.00, 1.30, 1.0, {}),
-    ("c10", 1.50, 1.70, 1.0, {}),
-    ("c07", 15.40, 1.20, 1.0, {}),
+    ("c10", 9.00, 0.90, 1.0, {}),
+    ("c07", 15.40, 1.00, 1.0, {}),
     # Beanie-Momente zum Schluss
-    ("c09", 5.20, 2.00, 1.0, {"freeze": 0.45}),
-    ("c12", 3.60, 1.60, 0.5, {}),
+    ("c09", 5.20, 1.40, 1.0, {"freeze": 0.40}),
+    ("c12", 3.80, 1.20, 0.5, {}),
     ("c05", 9.50, 0.80, 0.5, {"logo_tail": 0.0}),
 ]
 
@@ -73,7 +82,13 @@ for i, (cid, ss, dur, speed, opt) in enumerate(PLAN):
     else:
         x = opt.get("vhs_x", 120)
         vf = f"crop=360:640:{x}:0,scale=1080:1920:flags=lanczos," + G_VHS
+        if cid == "c10":  # Kabelzug im Ringlicht ist sehr dunkel: Mitten anheben
+            vf += ",eq=gamma=1.35:brightness=0.02"
     vf += f",setpts=(PTS-STARTPTS)/{speed},fps={FPS}"
+    if opt.get("hit"):
+        # kurzer Ruck: 3 % Reserve, Versatz klingt in ~0,2 s ab
+        vf += (",crop=1048:1863:x='16+14*sin(t*70)*exp(-t*14)':y='28+18*cos(t*60)*exp(-t*14)'"
+               ",scale=1080:1920:flags=lanczos")
     out_dur = dur / speed
     if "freeze" in opt:
         vf += f",tpad=stop_mode=clone:stop_duration={opt['freeze']}"
@@ -114,11 +129,17 @@ total = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries"
 t_logo = total - 0.7
 boom = (f"aevalsrc='0.9*sin(2*PI*(55-25*t)*t)*exp(-6*t)':s=48000:d=0.7,"
         f"adelay={int(t_logo*1000)}|{int(t_logo*1000)},aformat=channel_layouts=stereo")
+FONT = os.path.join(ROOT, "assets", "fonts", "BebasNeue-Regular.ttf")
+t_txt = sum(d / sp + o.get("freeze", 0) for (_, _, d, sp, o) in PLAN[:7])  # Start der Montage
+txt = (f"[0:v]drawtext=fontfile='{FONT}':text='01\\:43 AM':fontsize=110:fontcolor=0xF0CC38:"
+       f"shadowcolor=black@0.6:shadowx=4:shadowy=4:x=64:y=300:enable='between(t,{t_txt:.3f},{t_txt+1.8:.3f})',"
+       f"drawtext=fontfile='{FONT}':text='NOV 28':fontsize=64:fontcolor=0xFCF0E4:"
+       f"shadowcolor=black@0.6:shadowx=3:shadowy=3:x=68:y=412:enable='between(t,{t_txt+0.25:.3f},{t_txt+1.8:.3f})'[v];")
 subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", cat,
-                "-filter_complex",
+                "-filter_complex", txt +
                 f"[0:a]highpass=f=60,loudnorm=I=-22:TP=-3:LRA=11[amb];{boom},volume=0.35[b];"
                 f"[amb][b]amix=inputs=2:normalize=0,alimiter=limit=0.9[a]",
-                "-map", "0:v", "-map", "[a]",
+                "-map", "[v]", "-map", "[a]",
                 "-c:v", "libx264", "-preset", "slow", "-b:v", "18M", "-maxrate", "22M", "-bufsize", "36M",
                 "-pix_fmt", "yuv420p", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
                 "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", OUT], check=True)
